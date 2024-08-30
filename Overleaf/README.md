@@ -1,8 +1,14 @@
 # Overleaf: A Powerful Tool for Creating Professional Documents
 
+![image](https://github.com/user-attachments/assets/e8dffb6f-c14b-4a79-ae1c-75eff0822b5d)
+
+
 ## What is Overleaf?
 
 [Overleaf](https://www.overleaf.com/) is a collaborative cloud-based LaTeX editor that simplifies the process of writing, editing, and publishing scientific and professional documents. LaTeX is a typesetting system commonly used for technical and scientific documentation due to its powerful handling of formulas, bibliographies, and cross-references. Overleaf integrates seamlessly with LaTeX, providing an intuitive interface that makes it accessible for users at any level of experience.
+
+![image](https://github.com/user-attachments/assets/d068c1d8-131d-4731-9075-d3f057bff5d7)
+
 
 ## Key Features of Overleaf
 
@@ -44,9 +50,15 @@
 - **Data Science Report Template**: Perfect for documenting data analysis, machine learning models, or data engineering pipelines.
 - **Project Report Template**: Useful for maintaining detailed records of your projects, including data flow diagrams, architecture designs, and project milestones.
 
+  ![image](https://github.com/user-attachments/assets/576eed36-78f4-4c12-8871-dedb7ffc493b)
+
+
 ## Conclusion
 
 Overleaf is an invaluable tool for data engineers looking to streamline their documentation process, collaborate efficiently, and produce professional-quality documents. Whether you're creating a resume, writing a research paper, or maintaining a project report, Overleaf's comprehensive features and user-friendly interface make it an essential addition to your toolkit.
+
+![image](https://github.com/user-attachments/assets/730f94c8-7b94-422b-a16c-633db07bd17d)
+
 
 ---
 
