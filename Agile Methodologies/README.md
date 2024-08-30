@@ -68,6 +68,6 @@ This method is a good way for teams to identify roadblocks and to visualize the 
 
 ---
 
-Feel free to use this content to enhance your GitHub repository's README file!
+
 
 
