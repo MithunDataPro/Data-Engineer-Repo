@@ -66,6 +66,11 @@ Kanban is a visual approach to Agile. Teams use online Kanban board tools to rep
 
 This method is a good way for teams to identify roadblocks and to visualize the amount of work that’s getting done.
 
+### Scrum V/S Kanban
+
+![image](https://github.com/user-attachments/assets/31c4f25b-38fe-42c3-8c34-7a3c2423ab6c)
+
+
 ---
 
 
