@@ -144,6 +144,128 @@ Key-value stores are the simplest type of NoSQL databases. They store data as a 
 | **Riak**       | Key-Value Store          | Distributed Systems, Fault-Tolerant Applications   | High Availability, Fault Tolerance, Scalability | Eventual Consistency, Complexity               |
 
 
+### What is MongoDB?
+
+**MongoDB** is an open-source, NoSQL document-oriented database that stores data in flexible, JSON-like documents. This makes it suitable for applications where the structure of data may change frequently or where the data itself is unstructured or semi-structured.
+
+![image](https://github.com/user-attachments/assets/6f2790cc-7562-4fed-bcfc-3d33a87aa3e4)
+
+#### Key Features:
+- **Schema-less:** MongoDB doesn’t enforce a fixed schema, allowing documents to have varying fields and structures.
+- **Document Storage:** Uses BSON (binary-encoded JSON) format to store documents, supporting nested fields and arrays.
+- **Ad-hoc Queries:** Supports rich queries, including field, range queries, and regular expression searches.
+- **Indexing:** MongoDB provides various indexing options like compound indexes, text indexes, and geospatial indexes to optimize query performance.
+- **Horizontal Scalability:** MongoDB can scale out by distributing data across multiple servers using a feature called sharding.
+- **Replication:** Provides high availability and redundancy through replica sets, where data is replicated across multiple nodes.
+
+#### Use Cases:
+- **Content Management Systems (CMS):** MongoDB is widely used to manage unstructured content such as blog posts, news articles, and multimedia.
+- **E-commerce Platforms:** It can handle product catalogs where items have varying attributes (e.g., clothing, electronics) without predefined schemas.
+- **Mobile and Web Applications:** Ideal for applications that handle large volumes of unstructured or semi-structured data, such as user profiles or app logs.
+- **Real-Time Analytics:** MongoDB is used in real-time applications that need to process large volumes of dynamic data, such as recommendation engines or analytics dashboards.
+
+#### Companies Using MongoDB:
+- **eBay:** Uses MongoDB to power search suggestions.
+- **Adobe:** Implements MongoDB for content personalization and data management.
+- **Forbes:** Utilizes MongoDB to manage real-time article recommendations.
+
+#### Advantages:
+- **Flexible Data Model:** MongoDB’s document-oriented structure allows storing data in a flexible, dynamic schema.
+- **Horizontal Scalability:** Sharding enables MongoDB to handle large datasets by distributing them across multiple servers.
+- **Rich Query Language:** Supports complex queries with filtering, sorting, and aggregation capabilities.
+- **High Availability:** Replica sets ensure data is available even if one or more nodes fail.
+
+#### Disadvantages:
+- **Memory Usage:** Since MongoDB stores data in BSON format, it can consume more memory compared to relational databases.
+- **Limited Transaction Support (Earlier Versions):** Transactions across multiple documents were not supported until MongoDB 4.0, making it less suitable for certain use cases where ACID compliance is required.
+- **Indexing Limitations:** Large datasets with multiple indexes can lead to performance bottlenecks.
+
+---
+
+### What is Couchbase?
+
+**Couchbase** is a distributed NoSQL database that combines the capabilities of a key-value store with a document store. It is designed to provide high performance and scalability for modern web, mobile, and IoT applications. Couchbase supports a flexible schema and provides powerful querying capabilities, along with built-in full-text search and analytics.
+
+![image](https://github.com/user-attachments/assets/54519c31-8a09-4f9c-9ec5-b854508fcfaa)
+
+#### Key Features:
+- **Document Store:** Couchbase stores data as JSON documents, allowing flexible data modeling and easy integration with modern applications.
+- **Key-Value Store:** For use cases requiring ultra-fast lookups, Couchbase operates as a key-value store, ensuring low-latency access to data.
+- **N1QL Query Language:** Couchbase provides N1QL, an SQL-like query language, which allows developers to run rich queries on JSON documents.
+- **Replication and High Availability:** Couchbase ensures high availability with data replication across nodes. It also supports multi-node clusters to handle failover automatically.
+- **Built-in Full-Text Search:** Provides native support for full-text search capabilities, making it easy to perform text-based searches across documents.
+- **Mobile Integration:** Couchbase has built-in synchronization support for mobile and IoT applications through Couchbase Mobile, ensuring offline-first capabilities.
+
+#### Use Cases:
+- **Mobile Applications:** Couchbase supports real-time syncing and offline data storage, making it ideal for mobile apps that need to function without internet connectivity.
+- **E-commerce Platforms:** Couchbase’s low-latency operations and scalability make it suitable for handling shopping carts, product catalogs, and user sessions.
+- **Gaming Applications:** With Couchbase’s low-latency and high throughput, it is often used in gaming backends to store game states, leaderboards, and user data.
+- **IoT Data Management:** Couchbase’s distributed architecture and high availability make it ideal for managing large-scale IoT data, where devices generate a continuous stream of data.
+
+#### Companies Using Couchbase:
+- **LinkedIn:** Uses Couchbase to handle data for real-time notifications and content feeds.
+- **PayPal:** Implements Couchbase for user session storage and fraud detection.
+- **Viber:** Utilizes Couchbase for real-time messaging and syncing between devices.
+
+#### Advantages:
+- **Low Latency and High Performance:** Couchbase is optimized for performance with in-memory caching and distributed architecture, making it ideal for real-time applications.
+- **SQL-Like Querying:** N1QL provides developers with the familiarity of SQL while allowing them to query JSON documents efficiently.
+- **Mobile Syncing:** Couchbase Mobile enables syncing between the server and mobile devices, supporting offline functionality.
+- **Flexible Data Model:** Supports both key-value operations and document-based queries, making it versatile for various use cases.
+
+#### Disadvantages:
+- **Complex Setup:** Setting up and managing Couchbase clusters can be more complex than simpler NoSQL databases.
+- **High Resource Usage:** Couchbase’s in-memory architecture can consume significant memory and CPU resources, especially for larger datasets.
+- **Query Performance:** Complex queries can lead to performance issues when the dataset grows, particularly if indexing is not optimized.
+
+---
+
+### What is Amazon DocumentDB?
+
+**Amazon DocumentDB** is a managed document database service that is compatible with MongoDB. It is optimized for storing, querying, and indexing JSON documents. Amazon DocumentDB provides scalability, high availability, and data durability in the AWS cloud environment, making it ideal for handling large volumes of semi-structured data.
+
+![image](https://github.com/user-attachments/assets/09e5658c-7dea-4e67-9f2c-33e430f0770e)
+
+#### Key Features:
+- **MongoDB Compatibility:** Amazon DocumentDB is designed to be compatible with MongoDB, allowing users to migrate their MongoDB applications to Amazon DocumentDB without changing code or drivers.
+- **Managed Service:** As part of AWS, Amazon DocumentDB is fully managed, with automatic backups, scaling, and patching.
+- **Horizontal Scaling:** The database can automatically scale storage and compute resources as needed, providing flexibility for growing applications.
+- **High Availability:** Amazon DocumentDB automatically replicates data across three availability zones, ensuring high availability and durability.
+- **Backup and Restore:** Supports continuous backups with point-in-time recovery, allowing users to restore data to any second within the retention window.
+
+#### Use Cases:
+- **Content Management Systems (CMS):** Amazon DocumentDB is ideal for storing and managing unstructured content such as articles, blog posts, and multimedia.
+- **Mobile and Web Applications:** It provides high availability and scalability for mobile and web apps that rely on dynamic, semi-structured data.
+- **IoT Data Storage:** DocumentDB is suitable for IoT applications where devices produce semi-structured data that needs to be processed in real-time.
+- **Gaming Platforms:** It can store game-related data such as user profiles, game states, and high scores, with fast access for real-time gameplay.
+
+#### Companies Using Amazon DocumentDB:
+- **Sony:** Uses Amazon DocumentDB for handling data in its video game platform.
+- **Comcast:** Employs DocumentDB for content management in its streaming services.
+- **Zillow:** Utilizes Amazon DocumentDB to store and process real estate data in JSON format.
+
+#### Advantages:
+- **Fully Managed:** Amazon DocumentDB handles backups, patching, scaling, and replication, freeing developers from the burden of managing infrastructure.
+- **Scalable:** It can handle large amounts of data and scale seamlessly, ensuring performance as the dataset grows.
+- **MongoDB-Compatible:** Developers familiar with MongoDB can easily transition to Amazon DocumentDB, as it uses the same APIs and drivers.
+- **High Availability:** With data replicated across multiple availability zones, Amazon DocumentDB ensures that applications remain highly available.
+
+#### Disadvantages:
+- **Limited MongoDB Features:** While compatible with MongoDB, some features of MongoDB, such as certain aggregation functions and distributed transactions, are not supported in DocumentDB.
+- **AWS Lock-In:** Since Amazon DocumentDB is a managed service within AWS, migrating data out of DocumentDB can be challenging and costly.
+- **Cost:** Pricing can become expensive for large-scale applications due to the managed service fees and storage costs.
+
+---
+
+### Comparison Table
+
+| **Database**             | **Type**                | **Use Cases**                                      | **Advantages**                                  | **Disadvantages**                               |
+|--------------------------|-------------------------|---------------------------------------------------|-------------------------------------------------|------------------------------------------------|
+| **MongoDB**              | Document Store           | CMS, E-commerce, Real-Time Analytics               | Flexible Schema, Horizontal Scalability         | Memory Usage, Limited Transaction Support       |
+| **Couchbase**            | Key-Value & Document Store| Mobile Apps, IoT, E-commerce, Gaming               | Low Latency, N1QL Query Language, Mobile Syncing| Complex Setup, High Resource Usage             |
+| **Amazon DocumentDB**    | Managed Document Store    | CMS, Mobile Apps, IoT, Gaming                     | Fully Managed, MongoDB-Compatible, Scalable     | Limited MongoDB Features, AWS Lock-In           |
+
+
 
 1. **Apache Cassandra:**  
    - A distributed NoSQL database designed for handling large amounts of data across many commodity servers, providing high availability with no single point of failure.
