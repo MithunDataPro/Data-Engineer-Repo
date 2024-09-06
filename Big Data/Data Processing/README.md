@@ -46,7 +46,7 @@ In summary, data processing is vital because it turns raw data into actionable i
 
 Hadoop is primarily known for its capability to handle big data. It breaks down large data into smaller chunks, distributes these chunks across different machines in the cluster, and processes them in parallel.
 
-  ![image](https://github.com/user-attachments/assets/0d754ee5-f45f-499f-afd3-dc3c2573249f)
+![image](https://github.com/user-attachments/assets/bb68f72f-3d38-4c64-b3bc-e8cc73be44a7)
 
 ### Key Components of Hadoop:
 1. **Hadoop Distributed File System (HDFS):**
@@ -65,6 +65,8 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
    - **Description:** Hadoop Common provides the necessary libraries and utilities required by the other Hadoop modules. It includes shared libraries and functions that support the rest of the Hadoop framework.
    - **Purpose:** Provides infrastructure for distributed file and application management.
 
+  ![image](https://github.com/user-attachments/assets/0d754ee5-f45f-499f-afd3-dc3c2573249f)
+  
 ### Actions Performed by Hadoop:
 - **Data Processing:** Hadoop can process massive volumes of structured and unstructured data in a distributed manner across a cluster of computers.
 - **Data Transformation:** Using MapReduce, Hadoop transforms raw data into meaningful output by filtering, sorting, aggregating, or other data manipulation techniques.
@@ -106,6 +108,8 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 - **Description:** Apache Spark is an open-source, fast, in-memory data processing engine designed for large-scale data processing. It supports batch processing, real-time streaming, and machine learning workloads.
 - **Actions:** Data processing, real-time stream processing, transformation, machine learning, and analytics.
 - **Use Case:** Real-time data processing, ETL, machine learning, and big data analytics.
+
+![image](https://github.com/user-attachments/assets/1ecf4b70-1aa8-49a1-977c-488397199553)
 
 ---
 
