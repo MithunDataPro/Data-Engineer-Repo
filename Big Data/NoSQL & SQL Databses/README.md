@@ -27,6 +27,9 @@ Key-value stores are the simplest type of NoSQL databases. They store data as a 
 
 **Redis (Remote Dictionary Server)** is an open-source, in-memory data structure store that can be used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, and sorted sets. Redis is known for its high performance and is often used in scenarios where low-latency and fast data access are critical.
 
+![image](https://github.com/user-attachments/assets/f3251b56-d7f9-4535-8da6-ae8d5b30da41)
+
+
 #### Key Features:
 - **In-Memory Data Store:** Redis stores the entire dataset in memory, making it extremely fast for read and write operations.
 - **Persistence Options:** Redis provides different levels of persistence, such as snapshotting and append-only file (AOF) mode, to save data to disk.
@@ -62,6 +65,9 @@ Key-value stores are the simplest type of NoSQL databases. They store data as a 
 
 **Amazon DynamoDB** is a fully managed, key-value and document NoSQL database service provided by Amazon Web Services (AWS). DynamoDB is designed to deliver fast and predictable performance at any scale, making it ideal for applications with high throughput and low-latency requirements.
 
+![image](https://github.com/user-attachments/assets/2d11fd7e-dcb7-4739-99cf-5b7d9401f3ca)
+
+
 #### Key Features:
 - **Fully Managed:** DynamoDB is a serverless database, which means AWS handles all the infrastructure, scaling, backups, and performance management.
 - **Automatic Scaling:** DynamoDB automatically scales up or down based on the application’s traffic and workload, ensuring consistent performance.
@@ -96,6 +102,9 @@ Key-value stores are the simplest type of NoSQL databases. They store data as a 
 ### 3. What is Riak?
 
 **Riak** is a distributed NoSQL database designed to provide high availability, fault tolerance, and scalability. It is a key-value store that emphasizes availability over consistency, following the principles of the **CAP theorem**. Riak is built to be highly resilient and to ensure data availability even in the face of hardware failures.
+
+![image](https://github.com/user-attachments/assets/0693ed1b-ba78-41b6-b6e0-6fbe88911d1c)
+
 
 #### Key Features:
 - **High Availability:** Riak is designed to be highly available and partition tolerant. It uses consistent hashing to distribute data across multiple nodes, ensuring that the system can continue to operate even when some nodes are down.
