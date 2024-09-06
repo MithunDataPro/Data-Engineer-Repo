@@ -2,6 +2,9 @@
 
 NoSQL databases are a class of database management systems that differ from traditional relational databases (RDBMS) in their data models, scalability, and flexibility. The term "NoSQL" stands for "Not Only SQL," highlighting that these databases can handle a wide variety of data models beyond the relational model. They are designed to store, retrieve, and manage large volumes of unstructured, semi-structured, or rapidly changing data.
 
+![image](https://github.com/user-attachments/assets/29d354fc-25ee-4c8e-8ffe-d42b66df3c8a)
+
+
 ## Types of NoSQL Databases and Their Detailed Explanations with Use Cases
 
 NoSQL databases are generally categorized into four primary types: 
@@ -9,6 +12,9 @@ NoSQL databases are generally categorized into four primary types:
 2. **document databases**
 3. **column-family stores**
 4. **graph databases**
+
+![image](https://github.com/user-attachments/assets/0881de18-23f6-4545-8aa9-2e7c49b42d2f)
+
 
 ---
 
@@ -822,6 +828,9 @@ Unstructured data is raw data that does not follow a specific format or schema, 
 **SQL (Structured Query Language) database** is a type of database that uses structured query language (SQL) to manage, retrieve, and manipulate data stored in relational tables. SQL databases are based on the **relational database model**, where data is organized into tables (or relations) with rows (records) and columns (fields). SQL databases follow a strict schema, meaning the structure of the data (tables, columns, data types, relationships) is predefined, and any changes to the schema must be explicitly defined.
 
 SQL databases are known for their ability to handle structured data and enforce relationships between different data entities through constraints, foreign keys, and indexing. They are widely used for transactional applications, business analytics, and reporting systems due to their strong consistency and ACID (Atomicity, Consistency, Isolation, Durability) compliance.
+
+![image](https://github.com/user-attachments/assets/9316cac9-460d-4122-a6a0-84f35e53546c)
+
 
 #### Key Features:
 - **Relational Data Model:** SQL databases store data in structured tables that define relationships between entities using keys (primary and foreign keys).
