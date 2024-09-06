@@ -10,6 +10,8 @@ NoSQL databases are generally categorized into four primary types:
 3. **column-family stores**
 4. **graph databases**
 
+---
+
  Each type is optimized for specific data models and use cases.
 
 ## Key-Value Stores
@@ -31,17 +33,7 @@ Key-value stores are the simplest type of NoSQL databases. They store data as a 
 - **Real-Time Analytics**: Handle high-speed read and write operations for live data feeds.
 - **Shopping Cart Data**: Maintain shopping cart details in e-commerce platforms.
 
-### Detailed Explanation:
-
-#### Redis:
-
-- **What It Is**: An open-source, in-memory data structure store that can be used as a database, cache, and message broker.
-- **Features**: Supports various data structures like strings, hashes, lists, sets, sorted sets with range queries, bitmaps, and geospatial indexes.
-- **Use Cases**: Ideal for applications requiring rapid data access, such as leaderboards, real-time analytics, and messaging queues.
-- **Companies Using Redis**:
-  - Twitter uses Redis for caching and real-time analytics.
-  - GitHub employs it for queuing and background job processing.
-
+---
 
 ### 1. What is Redis?
 
@@ -163,6 +155,7 @@ Key-value stores are the simplest type of NoSQL databases. They store data as a 
 | **Amazon DynamoDB** | Key-Value/Document Store | Mobile Apps, IoT Data, E-Commerce                   | Fully Managed, Auto-Scaling, Global Tables      | Costly at Scale, Limited Query Flexibility     |
 | **Riak**       | Key-Value Store          | Distributed Systems, Fault-Tolerant Applications   | High Availability, Fault Tolerance, Scalability | Eventual Consistency, Complexity               |
 
+---
 
 ## Document Databases
 
@@ -183,17 +176,7 @@ Document databases store data in documents similar to JSON (JavaScript Object No
 - **E-commerce Platforms**: Manage product catalogs where items have different attributes.
 - **Mobile Applications**: Support flexible and rapidly changing data structures.
 
-### Detailed Explanation:
-
-#### MongoDB:
-
-- **What It Is**: A cross-platform, document-oriented database program that uses JSON-like documents with optional schemas.
-- **Features**: Supports ad-hoc queries, indexing, replication, and load balancing.
-- **Use Cases**: Ideal for applications requiring high scalability and flexibility, such as content management, real-time analytics, and big data.
-- **Companies Using MongoDB**: 
-  - eBay uses it for search suggestions.
-  - Adobe employs it for content management systems.
-
+---
 
 ### What is MongoDB?
 
@@ -316,6 +299,7 @@ Document databases store data in documents similar to JSON (JavaScript Object No
 | **Couchbase**            | Key-Value & Document Store| Mobile Apps, IoT, E-commerce, Gaming               | Low Latency, N1QL Query Language, Mobile Syncing| Complex Setup, High Resource Usage             |
 | **Amazon DocumentDB**    | Managed Document Store    | CMS, Mobile Apps, IoT, Gaming                     | Fully Managed, MongoDB-Compatible, Scalable     | Limited MongoDB Features, AWS Lock-In           |
 
+---
 
 ## 3. Column-Family Stores
 
@@ -336,16 +320,123 @@ Column-family stores organize data into columns and column families rather than 
 - **Real-Time Analytics**: Perform quick read and write operations on massive datasets.
 - **Messaging Systems**: Handle large-scale messaging and notification systems.
 
-### Detailed Explanation:
+---
+ 
+### What is Apache Cassandra?
 
-#### Apache Cassandra:
+**Apache Cassandra** is a highly scalable, distributed NoSQL database designed to handle large amounts of data across many commodity servers without a single point of failure. It is an open-source system designed to manage very large amounts of structured data spread out across many servers, providing high availability with no single point of failure.
 
-- **What It Is**: An open-source, distributed NoSQL database management system designed to handle large amounts of data across many commodity servers.
-- **Features**: Offers high availability with no single point of failure, linear scalability, and fault tolerance.
-- **Use Cases**: Ideal for applications that require high write and read throughput, such as social media platforms, IoT applications, and real-time analytics.
-- **Companies Using Cassandra**: 
-  - Netflix uses it for its scalability and fault tolerance.
-  - Apple employs it to manage massive amounts of data.
+#### Key Features:
+- **Distributed Architecture:** Cassandra is designed as a peer-to-peer system, where all nodes in the cluster are equal. Data is distributed across nodes, and each node communicates with others to achieve replication and fault tolerance.
+- **High Availability:** Cassandra ensures high availability and fault tolerance through its replication feature. It can replicate data across multiple data centers, ensuring there is no downtime even if a server or a data center fails.
+- **Linear Scalability:** Cassandra is linearly scalable, meaning you can add more nodes to the cluster without any disruption, and the system will scale out automatically.
+- **Eventual Consistency:** Cassandra follows the principles of eventual consistency (CAP theorem), meaning data may not be immediately consistent across all nodes but will eventually converge to a consistent state.
+- **Flexible Data Model:** It supports a wide range of data types and structures, allowing users to design schema-less tables.
+- **Partitioning:** Cassandra uses consistent hashing for partitioning data, ensuring that data is evenly distributed across all nodes.
+
+#### Use Cases:
+- **Time-Series Data:** Applications such as IoT, financial transactions, and sensor data that require efficient storage and querying of time-series data.
+- **Real-Time Analytics:** Applications that need to perform fast read and write operations on large datasets in real-time, such as recommendation engines or social media analytics.
+- **Messaging Systems:** Used in large-scale messaging platforms due to its low-latency write operations.
+- **Content Management:** E-commerce platforms use Cassandra to manage large catalogs, customer interactions, and product inventory in real-time.
+
+#### Companies Using Cassandra:
+- **Netflix:** Uses Cassandra for streaming and recommendation systems, managing petabytes of data across globally distributed data centers.
+- **Apple:** Manages trillions of messages and petabytes of data using Cassandra.
+- **Instagram:** Utilizes Cassandra to store user data and manage billions of photos.
+
+#### Advantages:
+- **Fault Tolerance:** Data is replicated across multiple nodes, ensuring high availability even if a node or data center goes down.
+- **High Write Throughput:** Cassandra is optimized for heavy write operations, making it ideal for applications that require high write performance.
+- **Scalability:** Its distributed architecture allows seamless scalability as new nodes can be added to the cluster without downtime.
+- **Multi-Data Center Support:** Cassandra allows replication across multiple data centers for disaster recovery and low-latency reads.
+
+#### Disadvantages:
+- **Eventual Consistency:** Applications that require strong consistency may face challenges, as Cassandra prioritizes availability and partition tolerance.
+- **Complex Setup and Maintenance:** Managing and maintaining Cassandra clusters can be complex, especially for large-scale implementations.
+- **Limited Aggregation Queries:** Cassandra does not natively support advanced query features like joins or complex aggregation functions, making it less suitable for applications requiring complex querying.
+
+---
+
+### What is Apache HBase?
+
+**Apache HBase** is a distributed, scalable NoSQL database that runs on top of the Hadoop Distributed File System (HDFS). It is modeled after Google Bigtable and provides a fault-tolerant way of storing large quantities of sparse data. HBase is designed to handle billions of rows and millions of columns, making it ideal for applications that require high throughput and scalability.
+
+#### Key Features:
+- **Column-Oriented Store:** HBase stores data in a column-family format, which allows for efficient retrieval of large datasets and operations on subsets of columns.
+- **Integration with Hadoop:** Since HBase runs on top of HDFS, it integrates well with the Hadoop ecosystem, making it easy to use with tools like MapReduce, Hive, and Pig for batch processing.
+- **Automatic Sharding:** HBase automatically partitions and distributes data across multiple nodes, allowing for horizontal scaling as the dataset grows.
+- **Strong Consistency:** Unlike Cassandra, HBase ensures strong consistency across nodes, which is important for applications requiring accurate, real-time reads and writes.
+- **High Write Throughput:** HBase is optimized for fast write operations and can handle high write throughput.
+- **Fault Tolerance:** Built on top of HDFS, HBase inherits Hadoop's fault tolerance features, ensuring that data is replicated and safe even in the event of node failures.
+
+#### Use Cases:
+- **Time-Series Data Storage:** HBase is often used for storing and querying time-series data, such as logs, sensor data, and monitoring information.
+- **Real-Time Data Analytics:** HBase is suitable for applications that require real-time read/write operations on large datasets, such as financial systems, fraud detection, and recommendation engines.
+- **Data Warehousing:** HBase is used to store large amounts of data that can be queried and analyzed using Hadoop’s batch processing tools.
+- **Search Engines:** Search engines can use HBase to store indexed web pages and metadata for fast retrieval.
+
+#### Companies Using HBase:
+- **Facebook:** Uses HBase to power its messaging platform, which handles billions of messages daily.
+- **Yahoo!:** Employs HBase for its analytics and log processing systems.
+- **Spotify:** Uses HBase to manage and analyze user activity logs and data.
+
+#### Advantages:
+- **Strong Consistency:** HBase ensures strong consistency for read and write operations, making it ideal for applications that require accurate, real-time access to data.
+- **Scalability:** Designed to scale horizontally by distributing data across multiple nodes.
+- **Integration with Hadoop Ecosystem:** HBase can be used with other Hadoop components such as MapReduce for batch processing and analytics on large datasets.
+- **High Write Performance:** Optimized for high throughput write operations, making it suitable for applications with heavy write workloads.
+
+#### Disadvantages:
+- **Complexity:** HBase can be complex to set up, configure, and maintain, particularly for large clusters.
+- **Limited Query Capabilities:** HBase does not support advanced querying (e.g., joins, aggregations) out of the box, making it less suitable for applications requiring complex query operations.
+- **Latency:** Compared to Cassandra, HBase may have higher latency for read operations, especially for random reads.
+
+---
+
+### What is Google Bigtable?
+
+**Google Bigtable** is a fully managed, scalable NoSQL database service provided by Google Cloud. It is designed for large-scale applications and offers low-latency access to structured data. Bigtable is a high-performance database that can handle massive amounts of data, making it suitable for applications that require fast read and write operations on large datasets.
+
+#### Key Features:
+- **Managed Service:** Bigtable is fully managed by Google Cloud, meaning users don’t have to worry about infrastructure, scaling, or patching.
+- **Low-Latency Reads and Writes:** Optimized for low-latency read and write operations, making it ideal for real-time applications such as analytics and time-series data storage.
+- **Horizontal Scalability:** Bigtable can scale horizontally to handle petabytes of data and millions of requests per second by distributing data across many nodes.
+- **High Availability:** It provides automatic replication across multiple zones for high availability and disaster recovery.
+- **Integration with Google Cloud Services:** Bigtable integrates seamlessly with other Google Cloud services such as BigQuery (for analytics), Dataflow (for data processing), and AI tools.
+
+#### Use Cases:
+- **Time-Series Data:** Bigtable is commonly used for storing and analyzing time-series data from IoT devices, financial systems, and monitoring applications.
+- **Real-Time Analytics:** Applications that require real-time data processing, such as recommendation engines, personalization engines, and fraud detection systems.
+- **IoT Data Storage:** Bigtable is used to store and analyze the massive amounts of data generated by IoT devices.
+- **Financial Services:** Used for managing financial transactions, historical data, and risk modeling where fast access to large datasets is required.
+
+#### Companies Using Google Bigtable:
+- **Google:** Uses Bigtable internally for many of its core services, including Gmail, YouTube, and Google Search.
+- **Spotify:** Utilizes Bigtable for storing user activity data and generating personalized recommendations.
+- **Snapchat:** Employs Bigtable for storing and processing large amounts of user-generated content.
+
+#### Advantages:
+- **Fully Managed:** Google Bigtable is a fully managed service, so there’s no need to handle infrastructure, scaling, or replication manually.
+- **Low-Latency:** Bigtable offers very low-latency read and write operations, making it ideal for real-time applications.
+- **Seamless Integration with Google Cloud:** Bigtable works well with other Google Cloud services, providing an integrated ecosystem for data processing, analytics, and machine learning.
+- **Scalable:** Bigtable is designed to scale to handle massive datasets and high request volumes without degrading performance.
+
+#### Disadvantages:
+- **Limited Query Capabilities:** Like HBase, Bigtable does not support advanced queries like joins and aggregations, making it unsuitable for some use cases.
+- **Vendor Lock-In:** Bigtable is a managed service from Google Cloud, which can create challenges when trying to migrate away from Google’s ecosystem.
+- **Cost:** For very large datasets or applications with high throughput, Bigtable can become expensive due to its managed service fees.
+
+---
+
+### Comparison Table
+
+| **Database**             | **Type**                 | **Use Cases**                                      | **Advantages**                                  | **Disadvantages**                               |
+|--------------------------|--------------------------|---------------------------------------------------|-------------------------------------------------|------------------------------------------------|
+| **Apache Cassandra**      | Column-Family Store       | Time-Series Data, Real-Time Analytics, Messaging   | Fault Tolerance, High Scalability, Low Latency  | Eventual Consistency, Complex Management        |
+| **Apache HBase**          | Column-Family Store       | Time-Series Data, Real-Time Analytics, Data Warehousing | Strong Consistency, Integration with Hadoop   | Higher Latency, Complex Setup                  |
+| **Google Bigtable**       | Managed Column-Family Store| IoT, Real-Time Analytics, Time-Series Data         | Fully Managed, Low Latency, Horizontal Scalability | Limited Query Capabilities, Vendor Lock-In    |
+
 
 ---
 
@@ -368,62 +459,143 @@ Graph databases use graph structures with nodes, edges, and properties to repres
 - **Fraud Detection**: Identify complex patterns and anomalies in transactional data.
 - **Knowledge Graphs**: Manage and query interconnected data in domains like research and development.
 
-### Detailed Explanation:
+---
 
-#### Neo4j:
+### What is Neo4j?
 
-- **What It Is**: An open-source graph database that uses nodes, relationships, and properties to represent and store data.
-- **Features**: Supports ACID transactions, high-availability clustering, and a declarative query language called Cypher.
-- **Use Cases**: Ideal for applications requiring complex relationship mapping, such as social networks, fraud detection systems, and recommendation engines.
-- **Companies Using Neo4j**:
-  - Walmart utilizes it for supply chain management.
-  - eBay employs it for social graph analysis.
+**Neo4j** is an open-source, NoSQL graph database that is designed to store and manage data in a graph format. It uses nodes, relationships, and properties to represent and store data, making it ideal for applications where the relationships between data points are as important as the data itself. Neo4j uses the **Cypher** query language, which is specifically optimized for traversing and querying graph structures.
 
+#### Key Features:
+- **Graph-Based Model:** Neo4j stores data in a graph format where entities (nodes) and their relationships (edges) are first-class citizens. This allows for efficient queries on highly connected datasets.
+- **Cypher Query Language:** Cypher is a declarative query language designed specifically for querying and updating graph structures, making it intuitive to express complex graph traversal operations.
+- **ACID Compliance:** Neo4j supports full ACID (Atomicity, Consistency, Isolation, Durability) transactions, making it suitable for enterprise applications that require strong data consistency.
+- **High Performance on Graph Queries:** Neo4j is optimized for queries involving traversing relationships, such as finding the shortest path between two nodes or analyzing complex interconnections between entities.
+- **Scalability and Clustering:** Neo4j supports horizontal scaling through clustering and replication, ensuring high availability and fault tolerance.
+- **Plugins and Extensions:** Neo4j allows the use of plugins and user-defined procedures to extend the database functionality for specific use cases.
 
-1. **Apache Cassandra:**  
-   - A distributed NoSQL database designed for handling large amounts of data across many commodity servers, providing high availability with no single point of failure.
-   
-2. **MongoDB:**  
-   - A document-oriented NoSQL database that uses JSON-like documents with optional schemas, making it highly flexible and suitable for diverse data structures.
-   
-3. **Amazon DynamoDB:**  
-   - A fully managed NoSQL database service by AWS that provides fast and predictable performance with seamless scalability.
+#### Use Cases:
+- **Social Networks:** Neo4j is used in social media platforms to manage and analyze relationships between users, such as friend connections, followers, and influencers.
+- **Recommendation Engines:** It is commonly used to power recommendation engines by identifying patterns between users and items, such as movie or product recommendations based on user preferences and behavior.
+- **Fraud Detection:** Neo4j can detect fraud by analyzing transaction patterns and identifying suspicious links between entities in financial networks.
+- **Knowledge Graphs:** It is used in building knowledge graphs, where large datasets with complex interrelations need to be explored and understood.
+- **Network and IT Operations:** Neo4j is used to model and manage complex IT networks, where nodes represent devices and edges represent connections or dependencies.
 
-4. **Couchbase:**  
-   - A distributed NoSQL document-oriented database with a flexible data model, consistent high performance, and easy scalability.
+#### Companies Using Neo4j:
+- **eBay:** Uses Neo4j for recommendation engines and fraud detection.
+- **Walmart:** Employs Neo4j to enhance supply chain logistics and product recommendations.
+- **IBM:** Utilizes Neo4j for knowledge management and IT operations optimization.
 
-5. **Redis:**  
-   - An in-memory NoSQL key-value store that supports various data structures such as strings, hashes, lists, sets, and more, known for its speed and versatility.
+#### Advantages:
+- **Optimized for Relationships:** Neo4j is designed for efficiently managing highly connected data and complex queries involving relationships.
+- **ACID-Compliant Transactions:** Ensures strong consistency and durability for enterprise-grade applications.
+- **Flexible Data Model:** No predefined schema is required, allowing flexibility in managing evolving data structures.
+- **Fast Traversals:** Optimized for graph traversals, making it highly efficient for queries involving multiple hops between nodes.
 
-6. **Neo4j:**  
-   - A graph database management system that uses graph structures for semantic queries, ideal for connected data and network analysis.
+#### Disadvantages:
+- **Memory Usage:** Neo4j's in-memory architecture can lead to higher memory consumption for very large datasets.
+- **Scalability Limits:** Although Neo4j supports clustering, its scalability can be limited compared to distributed graph databases.
+- **Learning Curve:** Cypher query language, while powerful, may have a steeper learning curve for users unfamiliar with graph databases.
+
+---
+
+### What is Amazon Neptune?
+
+**Amazon Neptune** is a fully managed graph database service provided by AWS. It is designed to work with both **property graph** models and **RDF (Resource Description Framework)** data models, making it suitable for applications that need to process and store highly connected datasets. Amazon Neptune is optimized for graph query languages such as **Gremlin** (for property graphs) and **SPARQL** (for RDF graphs).
+
+#### Key Features:
+- **Multi-Model Support:** Neptune supports both property graphs and RDF graphs, allowing users to choose the data model that best fits their application needs.
+- **Managed Service:** As a fully managed service, Neptune takes care of database provisioning, patching, backups, and scaling, freeing developers from managing the infrastructure.
+- **Graph Query Languages:** Neptune supports Gremlin for property graphs and SPARQL for RDF graphs, allowing users to query and traverse their data efficiently.
+- **Fault Tolerance and Replication:** Neptune automatically replicates data across multiple AWS availability zones, ensuring high availability and durability.
+- **Scalability:** Neptune can scale read operations by adding replica nodes to the cluster, making it suitable for read-intensive workloads.
+- **Integration with AWS Ecosystem:** Neptune integrates with other AWS services such as Amazon S3 for data storage, AWS Lambda for triggers, and Amazon CloudWatch for monitoring.
+
+#### Use Cases:
+- **Knowledge Graphs:** Neptune is used for building knowledge graphs, where complex relationships between entities need to be stored and queried.
+- **Social Networks:** Social media platforms use Neptune to manage user connections, followers, and relationships.
+- **Fraud Detection:** Neptune is used to detect fraud by analyzing transactional relationships and patterns in financial systems.
+- **Recommendation Systems:** By storing relationships between users and products, Neptune helps build recommendation engines for personalized suggestions.
+- **Network Topology:** Neptune is used to model and manage complex network topologies in IT infrastructure, where devices, connections, and dependencies need to be visualized and analyzed.
+
+#### Companies Using Amazon Neptune:
+- **Amazon:** Uses Neptune for product recommendation engines and knowledge graph management.
+- **Siemens:** Utilizes Neptune for managing complex industrial systems and IoT data.
+- **Samsung:** Employs Neptune to model relationships in their data for better decision-making and product recommendations.
+
+#### Advantages:
+- **Fully Managed Service:** Amazon Neptune is fully managed, so users do not need to worry about infrastructure maintenance, backups, or scaling.
+- **Multi-Model Support:** The ability to choose between property graphs and RDF graphs gives flexibility in handling different use cases.
+- **High Availability:** Neptune automatically replicates data across multiple availability zones, ensuring uptime and data durability.
+- **Seamless AWS Integration:** It integrates well with other AWS services, allowing for a complete cloud-native solution.
+
+#### Disadvantages:
+- **Cost:** Since Neptune is a fully managed service, it may be more expensive compared to self-hosted graph databases.
+- **AWS Lock-In:** As Neptune is part of the AWS ecosystem, migrating to another cloud provider or database can be challenging.
+- **Limited Customization:** Being a managed service, users may have limited control over the database configuration compared to self-hosted solutions.
+
+---
+
+### What is OrientDB?
+
+**OrientDB** is a multi-model, open-source NoSQL database that supports both graph and document models, as well as key-value and object-oriented data models. It is designed to combine the power of graph databases with the flexibility of document databases, offering a rich query language and strong ACID transaction support. OrientDB allows users to perform complex queries on graph data while storing additional details as documents within the same database.
+
+#### Key Features:
+- **Multi-Model Database:** OrientDB supports multiple data models including graph, document, key-value, and object-oriented models, allowing for flexibility in data storage and querying.
+- **ACID Transactions:** OrientDB ensures strong data consistency and supports ACID-compliant transactions, making it suitable for mission-critical applications.
+- **SQL-like Query Language:** OrientDB uses a SQL-like query language that allows users familiar with SQL to query both graph and document data easily.
+- **Schema-less and Schema-Based:** OrientDB allows users to choose between schema-less and schema-based data models, giving flexibility in defining the data structure.
+- **Distributed Architecture:** OrientDB supports horizontal scaling and replication across multiple servers, providing high availability and fault tolerance.
+- **Full-Text Search:** It includes full-text search capabilities, making it suitable for applications that require text indexing and searching across large datasets.
+
+#### Use Cases:
+- **Social Networks:** OrientDB is used to manage relationships between users, such as friendships, followers, and group memberships.
+- **Recommendation Systems:** It powers recommendation engines by identifying relationships between users, products, and behaviors.
+- **Enterprise Applications:** OrientDB is used in enterprise applications for managing complex business relationships and transactions.
+- **IoT Data Management:** It is used for storing and analyzing sensor data and the relationships between different devices in IoT systems.
+
+#### Companies Using OrientDB:
+- **Cisco:** Uses OrientDB to manage relationships and data in its network operations.
+- **Sky:** Employs OrientDB for managing user data and relationships in their streaming services.
+- **Motorola:** Uses OrientDB to manage communication networks and data from multiple devices.
+
+#### Advantages:
+- **Multi-Model Flexibility:** OrientDB combines the power of graph and document models, allowing for complex queries and rich data relationships.
+- **ACID Compliance:** Ensures strong consistency and durability, making it suitable for applications that require reliable transactions.
+- **Horizontal Scalability:** OrientDB’s distributed architecture allows it to scale across multiple servers, providing high availability and fault tolerance.
+- **SQL-like Query Language:** Familiar SQL syntax makes it easier for developers to query both graph and document data.
+
+#### Disadvantages:
+- **Complex Setup:** Configuring and managing a distributed OrientDB cluster can be complex and may require significant operational expertise.
+- **Performance Limitations:** For very large datasets, OrientDB can experience performance issues compared to more specialized graph or document databases.
+- **Limited Community Support:** While OrientDB is open-source, its community and ecosystem are smaller compared to more popular graph databases like Neo4j.
+
+---
+
+### Comparison Table
+
+| **Database**              | **Type**                 | **Use Cases**                                      | **Advantages**                                  | **Disadvantages**                               |
+|---------------------------|--------------------------|---------------------------------------------------|-------------------------------------------------|------------------------------------------------|
+| **Neo4j**                 | Graph Database            | Social Networks, Fraud Detection, Recommendation Systems | Optimized for Relationships, ACID-Compliant    | Memory Usage, Scalability Limits               |
+| **Amazon Neptune**        | Managed Graph Database    | Knowledge Graphs, Fraud Detection, Recommendation Systems | Fully Managed, Multi-Model Support, High Availability | Cost, AWS Lock-In                             |
+| **OrientDB**              | Multi-Model Database      | Social Networks, Enterprise Applications, IoT      | Multi-Model Flexibility, ACID Compliance, Scalability | Complex Setup, Limited Community Support       |
+
+---
+
 
 7. **Elasticsearch:**  
    - A distributed, RESTful search and analytics engine capable of storing and indexing large volumes of data, often used for log or event data.
 
-8. **HBase:**  
-   - A distributed, scalable NoSQL database built on top of HDFS (Hadoop Distributed File System), suitable for random, real-time read/write access to big data.
 
-9. **Amazon DocumentDB:**  
-   - A fully managed document database service that is MongoDB-compatible, designed for scaling, managing, and retrieving document data.
 
 10. **Azure Cosmos DB:**  
     - A globally distributed, multi-model NoSQL database service from Azure, supporting document, key-value, graph, and column-family data models.
 
-11. **CouchDB:**  
-    - An open-source NoSQL document database that uses JSON for documents, JavaScript for MapReduce queries, and HTTP for an API.
-
-12. **Riak:**  
-    - A distributed NoSQL key-value database designed for scalability, high availability, and fault tolerance.
 
 13. **ArangoDB:**  
     - A multi-model database that supports document, graph, and key/value data models, designed for flexibility and ease of use.
 
 14. **OrientDB:**  
     - A multi-model database that supports graph, document, key/value, and object models, making it versatile for different use cases.
-
-15. **Amazon Neptune:**  
-    - A fully managed graph database service by AWS that supports both the property graph model and RDF model, optimized for graph applications.
 
 ---
 
