@@ -12,16 +12,36 @@ NoSQL databases are generally categorized into four primary types:
 
  Each type is optimized for specific data models and use cases.
 
-## 1. Key-Value Stores
-**Description:**
+## Key-Value Stores
+
+### Description:
 
 Key-value stores are the simplest type of NoSQL databases. They store data as a collection of key-value pairs, where a unique key is associated with a value. The value can be any type of data, such as a string, JSON document, or even a binary object.
 
-**Examples:**
+### Examples:
 
-1. **Redis**
-2. **Amazon DynamoDB**
-3. **Riak**
+- **Redis**
+- **Amazon DynamoDB**
+- **Riak**
+
+### Use Cases:
+
+- **Caching**: Store frequently accessed data for quick retrieval to improve application performance.
+- **Session Management**: Manage user sessions in web applications efficiently.
+- **Real-Time Analytics**: Handle high-speed read and write operations for live data feeds.
+- **Shopping Cart Data**: Maintain shopping cart details in e-commerce platforms.
+
+### Detailed Explanation:
+
+#### Redis:
+
+- **What It Is**: An open-source, in-memory data structure store that can be used as a database, cache, and message broker.
+- **Features**: Supports various data structures like strings, hashes, lists, sets, sorted sets with range queries, bitmaps, and geospatial indexes.
+- **Use Cases**: Ideal for applications requiring rapid data access, such as leaderboards, real-time analytics, and messaging queues.
+- **Companies Using Redis**:
+  - Twitter uses Redis for caching and real-time analytics.
+  - GitHub employs it for queuing and background job processing.
+
 
 ### 1. What is Redis?
 
@@ -142,6 +162,37 @@ Key-value stores are the simplest type of NoSQL databases. They store data as a 
 | **Redis**      | Key-Value Store          | Caching, Session Management, Real-Time Analytics   | In-Memory Speed, Supports Complex Data Types    | Memory Dependent, Limited Querying             |
 | **Amazon DynamoDB** | Key-Value/Document Store | Mobile Apps, IoT Data, E-Commerce                   | Fully Managed, Auto-Scaling, Global Tables      | Costly at Scale, Limited Query Flexibility     |
 | **Riak**       | Key-Value Store          | Distributed Systems, Fault-Tolerant Applications   | High Availability, Fault Tolerance, Scalability | Eventual Consistency, Complexity               |
+
+
+## Document Databases
+
+### Description:
+
+Document databases store data in documents similar to JSON (JavaScript Object Notation) or XML formats. Each document contains semi-structured data that can vary in structure, allowing for flexibility in data modeling.
+
+### Examples:
+
+- **MongoDB**
+- **Couchbase**
+- **Amazon DocumentDB**
+
+### Use Cases:
+
+- **Content Management Systems (CMS)**: Handle unstructured content like articles, blog posts, and multimedia.
+- **User Profiles**: Store varying user data without a fixed schema.
+- **E-commerce Platforms**: Manage product catalogs where items have different attributes.
+- **Mobile Applications**: Support flexible and rapidly changing data structures.
+
+### Detailed Explanation:
+
+#### MongoDB:
+
+- **What It Is**: A cross-platform, document-oriented database program that uses JSON-like documents with optional schemas.
+- **Features**: Supports ad-hoc queries, indexing, replication, and load balancing.
+- **Use Cases**: Ideal for applications requiring high scalability and flexibility, such as content management, real-time analytics, and big data.
+- **Companies Using MongoDB**: 
+  - eBay uses it for search suggestions.
+  - Adobe employs it for content management systems.
 
 
 ### What is MongoDB?
