@@ -317,6 +317,68 @@ Document databases store data in documents similar to JSON (JavaScript Object No
 | **Amazon DocumentDB**    | Managed Document Store    | CMS, Mobile Apps, IoT, Gaming                     | Fully Managed, MongoDB-Compatible, Scalable     | Limited MongoDB Features, AWS Lock-In           |
 
 
+## 3. Column-Family Stores
+
+### Description:
+
+Column-family stores organize data into columns and column families rather than traditional rows. This allows for efficient storage and retrieval of large datasets and is particularly well-suited for distributed systems.
+
+### Examples:
+
+- **Apache Cassandra**
+- **Apache HBase**
+- **Google Bigtable**
+
+### Use Cases:
+
+- **Time-Series Data**: Store sensor data, logs, and financial transactions over time.
+- **Event Logging**: Record high volumes of events with low latency.
+- **Real-Time Analytics**: Perform quick read and write operations on massive datasets.
+- **Messaging Systems**: Handle large-scale messaging and notification systems.
+
+### Detailed Explanation:
+
+#### Apache Cassandra:
+
+- **What It Is**: An open-source, distributed NoSQL database management system designed to handle large amounts of data across many commodity servers.
+- **Features**: Offers high availability with no single point of failure, linear scalability, and fault tolerance.
+- **Use Cases**: Ideal for applications that require high write and read throughput, such as social media platforms, IoT applications, and real-time analytics.
+- **Companies Using Cassandra**: 
+  - Netflix uses it for its scalability and fault tolerance.
+  - Apple employs it to manage massive amounts of data.
+
+---
+
+## 4. Graph Databases
+
+### Description:
+
+Graph databases use graph structures with nodes, edges, and properties to represent and store data. They are designed to handle data whose relations are well represented as a graph, making them ideal for interconnected data.
+
+### Examples:
+
+- **Neo4j**
+- **Amazon Neptune**
+- **OrientDB**
+
+### Use Cases:
+
+- **Social Networks**: Model and analyze relationships between users, such as friendships and followers.
+- **Recommendation Engines**: Discover relationships between products and users for personalized recommendations.
+- **Fraud Detection**: Identify complex patterns and anomalies in transactional data.
+- **Knowledge Graphs**: Manage and query interconnected data in domains like research and development.
+
+### Detailed Explanation:
+
+#### Neo4j:
+
+- **What It Is**: An open-source graph database that uses nodes, relationships, and properties to represent and store data.
+- **Features**: Supports ACID transactions, high-availability clustering, and a declarative query language called Cypher.
+- **Use Cases**: Ideal for applications requiring complex relationship mapping, such as social networks, fraud detection systems, and recommendation engines.
+- **Companies Using Neo4j**:
+  - Walmart utilizes it for supply chain management.
+  - eBay employs it for social graph analysis.
+
 
 1. **Apache Cassandra:**  
    - A distributed NoSQL database designed for handling large amounts of data across many commodity servers, providing high availability with no single point of failure.
