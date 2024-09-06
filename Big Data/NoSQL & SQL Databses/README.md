@@ -883,6 +883,35 @@ SQL databases can be further categorized into different types of relational data
 
 ![image](https://github.com/user-attachments/assets/96f676ab-5139-42e0-a895-444b0d32e142)
 
+### What is Extensibility in PostgreSQL?
+
+**Extensibility** in PostgreSQL refers to the database's ability to be extended and customized by users beyond its built-in features. PostgreSQL allows developers to create custom functions, data types, operators, index types, and even new procedural languages to enhance its functionality. This makes PostgreSQL a highly flexible database, capable of adapting to specific application requirements.
+
+Key aspects of PostgreSQL's extensibility include:
+
+- **Custom Functions**: Developers can write custom functions in languages such as SQL, PL/pgSQL, Python, or C to perform specialized tasks.
+- **User-Defined Data Types**: PostgreSQL allows the creation of new data types that suit specific use cases.
+- **Custom Operators and Indexes**: Users can define new operators and indexing strategies for more complex queries.
+- **Procedural Languages**: Developers can add procedural languages to PostgreSQL, such as PL/Perl or PL/Python, for server-side scripting.
+
+Extensibility is a core strength of PostgreSQL, making it versatile and adaptable for a wide range of applications, from web services to scientific computing.
+
+---
+
+### What is Compliance in PostgreSQL?
+
+**Compliance** in PostgreSQL refers to the database's adherence to established standards, regulations, and best practices, ensuring data security, privacy, and operational integrity. PostgreSQL provides several features that help organizations meet legal and regulatory requirements, such as GDPR, HIPAA, or PCI-DSS.
+
+Key compliance-related features of PostgreSQL include:
+
+- **Role-Based Access Control (RBAC)**: PostgreSQL supports fine-grained access control, ensuring only authorized users can access certain data or perform specific operations.
+- **Encryption**: PostgreSQL supports encryption both at the connection level (SSL/TLS) and at the data storage level (encryption at rest) to protect sensitive information.
+- **Auditing**: PostgreSQL can integrate with third-party tools or use extensions to log access and changes to the database, which is crucial for audit trails and regulatory reporting.
+- **Data Integrity**: PostgreSQL offers strong data integrity features, such as foreign key constraints, transactional consistency (ACID compliance), and advanced backup/recovery options.
+
+By offering these features, PostgreSQL helps organizations comply with industry standards and regulatory requirements for data management.
+
+----
 
 #### Key Features:
 - **ACID Compliance:** PostgreSQL ensures reliable transactions and data integrity, making it suitable for mission-critical applications.
