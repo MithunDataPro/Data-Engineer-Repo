@@ -326,6 +326,8 @@ Column-family stores organize data into columns and column families rather than 
 
 **Apache Cassandra** is a highly scalable, distributed NoSQL database designed to handle large amounts of data across many commodity servers without a single point of failure. It is an open-source system designed to manage very large amounts of structured data spread out across many servers, providing high availability with no single point of failure.
 
+![image](https://github.com/user-attachments/assets/7fe0bac6-446d-428a-9210-418f31c394d1)
+
 #### Key Features:
 - **Distributed Architecture:** Cassandra is designed as a peer-to-peer system, where all nodes in the cluster are equal. Data is distributed across nodes, and each node communicates with others to achieve replication and fault tolerance.
 - **High Availability:** Cassandra ensures high availability and fault tolerance through its replication feature. It can replicate data across multiple data centers, ensuring there is no downtime even if a server or a data center fails.
@@ -362,6 +364,8 @@ Column-family stores organize data into columns and column families rather than 
 
 **Apache HBase** is a distributed, scalable NoSQL database that runs on top of the Hadoop Distributed File System (HDFS). It is modeled after Google Bigtable and provides a fault-tolerant way of storing large quantities of sparse data. HBase is designed to handle billions of rows and millions of columns, making it ideal for applications that require high throughput and scalability.
 
+![image](https://github.com/user-attachments/assets/0ea04965-dfa3-4409-91d5-e6dcdf5bc6d7)
+
 #### Key Features:
 - **Column-Oriented Store:** HBase stores data in a column-family format, which allows for efficient retrieval of large datasets and operations on subsets of columns.
 - **Integration with Hadoop:** Since HBase runs on top of HDFS, it integrates well with the Hadoop ecosystem, making it easy to use with tools like MapReduce, Hive, and Pig for batch processing.
@@ -397,6 +401,9 @@ Column-family stores organize data into columns and column families rather than 
 ### What is Google Bigtable?
 
 **Google Bigtable** is a fully managed, scalable NoSQL database service provided by Google Cloud. It is designed for large-scale applications and offers low-latency access to structured data. Bigtable is a high-performance database that can handle massive amounts of data, making it suitable for applications that require fast read and write operations on large datasets.
+
+![image](https://github.com/user-attachments/assets/9d5dff2e-f42d-4794-9e2d-329c6b6a02ea)
+
 
 #### Key Features:
 - **Managed Service:** Bigtable is fully managed by Google Cloud, meaning users don’t have to worry about infrastructure, scaling, or patching.
@@ -465,6 +472,8 @@ Graph databases use graph structures with nodes, edges, and properties to repres
 
 **Neo4j** is an open-source, NoSQL graph database that is designed to store and manage data in a graph format. It uses nodes, relationships, and properties to represent and store data, making it ideal for applications where the relationships between data points are as important as the data itself. Neo4j uses the **Cypher** query language, which is specifically optimized for traversing and querying graph structures.
 
+![image](https://github.com/user-attachments/assets/f3c169b4-c71d-4d2e-85d3-047da0ad7fd5)
+
 #### Key Features:
 - **Graph-Based Model:** Neo4j stores data in a graph format where entities (nodes) and their relationships (edges) are first-class citizens. This allows for efficient queries on highly connected datasets.
 - **Cypher Query Language:** Cypher is a declarative query language designed specifically for querying and updating graph structures, making it intuitive to express complex graph traversal operations.
@@ -502,6 +511,8 @@ Graph databases use graph structures with nodes, edges, and properties to repres
 
 **Amazon Neptune** is a fully managed graph database service provided by AWS. It is designed to work with both **property graph** models and **RDF (Resource Description Framework)** data models, making it suitable for applications that need to process and store highly connected datasets. Amazon Neptune is optimized for graph query languages such as **Gremlin** (for property graphs) and **SPARQL** (for RDF graphs).
 
+![image](https://github.com/user-attachments/assets/79461cc2-51b4-49e1-9bcf-36cc67bc7ba9)
+
 #### Key Features:
 - **Multi-Model Support:** Neptune supports both property graphs and RDF graphs, allowing users to choose the data model that best fits their application needs.
 - **Managed Service:** As a fully managed service, Neptune takes care of database provisioning, patching, backups, and scaling, freeing developers from managing the infrastructure.
@@ -538,6 +549,8 @@ Graph databases use graph structures with nodes, edges, and properties to repres
 ### What is OrientDB?
 
 **OrientDB** is a multi-model, open-source NoSQL database that supports both graph and document models, as well as key-value and object-oriented data models. It is designed to combine the power of graph databases with the flexibility of document databases, offering a rich query language and strong ACID transaction support. OrientDB allows users to perform complex queries on graph data while storing additional details as documents within the same database.
+
+![image](https://github.com/user-attachments/assets/415c291d-7db4-4bed-a723-d332da41a7d4)
 
 #### Key Features:
 - **Multi-Model Database:** OrientDB supports multiple data models including graph, document, key-value, and object-oriented models, allowing for flexibility in data storage and querying.
