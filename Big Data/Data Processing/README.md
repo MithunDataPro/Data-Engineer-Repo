@@ -104,19 +104,136 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 
 ---
 
-### 2. **Apache Spark**
-- **Description:** Apache Spark is an open-source, fast, in-memory data processing engine designed for large-scale data processing. It supports batch processing, real-time streaming, and machine learning workloads.
-- **Actions:** Data processing, real-time stream processing, transformation, machine learning, and analytics.
-- **Use Case:** Real-time data processing, ETL, machine learning, and big data analytics.
-
-![image](https://github.com/user-attachments/assets/1ecf4b70-1aa8-49a1-977c-488397199553)
+# Apache Spark, Apache Flink, and Apache Airflow
 
 ---
 
-### 3. **Apache Flink**
-- **Description:** Apache Flink is a stream processing framework that supports both batch and real-time stream processing. It provides exactly-once semantics and is designed for low-latency and high-throughput processing.
-- **Actions:** Real-time stream processing, batch processing, data transformation, data analytics.
-- **Use Case:** Real-time event processing, fraud detection, data enrichment, and anomaly detection.
+## 1. **What is Apache Spark?**
+
+**Apache Spark** is an open-source, distributed, general-purpose cluster-computing framework for large-scale data processing. Spark is designed to perform both batch processing and real-time stream processing, making it highly versatile for various data-intensive applications.
+
+### Key Features:
+- **In-Memory Processing:** Spark performs computations in memory, which dramatically speeds up data processing compared to disk-based systems like Hadoop MapReduce.
+- **Unified Engine:** Spark provides a unified framework for processing batch and streaming data, machine learning, and graph processing.
+- **Fault Tolerance:** Spark automatically recovers from failures by using RDD (Resilient Distributed Datasets) to track lineage and recompute lost data.
+- **Lazy Evaluation:** Spark delays the execution of tasks until an action (e.g., count, collect) is called, optimizing the entire computation process.
+
+### Components of Spark:
+1. **Spark Core:**
+   - Responsible for basic I/O functions, distributed task scheduling, memory management, and fault recovery.
+   - Implements RDDs (Resilient Distributed Datasets), Spark’s fundamental data structure that allows parallel processing.
+
+2. **Spark SQL:**
+   - Provides a module for structured data processing. It allows querying data using SQL and seamlessly integrates with Spark's API.
+   - Supports SQL queries, data transformations, and interaction with structured data formats such as JSON, Avro, and Parquet.
+
+3. **Spark Streaming:**
+   - Enables real-time data stream processing and supports processing in near real-time by dividing the stream into micro-batches.
+   - Integrates with systems like Apache Kafka, Amazon Kinesis, and HDFS.
+
+4. **MLlib (Machine Learning Library):**
+   - A scalable machine learning library that provides algorithms for classification, regression, clustering, collaborative filtering, and more.
+
+5. **GraphX:**
+   - A library for processing and analyzing large-scale graph data. It enables running graph algorithms on distributed datasets.
+
+### Apache Spark Architecture:
+
+![Spark Architecture](https://www.databricks.com/sites/default/files/inline-images/spark_architecture_diagram.png)
+
+### Spark Architecture Overview:
+- **Driver Program:** The driver is the main control point where the Spark application runs. It translates user code into jobs that are executed on the cluster.
+- **Cluster Manager:** Spark supports different cluster managers, such as **YARN**, **Mesos**, or its standalone cluster manager. The cluster manager allocates resources to Spark applications.
+- **Executors:** Executors are worker processes launched on each node in the cluster. They execute tasks and store data in memory or disk as needed.
+- **Tasks:** Tasks are the smallest unit of work sent to executors by the driver. They are executed in parallel across the cluster.
+
+### Use Cases:
+- **Batch Processing:** Processing large datasets in a distributed manner.
+- **Real-Time Stream Processing:** Near real-time analytics of data streams like log monitoring and fraud detection.
+- **Machine Learning:** Distributed training and evaluation of machine learning models.
+- **ETL Pipelines:** Extract, transform, and load operations at scale.
+
+---
+
+## 2. **What is Apache Flink?**
+
+**Apache Flink** is an open-source, stream-processing framework for distributed, high-performing, and fault-tolerant data processing. Flink supports both real-time stream processing and batch processing but is optimized for stream processing with low-latency and stateful computations.
+
+### Key Features:
+- **Stream Processing First:** Unlike Spark, Flink is designed with stream processing as its core feature and handles real-time data processing natively.
+- **Event-Time Processing:** Flink supports event-time processing, which ensures that streams are processed based on the actual event times rather than the system clock.
+- **Exactly-Once Semantics:** Provides strong guarantees for state consistency with exactly-once semantics, which ensures that data is processed exactly once, even in the case of failures.
+- **Stateful Processing:** Flink can maintain state in the streaming applications, allowing users to perform stateful computations over data streams.
+
+### Components of Flink:
+1. **DataStream API:**
+   - For working with streams of data (real-time processing). It supports transformations like filtering, mapping, windowing, and joining on streams.
+   
+2. **DataSet API:**
+   - For processing batch data (offline processing). It supports various transformations like grouping, reducing, joining, and sorting.
+   
+3. **Flink Table API and SQL:**
+   - Provides an abstraction for batch and stream processing using relational queries via SQL.
+
+4. **State Backends:** 
+   - Flink allows storing states in external systems such as RocksDB, providing fault-tolerance by writing state snapshots to distributed storage.
+
+### Apache Flink Architecture:
+
+![Flink Architecture](https://nightlies.apache.org/flink/flink-docs-release-1.13/fig/job_submission.png)
+
+### Flink Architecture Overview:
+- **Job Manager:** Responsible for scheduling tasks, managing fault tolerance, and resource management. It coordinates the execution of a Flink job by distributing tasks across worker nodes.
+- **Task Manager:** These are the worker nodes in a Flink cluster. Each task manager runs multiple parallel tasks and manages the data flow between them.
+- **Job Graph & Execution Graph:** The user's program is first converted to a Job Graph, which is then converted to an Execution Graph for execution on the cluster.
+- **State Management:** Flink stores the state of streaming computations in a fault-tolerant manner, ensuring that applications can recover from failures.
+
+### Use Cases:
+- **Real-Time Analytics:** Real-time event processing in applications such as fraud detection, social media analytics, and monitoring.
+- **Stream Processing:** Processing continuous streams of data from IoT devices or web applications.
+- **Batch Processing:** Traditional ETL workflows, though Flink is more specialized for stream processing.
+- **Complex Event Processing:** Building event-driven applications based on event patterns.
+
+---
+
+## 3. **What is Apache Airflow?**
+
+**Apache Airflow** is an open-source workflow automation and scheduling tool for managing complex data pipelines. It allows users to programmatically author, schedule, and monitor workflows as Directed Acyclic Graphs (DAGs).
+
+### Key Features:
+- **DAG-Based Workflows:** Airflow represents workflows as Directed Acyclic Graphs (DAGs), where nodes represent individual tasks, and edges represent task dependencies.
+- **Scheduling:** Airflow allows scheduling of workflows at specific intervals (e.g., daily, hourly). It offers a robust mechanism to trigger and manage workflows.
+- **Dynamic Workflows:** Airflow workflows are defined in Python code, allowing for highly dynamic and programmatically generated workflows.
+- **Monitoring:** Airflow provides a user-friendly web UI to monitor the status of workflows, view logs, and rerun tasks in case of failure.
+- **Extensible:** Airflow integrates with multiple services, including AWS, GCP, Hadoop, and external databases.
+
+### Apache Airflow Architecture:
+
+![Airflow Architecture](https://airflow.apache.org/docs/apache-airflow/stable/_images/arch_diagram.png)
+
+### Airflow Architecture Overview:
+- **Scheduler:** The scheduler is responsible for scheduling DAGs and assigning tasks to be executed at the appropriate time based on the DAG definition and task dependencies.
+- **Worker:** Workers execute the tasks defined in the DAGs. Airflow uses a distributed architecture, so tasks can be executed across a cluster of machines.
+- **DAGs (Directed Acyclic Graphs):** DAGs define the sequence of tasks in a workflow, ensuring that tasks are executed in the correct order.
+- **Metadata Database:** Airflow uses a relational database to store metadata about the DAGs, including execution logs, task status, and historical data.
+- **Web Server:** The web server provides a user interface for monitoring and managing workflows, viewing logs, and handling DAG failures.
+- **Executor:** Airflow uses an executor to run tasks, which can be configured to run locally, on a Celery cluster, or using Kubernetes.
+
+### Use Cases:
+- **ETL Workflows:** Scheduling and orchestrating data ingestion, transformation, and loading (ETL) pipelines.
+- **Data Pipeline Automation:** Automating complex data workflows across various systems.
+- **Machine Learning Pipelines:** Scheduling and managing end-to-end machine learning workflows, from data collection to model deployment.
+- **Data Monitoring:** Monitoring tasks such as data validation, log aggregation, and error alerting.
+
+---
+
+# Summary Table of Actions:
+
+| **Tool**      | **Processing Type**              | **Actions Performed**                                   |
+|---------------|----------------------------------|--------------------------------------------------------|
+| **Apache Spark** | Batch and Stream Processing       | Data processing, transformation, real-time analytics, machine learning |
+| **Apache Flink** | Real-Time Stream Processing       | Stream and batch processing, event-time processing, stateful computations |
+| **Apache Airflow** | Workflow Scheduling & Orchestration | Workflow orchestration, ETL automation, DAG-based task scheduling |
 
 ---
 
@@ -201,13 +318,6 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 - **Description:** Cascading is a Java-based framework that abstracts complex MapReduce jobs and simplifies the creation of data workflows on Hadoop.
 - **Actions:** Data transformation, orchestration, batch processing.
 - **Use Case:** Building ETL workflows, data aggregation, and large-scale data transformations on Hadoop.
-
----
-
-### 16. **Apache Airflow**
-- **Description:** Apache Airflow is an open-source workflow orchestration tool used to programmatically author, schedule, and monitor workflows. It is used to orchestrate complex data pipelines.
-- **Actions:** Workflow orchestration, scheduling, data pipeline automation.
-- **Use Case:** Scheduling and automating ETL pipelines, machine learning workflows, data processing jobs.
 
 ---
 
