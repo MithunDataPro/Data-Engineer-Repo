@@ -112,6 +112,8 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 
 **Apache Spark** is an open-source, distributed, general-purpose cluster-computing framework for large-scale data processing. Spark is designed to perform both batch processing and real-time stream processing, making it highly versatile for various data-intensive applications.
 
+![image](https://github.com/user-attachments/assets/122ed221-a2a5-47bf-b310-f57ed639413d)
+
 ### Key Features:
 - **In-Memory Processing:** Spark performs computations in memory, which dramatically speeds up data processing compared to disk-based systems like Hadoop MapReduce.
 - **Unified Engine:** Spark provides a unified framework for processing batch and streaming data, machine learning, and graph processing.
@@ -139,7 +141,12 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 
 ### Apache Spark Architecture:
 
-![Spark Architecture](https://www.databricks.com/sites/default/files/inline-images/spark_architecture_diagram.png)
+![image](https://github.com/user-attachments/assets/999f96fe-bb41-40f6-9f91-6628c601ce60)
+
+---
+
+![image](https://github.com/user-attachments/assets/80f7a62b-1114-46be-be46-8720b7afa91b)
+
 
 ### Spark Architecture Overview:
 - **Driver Program:** The driver is the main control point where the Spark application runs. It translates user code into jobs that are executed on the cluster.
@@ -158,6 +165,8 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 ## 2. **What is Apache Flink?**
 
 **Apache Flink** is an open-source, stream-processing framework for distributed, high-performing, and fault-tolerant data processing. Flink supports both real-time stream processing and batch processing but is optimized for stream processing with low-latency and stateful computations.
+
+![image](https://github.com/user-attachments/assets/0a605eb3-0a64-482c-a759-ece9f89b613c)
 
 ### Key Features:
 - **Stream Processing First:** Unlike Spark, Flink is designed with stream processing as its core feature and handles real-time data processing natively.
@@ -180,7 +189,14 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 
 ### Apache Flink Architecture:
 
-![Flink Architecture](https://nightlies.apache.org/flink/flink-docs-release-1.13/fig/job_submission.png)
+![image](https://github.com/user-attachments/assets/222a3682-1917-4ff2-8d32-42856ac12935)
+
+
+---
+
+![image](https://github.com/user-attachments/assets/0208f73f-000a-458f-b6fb-b2f73960527a)
+
+---
 
 ### Flink Architecture Overview:
 - **Job Manager:** Responsible for scheduling tasks, managing fault tolerance, and resource management. It coordinates the execution of a Flink job by distributing tasks across worker nodes.
@@ -200,6 +216,8 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 
 **Apache Airflow** is an open-source workflow automation and scheduling tool for managing complex data pipelines. It allows users to programmatically author, schedule, and monitor workflows as Directed Acyclic Graphs (DAGs).
 
+![image](https://github.com/user-attachments/assets/872ef6d1-2fed-40dc-ac05-21589c1da062)
+
 ### Key Features:
 - **DAG-Based Workflows:** Airflow represents workflows as Directed Acyclic Graphs (DAGs), where nodes represent individual tasks, and edges represent task dependencies.
 - **Scheduling:** Airflow allows scheduling of workflows at specific intervals (e.g., daily, hourly). It offers a robust mechanism to trigger and manage workflows.
@@ -209,7 +227,12 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 
 ### Apache Airflow Architecture:
 
-![Airflow Architecture](https://airflow.apache.org/docs/apache-airflow/stable/_images/arch_diagram.png)
+![image](https://github.com/user-attachments/assets/0a924836-5961-4aa1-bd40-255e0a247b4e)
+
+---
+
+![image](https://github.com/user-attachments/assets/3e55772b-4aaf-4005-b820-f5ec2779a839)
+
 
 ### Airflow Architecture Overview:
 - **Scheduler:** The scheduler is responsible for scheduling DAGs and assigning tasks to be executed at the appropriate time based on the DAG definition and task dependencies.
