@@ -269,15 +269,21 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 ### What is Apache Storm?
 **Apache Storm** is a distributed real-time computation system that processes streams of data. It is designed for processing large amounts of data in real-time with low latency.
 
+![image](https://github.com/user-attachments/assets/23c54b54-e996-4af4-9237-6c29a64c0296)
+
 ### How It Works:
 Apache Storm processes unbounded streams of data using topologies. A topology is a network of spouts and bolts:
 - **Spouts** are data sources that emit data streams.
 - **Bolts** consume those streams and perform processing such as filtering, aggregation, and transformation.
 
+![image](https://github.com/user-attachments/assets/a901ddcd-ae2a-4ae3-b565-c57f00f8853e)
+
 ### Architecture:
 - **Nimbus:** Coordinates the cluster and manages task assignment.
 - **Supervisors:** Run on worker nodes, managing task execution.
 - **ZooKeeper:** Coordinates between Nimbus and Supervisors.
+
+![image](https://github.com/user-attachments/assets/eca358a6-bc5c-438f-af0d-d1aa8c700d77)
 
 ### Use Cases:
 - Real-time analytics, log processing, fraud detection, and event stream processing.
