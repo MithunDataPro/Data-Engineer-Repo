@@ -79,6 +79,9 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 - **Parallel Processing:** Hadoop processes data in parallel across multiple nodes, leading to high efficiency and fast processing of large datasets.
 - **Data Variety:** Hadoop can handle a wide variety of data formats such as structured, semi-structured, and unstructured data.
 
+### Apache Hadoop Eco-System
+![Uploading image.png…]()
+
 ### Use Cases:
 - **Big Data Analytics:** Hadoop is widely used for processing big data in industries such as finance, healthcare, retail, and technology.
 - **Data Warehousing:** Organizations use Hadoop for storing vast amounts of data in a cost-effective manner and performing batch processing.
@@ -304,14 +307,22 @@ Apache Storm processes unbounded streams of data using topologies. A topology is
 ### What is Apache Beam?
 **Apache Beam** is a unified programming model for batch and stream data processing. It allows developers to write data processing pipelines that can run on multiple backends like Apache Flink, Spark, and Google Cloud Dataflow.
 
+![image](https://github.com/user-attachments/assets/25b40b58-f240-4853-a0a3-be2bf14fbf3c)
+
 ### How It Works:
 Beam provides an API to write batch or stream processing jobs. These jobs are then executed on a Beam-supported engine. It separates pipeline creation from execution.
+
+![image](https://github.com/user-attachments/assets/dedf6e9c-de4a-4b89-9395-43e3d59e859a)
 
 ### Architecture:
 - **Pipeline:** Represents the data flow.
 - **PCollections:** Distributed datasets that flow through the pipeline.
 - **Transforms:** Processing steps that modify PCollections.
 - **Runners:** Translate the Beam pipeline to the specific data processing engine like Flink or Spark.
+
+![image](https://github.com/user-attachments/assets/e593a539-b4e7-428d-9d88-fecf58b1f866)
+
+![image](https://github.com/user-attachments/assets/ed9c0907-a714-4b31-a6b4-99d71577193a)
 
 ### Use Cases:
 - Data ingestion, ETL pipelines, real-time analytics, and machine learning workflows.
@@ -332,13 +343,19 @@ Beam provides an API to write batch or stream processing jobs. These jobs are th
 ### What is Apache Pig?
 **Apache Pig** is a high-level platform for creating MapReduce programs on Apache Hadoop. It simplifies the process of coding complex data transformations using a scripting language called Pig Latin.
 
+![image](https://github.com/user-attachments/assets/a9927db4-f7b2-421f-8acb-913acb3d9bde)
+
 ### How It Works:
 Pig scripts are converted into MapReduce jobs that run on a Hadoop cluster. Pig is designed to handle both structured and unstructured data.
+
+![image](https://github.com/user-attachments/assets/2f13ef21-fb9c-4129-bdb3-9ef61a1a4b68)
 
 ### Architecture:
 - **Pig Latin Scripts:** Define data flow and transformation steps.
 - **Pig Compiler:** Converts Pig Latin scripts into MapReduce jobs.
 - **Hadoop MapReduce:** Executes the tasks defined by Pig.
+
+![image](https://github.com/user-attachments/assets/25bbc8d5-18eb-40a1-9dd8-cbe3e019fa70)
 
 ### Use Cases:
 - Data transformation, ETL, log analysis, and data aggregation.
