@@ -374,14 +374,22 @@ Pig scripts are converted into MapReduce jobs that run on a Hadoop cluster. Pig 
 ### What is Cascading?
 **Cascading** is an abstraction layer for building data processing applications on Hadoop. It provides a Java API that simplifies building complex ETL workflows and data processing jobs.
 
+![image](https://github.com/user-attachments/assets/1f0da37b-d20d-47e2-b86b-a3d97ba34ba7)
+
+![image](https://github.com/user-attachments/assets/1c79e2fb-b992-4a6a-aba3-bd4c1518294b)
+
+
 ### How It Works:
 Cascading allows developers to create data processing flows in Java without directly writing MapReduce jobs.
 
+![image](https://github.com/user-attachments/assets/76405050-e499-4f7c-9c93-5d05634a7952)
 ### Architecture:
 - **Flow API:** Used to define the steps in a data pipeline.
 - **Tap:** Represents data sources and sinks.
 - **Pipe:** Represents data transformations.
 - **Flow Planner:** Converts the flow to Hadoop jobs.
+
+![image](https://github.com/user-attachments/assets/e353a68a-1564-49cd-93ee-f584f1e96505)
 
 ### Use Cases:
 - Building ETL pipelines, data transformation workflows, and data aggregation.
@@ -402,8 +410,15 @@ Cascading allows developers to create data processing flows in Java without dire
 ### What is Google Cloud Dataflow?
 **Google Cloud Dataflow** is a fully managed service for real-time stream and batch data processing. It is based on Apache Beam and supports high-scale data pipeline execution.
 
+![image](https://github.com/user-attachments/assets/95c281cd-5d02-445a-affb-c847f969f9b1)
+
+
 ### How It Works:
 Users define pipelines in Apache Beam, and Cloud Dataflow executes them with autoscaling and fault tolerance on Google Cloud.
+
+![image](https://github.com/user-attachments/assets/0a0b2072-3eec-4acb-ae4b-b494de0b0477)
+
+![image](https://github.com/user-attachments/assets/7b3de78b-b0e7-4be8-86eb-e0ae97e14ea5)
 
 ### Architecture:
 - **Dataflow Pipelines:** Define the stages of data processing.
@@ -429,16 +444,25 @@ Users define pipelines in Apache Beam, and Cloud Dataflow executes them with aut
 ### What is AWS Glue?
 **AWS Glue** is a fully managed ETL service that helps discover, prepare, and transform data for analytics. It automates the process of data preparation and data integration across various sources.
 
+![image](https://github.com/user-attachments/assets/10926ccf-0c45-40cb-979e-e7f7d52797bc)
+
 ### How It Works:
 Glue consists of a catalog to store metadata and a scheduler to run ETL jobs. Developers can write ETL scripts using PySpark or a visual editor.
+
+![image](https://github.com/user-attachments/assets/87a4aa6a-2e93-4a83-819a-1274f19694bb)
+
 
 ### Architecture:
 - **Glue Catalog:** Central repository for metadata and schemas.
 - **ETL Jobs:** Define how data is extracted, transformed, and loaded.
 - **Glue Scheduler:** Automates job execution at scheduled intervals.
 
+  ![image](https://github.com/user-attachments/assets/d660210c-ad9d-4e13-8159-756a14d941f5)
+
 ### Use Cases:
 - Data lake creation, ETL jobs, and data pipeline orchestration.
+
+![image](https://github.com/user-attachments/assets/14110824-7462-4ef2-841e-1b361112f766)
 
 ### Industries:
 - E-commerce, media, finance, and technology.
@@ -456,14 +480,22 @@ Glue consists of a catalog to store metadata and a scheduler to run ETL jobs. De
 ### What is Azure Data Factory?
 **Azure Data Factory** is a cloud-based ETL service that enables you to create data pipelines for ingesting, transforming, and loading data at scale.
 
+![image](https://github.com/user-attachments/assets/34ad7664-0f26-4a51-9705-3e2f05c0edcb)
+
 ### How It Works:
 ADF allows you to design workflows via a graphical interface or programmatically using Python or .NET. It integrates with various data sources for ingestion and transformation.
+
+![image](https://github.com/user-attachments/assets/1124174a-625c-4613-b252-988a36301240)
+
+![image](https://github.com/user-attachments/assets/727f2474-c34e-4b29-9a93-306733dbd753)
 
 ### Architecture:
 - **Pipelines:** Series of activities for data ingestion and transformation.
 - **Linked Services:** Define data source connections.
 - **Data Flows:** Visual interface for transforming data.
 - **Triggers:** Schedule pipeline executions.
+
+![image](https://github.com/user-attachments/assets/b1ac179e-b81d-4f25-bab8-92865d6cdc16)
 
 ### Use Cases:
 - Cloud-native ETL workflows, data migration, and hybrid data integration.
@@ -484,14 +516,20 @@ ADF allows you to design workflows via a graphical interface or programmatically
 ### What is Kafka Streams?
 **Kafka Streams** is a lightweight Java library for processing real-time data streams from Apache Kafka. It allows developers to build scalable, fault-tolerant stream processing applications.
 
+![image](https://github.com/user-attachments/assets/70915331-a9d9-4c8d-aae6-e31fe39d1151)
+
 ### How It Works:
 Kafka Streams processes data directly from Kafka topics and can perform operations like filtering, aggregating, and joining streams.
+
+![image](https://github.com/user-attachments/assets/cfa5cdc1-6784-4f87-a08b-ee35df37d240)
 
 ### Architecture:
 - **Kafka Topics:** Data source.
 - **Streams Processor:** Transforms the data.
 - **State Store:** Stores stateful computations.
 - **Task:** A unit of parallelism.
+
+![image](https://github.com/user-attachments/assets/e8296693-ecc3-4ffe-9ddc-45b622f1fe4e)
 
 ### Use Cases:
 - Real-time analytics, monitoring, fraud detection.
@@ -512,14 +550,20 @@ Kafka Streams processes data directly from Kafka topics and can perform operatio
 ### What is Apache NiFi?
 **Apache NiFi** is a data integration tool designed to automate the flow of data between systems. It offers a drag-and-drop interface for building data pipelines.
 
+![image](https://github.com/user-attachments/assets/38cc9eaf-1b87-4c17-ad7e-ca9452c578d1)
+
 ### How It Works:
 NiFi allows you to create directed graphs of data routing, transformation, and system mediation logic. It handles real-time and batch data ingestion.
+
+![image](https://github.com/user-attachments/assets/e6b05e3e-94ca-4b11-a7dd-a8c83df07201)
 
 ### Architecture:
 - **FlowFile:** Represents the data.
 - **Processor:** Performs data transformation.
 - **Connection:** Routes FlowFiles between processors.
 - **Controller Services:** Manage external resources like databases.
+
+![image](https://github.com/user-attachments/assets/01d3cfd2-b35a-4be4-9433-e3ab6317ed4e)
 
 ### Use Cases:
 - IoT data collection, ETL, real-time data flow, data ingestion.
@@ -540,8 +584,12 @@ NiFi allows you to create directed graphs of data routing, transformation, and s
 ### What is Presto?
 **Presto** (now known as **Trino**) is a distributed SQL query engine for running interactive analytic queries against large datasets across multiple data sources, including Hadoop, Amazon S3, and relational databases.
 
+![image](https://github.com/user-attachments/assets/ec3f6946-09ef-4a7e-9064-83e00fd7a66a)
+
 ### How It Works:
 Presto runs SQL queries across different storage systems using a massively parallel processing architecture. It doesn’t store data itself but queries data in place.
+
+![image](https://github.com/user-attachments/assets/4d7b8542-08cf-4f7a-8907-c0b5d50022f0)
 
 ### Architecture:
 - **Coordinator:** Manages queries and distributes tasks.
@@ -566,8 +614,12 @@ Presto runs SQL queries across different storage systems using a massively paral
 ### What is Dask?
 **Dask** is a parallel computing library in Python that scales Python workflows from single machines to large clusters. It is commonly used for scaling data science tasks and parallel data processing.
 
+![image](https://github.com/user-attachments/assets/a93dc9e2-6f4c-4411-a07a-43fdcfd45801)
+
 ### How It Works:
 Dask breaks tasks into smaller chunks and distributes them across multiple CPU cores or cluster nodes. It integrates seamlessly with libraries like Pandas and NumPy.
+
+![image](https://github.com/user-attachments/assets/25301548-08bd-4c85-a9ab-8971959a6df5)
 
 ### Architecture:
 - **Dask Scheduler:** Distributes tasks across workers.
@@ -592,6 +644,8 @@ Dask breaks tasks into smaller chunks and distributes them across multiple CPU c
 
 ### What is Flink SQL?
 **Flink SQL** is a feature of Apache Flink that allows users to process both streaming and batch data using SQL queries. It supports querying real-time data streams, making it suitable for analytics and ETL.
+
+![image](https://github.com/user-attachments/assets/cedf9202-76eb-466c-a060-c344d59860f2)
 
 ### How It Works:
 Flink SQL provides a SQL interface for real-time data processing by translating SQL queries into Flink jobs. It supports complex event processing, aggregation, and joins.
@@ -620,6 +674,8 @@ Flink SQL provides a SQL interface for real-time data processing by translating 
 ### What is Apache Drill?
 **Apache Drill** is a distributed SQL query engine designed for big data exploration. It allows users to query multiple data sources (e.g., Hadoop, NoSQL, cloud storage) using SQL without predefined schemas.
 
+![image](https://github.com/user-attachments/assets/7a29c5e6-c2ed-417c-9059-5818436b8069)
+
 ### How It Works:
 Drill supports schema-free querying, allowing users to query data from heterogeneous data sources without needing a defined schema.
 
@@ -646,6 +702,8 @@ Drill supports schema-free querying, allowing users to query data from heterogen
 
 ### What is StreamSets?
 **StreamSets** is a data integration platform for building continuous data pipelines. It provides real-time data flow management and monitoring capabilities.
+
+![image](https://github.com/user-attachments/assets/0a837a37-671a-4891-9023-fec515552a40)
 
 ### How It Works:
 StreamSets allows you to build data pipelines via a graphical interface, automate ingestion from multiple sources, and monitor data flows in real-time.
