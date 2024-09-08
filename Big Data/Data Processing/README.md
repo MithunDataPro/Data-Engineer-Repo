@@ -12,9 +12,7 @@ The typical stages of data processing include:
 
 Data processing can be manual, automated, or a combination of both, depending on the complexity and size of the data.
 
-![image](https://github.com/user-attachments/assets/f741082f-2324-46d3-a08d-852558dda807)      ![image](https://github.com/user-attachments/assets/50ce8268-b201-44ab-bb15-8674e67cbf3f)
-
-
+![image](https://github.com/user-attachments/assets/f741082f-2324-46d3-a08d-852558dda807)     
 
 ---
 
@@ -80,7 +78,7 @@ Hadoop is primarily known for its capability to handle big data. It breaks down 
 - **Data Variety:** Hadoop can handle a wide variety of data formats such as structured, semi-structured, and unstructured data.
 
 ### Apache Hadoop Eco-System
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/0586ca6d-76ee-4f4f-b774-4b25b912ccb9)
 
 ### Use Cases:
 - **Big Data Analytics:** Hadoop is widely used for processing big data in industries such as finance, healthcare, retail, and technology.
