@@ -73,13 +73,16 @@ Let’s analyze these keywords:
 NiFi is useful in scenarios where data flows need to be routed, validated, transformed, and enriched before being sent to multiple destinations. Key scenarios include handling a high variety of data sources, cleaning untrusted data, and managing different data schema. NiFi is especially suited for handling the four Vs of Big Data:
 
 - #### 1. **Volume —**:
-                  At what scale do you operate? In order of magnitude, are you closer to a few GigaBytes or hundreds of PetaBytes?
-- ### 2. **Variety —**:
-                       How many data sources do you have? Are your data structured? If yes, does the schema vary often?
-- ### 3. **Velocity —**:
-                        What is the frequency of the events you process? Is it credit cards payments? Is it a daily performance report sent by an IoT device?
-- ### 4. **Veracity —**:
-                         Can you trust the data? Alternatively, do you need to apply multiple cleaning operations before manipulating it?
+   At what scale do you operate? In order of magnitude, are you closer to a few GigaBytes or hundreds of PetaBytes?
+  
+- #### 2. **Variety —**:
+   How many data sources do you have? Are your data structured? If yes, does the schema vary often?
+
+- #### 3. **Velocity —**:
+   What is the frequency of the events you process? Is it credit card payments? Is it a daily performance report sent by an IoT device?
+
+- #### 4. **Veracity —**:
+   Can you trust the data? Alternatively, do you need to apply multiple cleaning operations before manipulating it?
 
 ![image](https://github.com/user-attachments/assets/f1c866a1-db2e-4980-a86d-0eaceb92e2de)
 
