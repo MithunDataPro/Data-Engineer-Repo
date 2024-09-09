@@ -171,4 +171,113 @@ cd /path/to/directory
 ```
 ---
 
+## Resources:
+- [Apple Developer](https://developer.apple.com/macos/) – Official macOS development resources.
+- [Homebrew](https://brew.sh) – Package manager for macOS.
+- [MacOS Terminal Commands Cheat Sheet](https://ss64.com/osx/) – Command line resources for macOS.
 
+---
+
+## 4. Other Operating Systems
+
+While **Linux**, **Windows**, and **macOS** are the most commonly used operating systems for data engineers, a few other OS platforms are worth mentioning:
+
+### **FreeBSD**
+- **Description:** Unix-like OS known for its performance, networking, and advanced security features.
+- **Use Case:** Used in highly secure and performance-oriented environments.
+- **More Info:** [FreeBSD Official Site](https://www.freebsd.org/)
+
+### **Solaris**
+- **Description:** A Unix operating system originally developed by Sun Microsystems, known for scalability and advanced filesystem (ZFS).
+- **Use Case:** Often used in enterprise environments that require large-scale data processing systems.
+- **More Info:** [Oracle Solaris](https://www.oracle.com/solaris/)
+
+### **Unix**
+- **Description:** The foundation of many modern operating systems (including Linux and macOS).
+- **Use Case:** Still used in older legacy systems but less common in modern data engineering.
+- **More Info:** [Unix.org](http://www.unix.org/)
+
+---
+
+## 5. How Data Engineers Use Operating Systems in Real-Time
+
+Data engineers and big data engineers rely on different operating systems based on specific tasks. Here’s how they use OSes in real-time scenarios:
+
+### **Linux**:
+- **Cluster Management:** Engineers run Hadoop, Spark, Kafka, and other big data services on Linux-based clusters.
+- **Scripting and Automation:** Bash scripting to automate ETL processes, monitoring, and job scheduling.
+- **Data Pipeline Deployment:** Linux is the primary OS for deploying and managing large-scale data pipelines in cloud environments like AWS and Google Cloud.
+
+### **Windows**:
+- **Data Analysis:** Engineers use tools like **Power BI** and **Excel** to analyze data.
+- **Development:** Windows Subsystem for Linux (WSL) enables developers to use Linux tools in a Windows environment.
+- **SQL Server:** SQL Server Management Studio (SSMS) is widely used by data engineers to manage SQL Server databases.
+
+### **macOS**:
+- **Development:** Data engineers use macOS for developing and testing data pipelines in Python, R, or Java.
+- **Cloud Deployment:** Engineers frequently connect to cloud services (AWS, GCP, Azure) from macOS for deployment tasks.
+- **Command-Line Tools:** Similar to Linux, macOS’s Unix-based terminal is frequently used for scripting and automation.
+
+---
+
+## 6. Useful Commands for Data Engineers
+
+### **Linux & macOS:**
+```bash
+# List running Hadoop jobs (example)
+hadoop job -list
+
+# Start/Stop a Hadoop service
+start-dfs.sh
+stop-dfs.sh
+
+# Submit a Spark job
+spark-submit --class MainClass --master yarn --deploy-mode cluster app.jar
+
+# Transfer files to/from a remote server
+scp file.txt user@server:/path/to/remote
+scp user@server:/path/to/remote/file.txt /local/path
+
+```
+---
+
+### **Windows (PowerShell):**
+'''PowerShell
+
+# Run a SQL query in SQL Server
+Invoke-Sqlcmd -Query "SELECT * FROM TableName" -ServerInstance "Server\Instance"
+
+# Schedule a batch file to run at a specific time using Task Scheduler
+schtasks /create /tn "MyTask" /tr "C:\path\to\script.bat" /sc daily /st 00:00
+
+```
+
+---
+
+## 7. Resources for Learning More
+
+### **Linux:**
+- [The Linux Documentation Project](https://www.tldp.org/)
+- [Ubuntu Tutorials](https://ubuntu.com/tutorials)
+
+### **Windows:**
+- [Windows Command Line Documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
+- [Windows Subsystem for Linux (WSL) Documentation](https://docs.microsoft.com/en-us/windows/wsl/)
+
+### **macOS:**
+- [MacOS Terminal Commands](https://ss64.com/osx/)
+
+### **General Data Engineering:**
+- [Data Engineering on GCP](https://cloud.google.com/certification/guides/professional-data-engineer)
+- [AWS Big Data Resources](https://aws.amazon.com/big-data/)
+```
+---
+
+
+This Markdown content outlines the necessary resources, other operating systems relevant to data engineers, real-time usage of operating systems by data engineers, and useful commands for **Linux** and **macOS**.
+
+
+# By:
+
+**Mithun Dama**
+**Senior Big Data Engineer**
