@@ -728,6 +728,187 @@ StreamSets allows you to build data pipelines via a graphical interface, automat
 
 ---
 
+## 15. Hive
+**Description:**  
+Apache Hive is a data warehousing tool built on top of Hadoop that provides a SQL-like interface to query data stored in Hadoop’s HDFS. It allows users to read, write, and manage large datasets residing in distributed storage using SQL.
+
+![image](https://github.com/user-attachments/assets/b371444f-7230-4289-9164-47b3c8543996)
+
+
+**Use Cases:**  
+- **Data Analytics:** Performing complex queries and analysis on large datasets.
+- **Data Summarization:** Aggregating and summarizing large datasets for reporting.
+
+**Language:**  
+HiveQL (Hive Query Language), which is similar to SQL.
+
+**Why Used:**  
+Hive is used for its familiar SQL-like interface, making it easier for data analysts and developers to work with large datasets stored in Hadoop.
+
+---
+
+## 16. PySpark
+**Description:**  
+PySpark is the Python API for Apache Spark, allowing users to interface with Spark’s powerful data processing engine using Python.
+
+![image](https://github.com/user-attachments/assets/355219e8-5023-4af9-a509-f7fb1d76baaf)
+
+**Use Cases:**  
+- **Data Wrangling:** Cleaning and preparing large datasets for analysis.
+- **Data Analysis:** Performing complex data analysis using Spark with Python.
+
+**Language:**  
+Python.
+
+**Why Used:**  
+PySpark is favored for its simplicity and flexibility, enabling Python developers to leverage Spark’s capabilities.
+
+---
+
+##  Difference Between Spark & PySpark
+**Spark:**  
+- Written in Scala, and supports Java, Scala, Python, and R APIs.
+- Used for large-scale data processing, including batch processing and real-time analytics.
+
+**PySpark:**  
+- Python API for Spark, enabling Python developers to use Spark.
+- Simplifies working with Spark by providing a Pythonic interface.
+
+![image](https://github.com/user-attachments/assets/a7ea9e84-6226-41ed-8d55-da17ca5f2da7)
+
+**Key Difference:**  
+PySpark is essentially a Python wrapper for Spark, providing a more accessible interface for Python developers.
+
+---
+
+## 17. Google BigQuery
+**Description:**  
+Google BigQuery is a fully-managed, serverless data warehouse that enables super-fast SQL queries using the processing power of Google’s infrastructure.
+
+![image](https://github.com/user-attachments/assets/ac63a49d-e5fe-4daf-831f-0b96e05a3751)
+
+**Use Cases:**  
+- **Data Analytics:** Analyzing petabytes of data quickly using SQL.
+- **Business Intelligence:** Running complex queries on large datasets for business reporting.
+
+**Language:**  
+Standard SQL.
+
+**Why Used:**  
+BigQuery is used for its ability to process large datasets quickly and efficiently without needing to manage infrastructure.
+
+---
+
+## 18. Snowflake
+**Description:**  
+Snowflake is a cloud-based data warehousing solution that enables secure, scalable data storage and analytics. It’s known for separating compute and storage, allowing for flexible scaling.
+
+![image](https://github.com/user-attachments/assets/3bd36121-da67-4758-9178-f0b2e2fb876d)
+
+**Use Cases:**  
+- **Data Warehousing:** Storing and querying large datasets with high concurrency.
+- **Data Sharing:** Securely sharing live data across organizations.
+
+**Language:**  
+SQL.
+
+**Why Used:**  
+Snowflake is popular for its performance, scalability, and ease of use in cloud environments, especially for data warehousing and analytics.
+
+---
+
+## 10. Databricks
+**Description:**  
+Databricks is a cloud-based platform for big data analytics and machine learning, built on top of Apache Spark. It provides a collaborative environment for data engineers, data scientists, and business analysts.
+
+![image](https://github.com/user-attachments/assets/c9bca141-4270-49b2-9edc-890cdf043532)
+
+**Use Cases:**  
+- **Data Engineering:** Building and managing data pipelines.
+- **Machine Learning:** Developing and deploying machine learning models.
+
+**Language:**  
+Scala, Python, SQL, R.
+
+**Why Used:**  
+Databricks simplifies the process of building big data and machine learning workflows, offering strong collaboration features.
+
+---
+
+## 11. Apache HBase
+**Description:**  
+Apache HBase is an open-source, distributed, column-oriented store modeled after Google’s Bigtable. It is designed to handle large amounts of sparse data.
+
+![image](https://github.com/user-attachments/assets/1a0f5c03-f2cc-40c0-ba01-fe047a2a2a6b)
+
+**Use Cases:**  
+- **Time-Series Data:** Storing and retrieving time-series data.
+- **Large-Scale Data Processing:** Handling large volumes of data across distributed clusters.
+
+**Language:**  
+Java.
+
+**Why Used:**  
+HBase is used for its ability to handle large-scale data in a distributed environment, particularly for real-time read/write access to big data.
+
+---
+
+## 15. Sqoop
+**Description:**  
+Apache Sqoop is a tool designed for efficiently transferring bulk data between Apache Hadoop and structured data stores such as relational databases.
+
+![image](https://github.com/user-attachments/assets/8fa3cd19-5bed-47ef-9e57-f0911f72f61f)
+
+
+![image](https://github.com/user-attachments/assets/638a8fa8-9a12-4ab0-ad09-df5f944a1446)
+
+**Use Cases:**  
+- **Data Migration:** Importing data from relational databases to Hadoop and exporting data back to relational databases.
+- **ETL Processes:** Moving large datasets in and out of Hadoop for processing.
+
+**Language:**  
+Java.
+
+**Why Used:**  
+Sqoop is used for its ability to seamlessly transfer data between Hadoop and relational databases, facilitating data integration tasks.
+
+---
+
+## 16. Flume
+**Description:**  
+Apache Flume is a distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log data from various sources to a centralized data store.
+
+![image](https://github.com/user-attachments/assets/a035f06c-d171-471b-9877-e0b8c3d84591)
+
+![image](https://github.com/user-attachments/assets/cb29e47d-9bb9-44c3-91ee-0978d88d9c7f)
+
+**Use Cases:**  
+- **Log Aggregation:** Collecting and storing log data from multiple sources.
+- **Event Data Ingestion:** Ingesting large volumes of event data into Hadoop for processing.
+
+**Language:**  
+Java.
+
+**Why Used:**  
+Flume is used for its ability to reliably collect and transfer large amounts of log and event data in real-time.
+
+---
+
+## 17. Oozie
+**Description:**  
+Apache Oozie is a workflow scheduler system to manage Apache Hadoop jobs. It allows users to define workflows composed of multiple jobs, including MapReduce, Pig, Hive, and others.
+
+![image](https://github.com/user-attachments/assets/4af73b19-6907-4dbc-b447-03e1f253fbc4)
+
+**Use Cases:**  
+- **Workflow Automation:** Automating the scheduling and execution of Hadoop jobs.
+- **Job Coordination:** Coordinating complex data processing pipelines in Hadoop.
+
+**Language:**  
+Java, XML (for defining workflows).
+
+---
+
 ### Summary of Actions:
 
 #### 1. Data Processing:
