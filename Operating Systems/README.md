@@ -242,8 +242,7 @@ scp user@server:/path/to/remote/file.txt /local/path
 ---
 
 ### **Windows (PowerShell):**
-'''PowerShell
-
+```
 # Run a SQL query in SQL Server
 Invoke-Sqlcmd -Query "SELECT * FROM TableName" -ServerInstance "Server\Instance"
 
