@@ -123,3 +123,103 @@ YARN is a Framework on which MapReduce works. YARN performs 2 operations that ar
 Hadoop common or Common utilities are nothing but our java library and java files or we can say the java scripts that we need for all the other components present in a Hadoop cluster. these utilities are used by HDFS, YARN, and MapReduce for running the cluster. Hadoop Common verify that Hardware failure in a Hadoop cluster is common so it needs to be solved automatically in software by Hadoop Framework.
 
 
+# Hadoop Master-Slave Architecture
+
+**Description:**  
+Hadoop is a distributed computing framework that uses a master-slave architecture to store and process large datasets across multiple machines. It follows the principles of distributed computing and is based on two main components: the **Hadoop Distributed File System (HDFS)** and **MapReduce** for parallel data processing.
+
+---
+
+## Key Components of Hadoop Architecture:
+
+### 1. **HDFS (Hadoop Distributed File System):**
+   HDFS is a distributed file system that stores data across multiple nodes and manages file storage.
+
+   - **Master Node (NameNode):**  
+     The NameNode is the master node responsible for managing the metadata of the files stored in HDFS, such as file locations, permissions, and hierarchy. It does not store the actual data but keeps track of where data is stored across the cluster.
+
+   - **Slave Nodes (DataNodes):**  
+     The DataNodes are slave nodes that store the actual data. They communicate with the NameNode to read, write, and replicate data blocks. Each file is split into blocks, and these blocks are stored across various DataNodes.
+
+---
+
+### 2. **MapReduce:**
+   MapReduce is the programming model for processing large datasets in parallel across the Hadoop cluster.
+
+   - **Master Node (JobTracker):**  
+     The JobTracker is the master node in the MapReduce component. It is responsible for distributing MapReduce tasks to the TaskTrackers (slave nodes), monitoring their progress, and handling any task failures.
+
+   - **Slave Nodes (TaskTrackers):**  
+     The TaskTrackers are slave nodes that receive tasks from the JobTracker. Each TaskTracker executes the assigned tasks (map and reduce operations) on the data stored in its local DataNode.
+
+---
+
+## Master-Slave Architecture:
+
+### **1. NameNode (Master)**
+   - **Role:**  
+     The NameNode is the central master node that manages the HDFS metadata. It handles operations like opening, closing, and renaming files and directories.
+   - **Responsibilities:**
+     - Keeps track of where data blocks are stored on the DataNodes.
+     - Ensures the replication of data blocks across DataNodes to ensure fault tolerance.
+
+### **2. DataNode (Slave)**
+   - **Role:**  
+     DataNodes are responsible for storing the actual data in HDFS. They perform block creation, deletion, and replication upon instructions from the NameNode.
+   - **Responsibilities:**
+     - Stores blocks of data.
+     - Sends regular heartbeat signals to the NameNode to confirm their availability.
+     - Transfers data blocks to other DataNodes for replication as per the NameNode’s instructions.
+
+### **3. JobTracker (Master)**
+   - **Role:**  
+     The JobTracker is the master node that assigns tasks to TaskTrackers. It keeps track of the progress of jobs and coordinates the execution of MapReduce jobs.
+   - **Responsibilities:**
+     - Accepts MapReduce jobs from clients.
+     - Breaks down jobs into tasks and assigns them to TaskTrackers.
+     - Monitors the status of jobs and handles task failures.
+
+### **4. TaskTracker (Slave)**
+   - **Role:**  
+     TaskTrackers are the slave nodes that execute the map and reduce tasks on behalf of the JobTracker.
+   - **Responsibilities:**
+     - Executes MapReduce tasks on local data.
+     - Reports task status back to the JobTracker.
+     - Handles data processing in parallel with other TaskTrackers across the cluster.
+
+---
+
+## Workflow of Hadoop Master-Slave Architecture:
+
+1. **Data Storage (HDFS):**
+   - Data is split into blocks and distributed across DataNodes.
+   - The NameNode maintains metadata about the blocks, such as where they are stored and their replication status.
+
+2. **Data Processing (MapReduce):**
+   - A user submits a MapReduce job to the JobTracker.
+   - The JobTracker splits the job into tasks and assigns them to TaskTrackers located on the slave nodes.
+   - TaskTrackers process the data in parallel, and the results are aggregated and sent back to the user.
+
+---
+
+## Fault Tolerance in Master-Slave Architecture:
+   - **HDFS Fault Tolerance:**  
+     HDFS replicates each data block across multiple DataNodes to ensure that if one node fails, the data can still be retrieved from other nodes.
+   - **MapReduce Fault Tolerance:**  
+     If a TaskTracker fails during processing, the JobTracker will reschedule the failed tasks on another TaskTracker.
+
+---
+
+## Diagram of Hadoop Master-Slave Architecture:
+
+```text
++-------------------------+       +-------------------------+
+|       NameNode (Master)  |<----->|     DataNode (Slave)     |
++-------------------------+       +-------------------------+
+                                      /   |     |     \
+                                    /     |     |      \
+                                  /       |     |       \
++------------------------+   +--------------------------+   +--------------------------+
+|   JobTracker (Master)  |<-->|  TaskTracker (Slave)     |<->|  TaskTracker (Slave)      |
++------------------------+   +--------------------------+   +--------------------------+
+
