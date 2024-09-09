@@ -2,6 +2,13 @@
 
 **Data Transformation** is the process of converting data from one format or structure into another format or structure. This is a critical step in data integration, data warehousing, and analytics workflows. Data transformation is essential to ensure that data from different sources, which may be in various formats, can be combined, analyzed, and processed in a consistent manner.
 
+![image](https://github.com/user-attachments/assets/eec37fbc-af88-447d-bf72-43abb6d1f6a9)
+
+---
+
+![image](https://github.com/user-attachments/assets/102cb390-d705-4121-a5d5-c39cd00914f9)
+
+
 ### Key Phases of Data Transformation:
 1. **Data Cleaning:** Involves removing inconsistencies, errors, and missing values from the data. It ensures that the data is accurate and useful.
 2. **Data Normalization/Denormalization:** Data is normalized to eliminate redundancy or denormalized for optimizing querying efficiency.
@@ -28,6 +35,8 @@ Here is a list of tools specifically designed or widely used for **Data Transfor
 
 ### What is Apache NiFi?
 **Apache NiFi** is an open-source data integration tool designed for automating the flow of data between systems. It offers real-time data ingestion, routing, and transformation. NiFi provides an intuitive, web-based user interface to design data flows visually.
+
+![image](https://github.com/user-attachments/assets/78d080a3-9f45-4ec3-8c9f-710a752ca656)
 
 ### How It Works:
 - NiFi operates on a flow-based programming model where you define **data flows** using processors for transforming, routing, and processing data.
