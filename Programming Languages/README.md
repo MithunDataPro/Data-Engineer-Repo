@@ -34,7 +34,7 @@
 
 ### Regularly Used Python Libraries in Detail:
 
-#### **Pandas**:
+#### **1. Pandas:**
 - **Description**: Pandas is the most popular library for working with data in Python. It provides easy-to-use data structures (DataFrames) and functions for data analysis.
 - **Usage**: Data cleaning, transformation, and analysis of structured data.
 - **Common Functions**:
@@ -50,3 +50,64 @@
 
   # Filtering data
   filtered_df = df[df['column_name'] > 10]
+  ```
+
+  ---
+
+  ## **2. NumPy:**
+- **Description**: NumPy is essential for performing mathematical operations on arrays and matrices.
+- **Usage**: Numerical computation, array manipulation, and working with large datasets.
+- **Common Functions**:
+  ```python
+  import numpy as np
+
+  # Creating a NumPy array
+  arr = np.array([1, 2, 3, 4])
+
+  # Basic array operations
+  arr_sum = np.sum(arr)
+  ```
+---
+
+## **3. Dask:**
+**Description:**  
+Dask provides advanced parallel computing for large datasets, extending the functionalities of Pandas and NumPy to handle "big data".
+
+**Usage:**  
+Distributed data processing, parallel data manipulation.
+
+**Common Functions:**
+```python
+import dask.dataframe as dd
+
+# Load a large CSV file as a Dask DataFrame
+df = dd.read_csv('large_data.csv')
+
+# Perform computations in parallel
+df_mean = df['column_name'].mean().compute()
+```
+---
+
+## **4. PySpark:**
+**Description:**
+PySpark is the Python API for Apache Spark. It is used for distributed data processing across large datasets.
+
+**Usage:**
+Big data processing, ETL pipelines.
+
+**Common Functions:**
+
+```
+from pyspark.sql import SparkSession
+
+# Initialize a Spark session
+spark = SparkSession.builder.appName("DataProcessing").getOrCreate()
+
+# Read data into a Spark DataFrame
+df = spark.read.csv('data.csv', header=True)
+
+# Perform transformations
+df_filtered = df.filter(df['column_name'] > 10)
+
+```
+---
