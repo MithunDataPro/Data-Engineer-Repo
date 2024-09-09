@@ -15,6 +15,12 @@
 
 **Linux** is an open-source, Unix-like operating system (OS) that is highly customizable and widely used for servers, development environments, cloud computing, and big data platforms. Linux has various distributions (or distros), such as **Ubuntu**, **CentOS**, **Debian**, **Red Hat**, and more.
 
+![image](https://github.com/user-attachments/assets/9db6c90b-e598-4a96-84c0-d2a5e789bbac)
+
+**Unix** Unix is a powerful, multiuser, multitasking operating system originally developed in the 1960s. It’s known for its efficiency and has been influential in the development of other operating systems, including Linux.
+
+![image](https://github.com/user-attachments/assets/5a864265-42b1-4c74-b6de-e8e2fed4dcbb)
+
 ### Key Features:
 - **Open-Source:** Free to use, modify, and distribute.
 - **Security:** Linux has built-in security features and is less prone to malware compared to other operating systems.
@@ -60,3 +66,109 @@ vim filename.txt
 # Schedule a cron job (e.g., run a script daily at midnight)
 crontab -e
 0 0 * * * /path/to/script.sh
+```
+---
+
+### Resources:
+- [Linux.org](https://www.linux.org) – Linux tutorials and resources.
+- [Ubuntu](https://ubuntu.com) – Official Ubuntu site.
+- [Red Hat](https://www.redhat.com) – Enterprise Linux.
+- [Linux Command Line Basics](https://www.udemy.com/course/linux-command-line-basics/) – Free Udemy course on Linux.
+
+---
+
+## 2. **Windows XP/7/8/10**
+
+**Windows** is a series of operating systems developed by Microsoft. While **Windows XP** was highly popular in the early 2000s, it has been replaced by newer versions like **Windows 7**, **Windows 8**, and **Windows 10**, each with improvements in UI and security. **Windows 10** is the most recent mainstream version.
+
+### Key Features:
+- **User-Friendly Interface:** Known for its graphical interface, making it easy for non-technical users.
+- **Software Compatibility:** Supports a wide range of software applications.
+- **Integrated Tools:** Features built-in tools like **PowerShell**, **Task Scheduler**, and **Windows Subsystem for Linux (WSL)** in Windows 10.
+- **Microsoft Integration:** Works seamlessly with Microsoft products like Azure, SQL Server, and Power BI.
+
+### How Data Engineers Use Windows:
+- **Data Analysis Tools:** Tools like **Power BI**, **Microsoft Excel**, and **SQL Server Management Studio (SSMS)** run natively on Windows.
+- **Windows Subsystem for Linux (WSL):** In Windows 10, WSL allows running Linux command-line tools directly on Windows, offering data engineers the flexibility of both systems.
+- **Development Environments:** Windows provides access to IDEs like **Visual Studio Code**, **PyCharm**, and **Jupyter Notebooks** for developing data pipelines.
+
+### Common Commands for Data Engineers on Windows (PowerShell):
+```powershell
+# List files and directories
+Get-ChildItem
+
+# Navigate directories
+Set-Location C:\path\to\directory
+
+# View system processes
+Get-Process
+
+# Schedule a task (using Task Scheduler)
+schtasks /create /tn "MyTask" /tr "C:\path\to\script.bat" /sc daily /st 00:00
+
+# Start or stop a service
+Start-Service -Name "ServiceName"
+Stop-Service -Name "ServiceName"
+
+# Run a Python script
+python script.py
+
+# Managing file permissions
+icacls C:\path\to\directory /grant UserName:(F)
+
+```
+---
+
+## Resources:
+
+- [Microsoft Windows Documentation](https://docs.microsoft.com/en-us/windows/) – Official Microsoft documentation.
+- [PowerShell Basics](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.1) – PowerShell guide for beginners.
+- [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/) – Official documentation for WSL.
+
+---
+
+## 3. **MacOS**
+
+**MacOS** is Apple's proprietary operating system, known for its polished interface and integration with Apple hardware. It is Unix-based, providing a solid foundation for software development and data engineering tasks.
+
+### Key Features:
+- **UNIX Foundation:** Like Linux, macOS provides a Unix-like environment that supports shell scripting and command-line utilities.
+- **Developer-Friendly:** Comes pre-installed with Xcode, Python, and tools like Homebrew to easily manage software packages.
+- **Ecosystem Integration:** macOS works seamlessly with other Apple devices and services like iCloud.
+  
+### How Data Engineers Use MacOS:
+- **Development Environment:** Data engineers use macOS for local development of Python, R, or Java applications and for running big data frameworks in testing or small-scale production environments.
+- **Command Line Tools:** macOS has a built-in terminal that supports bash, zsh, and other shells, making it easy to run Linux-like commands.
+- **Data Analysis Tools:** IDEs like Jupyter Notebooks, RStudio, and PyCharm run natively on macOS.
+
+---
+
+Common Commands for Data Engineers on MacOS:
+
+```
+
+# List files and directories
+ls -la
+
+# Install a package using Homebrew
+brew install package_name
+
+# Check system processes
+ps aux
+
+# Running Python scripts
+python3 script.py
+
+# Monitoring system resource usage
+top
+
+# Scheduling a cron job (same as Linux)
+crontab -e
+
+# Navigating directories
+cd /path/to/directory
+
+```
+---
+
+
