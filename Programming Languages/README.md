@@ -106,8 +106,52 @@ spark = SparkSession.builder.appName("DataProcessing").getOrCreate()
 # Read data into a Spark DataFrame
 df = spark.read.csv('data.csv', header=True)
 
-# Perform transformations
-df_filtered = df.filter(df['column_name'] > 10)
-
 ```
 ---
+
+## **5. SQLAlchemy:**
+
+- **Description**: SQLAlchemy is a SQL toolkit and Object-Relational Mapping (ORM) library for Python.
+- **Usage**: Work with SQL databases directly from Python.
+- **Common Functions**:
+  ```python
+  from sqlalchemy import create_engine
+
+  # Connect to a database
+  engine = create_engine('sqlite:///example.db')
+
+  # Load data into a DataFrame
+  df = pd.read_sql('SELECT * FROM table_name', engine)
+  
+  # Perform transformations
+df_filtered = df.filter(df['column_name'] > 10)
+
+---
+
+# **6. Airflow:**
+
+**Description:**  
+Apache Airflow is a platform to programmatically author, schedule, and monitor workflows.
+
+**Usage:**  
+Orchestration of ETL pipelines.
+
+**Common Functions:**
+```python
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+from datetime import datetime
+
+# Define your workflow
+def my_task():
+    print("Running task")
+
+# Create a DAG (Directed Acyclic Graph)
+dag = DAG('my_dag', start_date=datetime(2021, 1, 1))
+
+# Define a task in the DAG
+task = PythonOperator(
+    task_id='my_task',
+    python_callable=my_task,
+    dag=dag
+)
