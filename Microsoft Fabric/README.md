@@ -3,7 +3,11 @@
 ## What is Microsoft Fabric?
 Microsoft Fabric is a unified, end-to-end data analytics platform built by Microsoft to simplify data management, integration, analysis, and reporting. It combines several services from the Microsoft Azure ecosystem to deliver a seamless experience for handling large-scale data processing, analysis, and visualization within a single environment.
 
+![image](https://github.com/user-attachments/assets/1596d39d-2183-478f-974e-51eed6e313b3)
+
 ## Tools in Microsoft Fabric (Based on the Images):
+
+![image](https://github.com/user-attachments/assets/9b3f423e-d612-4966-9004-48eb609a8f79)
 
 ### 1. Data Factory
 - **Purpose**: A cloud-based ETL (Extract, Transform, Load) service designed to help you orchestrate data movement and transformation at scale.
@@ -11,6 +15,8 @@ Microsoft Fabric is a unified, end-to-end data analytics platform built by Micro
   - Seamless data ingestion from various sources.
   - Supports complex data pipelines for cleaning, transforming, and loading data into your destination.
   - Integration with other Azure services like Synapse Analytics and Data Lake.
+
+![image](https://github.com/user-attachments/assets/46c68fbe-02ef-4f96-aecf-3121956ceaad)
 
 ### 2. Synapse Data Engineering
 - **Purpose**: Provides tools for building and managing data pipelines, especially for big data processing.
@@ -41,6 +47,8 @@ Microsoft Fabric is a unified, end-to-end data analytics platform built by Micro
   - Access to powerful Python and R environments for data science workflows.
   - Seamless connection to Synapse data pipelines and data lakes for model training and experimentation.
 
+![image](https://github.com/user-attachments/assets/d32c989a-9f36-4d59-af51-a0057fc91607)
+
 ### 6. Power BI
 - **Purpose**: A business analytics tool that delivers interactive visualizations and business intelligence capabilities.
 - **Key Features**:
@@ -53,6 +61,10 @@ Microsoft Fabric is a unified, end-to-end data analytics platform built by Micro
 - **Key Features**:
   - Proactive alerting for key metrics and KPIs.
   - Real-time notifications that help users address potential issues promptly.
+
+---
+
+![image](https://github.com/user-attachments/assets/ca01e22c-aaf3-48e6-9dc1-c3aa82946f6c)
 
 ---
 
@@ -71,6 +83,12 @@ The architecture of **Microsoft Fabric** is designed around three key pillars:
 
 - **Serverless Compute**: Microsoft Fabric uses serverless compute, meaning you only pay for what you use, and there's no need for infrastructure management.
 - **One Lake**: The platform supports **One Lake**, which is a unified storage system where all the data ingested or transformed is stored, making it easier to query and process at scale.
+
+![image](https://github.com/user-attachments/assets/474f9c4c-92a1-4d2e-8c57-df2c646621c3)
+
+---
+
+![image](https://github.com/user-attachments/assets/357b6d54-2830-488f-9c5a-f3e5880ae68d)
 
 ---
 
