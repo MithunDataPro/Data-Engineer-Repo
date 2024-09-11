@@ -238,3 +238,48 @@ Like Parquet, ORC is a binary format and optimized for columnar data storage, im
 2024-09-10 12:34:56 INFO User logged in
 2024-09-10 12:35:10 ERROR Database connection failed
 
+```
+
+---
+
+## 9. Delta Lake
+
+**Delta Lake** is an open-source storage layer that brings **ACID** (Atomicity, Consistency, Isolation, Durability) transactions to big data processing frameworks like **Apache Spark**. It provides a unified way to manage both **batch** and **streaming data**. Delta Lake ensures data integrity and reliability by supporting ACID transactions even during concurrent writes and reads, making it ideal for handling large-scale data processing.
+
+![image](https://github.com/user-attachments/assets/d062e8bd-c5f4-4fe7-bc3a-172441c4a615)
+
+### Features:
+- **Data Type**: Structured, Semi-Structured
+- **Use Cases**: Streaming data, batch data processing, ETL (Extract, Transform, Load), data lakes.
+- **ACID Transactions**: Ensures data integrity and reliability even during concurrent writes and reads.
+
+### Pros:
+- Supports **ACID transactions** for big data workloads, ensuring consistency and integrity.
+- Handles both **batch** and **streaming data** seamlessly.
+- Supports **schema enforcement** and schema evolution for flexible data handling.
+
+### Cons:
+- Requires integration with specific tools (e.g., **Apache Spark**) to manage data efficiently.
+
+### Example:
+Data in **Delta Lake** is stored in **Parquet format** but managed with additional metadata for **ACID compliance** and **transaction support**, allowing it to handle complex big data workloads while maintaining data consistency.
+
+---
+
+## Summary
+
+Understanding these file formats is crucial for data engineers and big data engineers. Each format has its own strengths and weaknesses, and the choice of format often depends on the specific use case, data size, and performance requirements.
+
+| **File Format** | **Data Type**                            | **Best Used For**                                      | **Human-Readable** | **Compression** |
+|-----------------|------------------------------------------|--------------------------------------------------------|--------------------|-----------------|
+| **JSON**        | Semi-Structured                          | APIs, configurations, NoSQL databases                  | Yes                | No              |
+| **Parquet**     | Structured, Semi-Structured              | Big data analytics, ETL pipelines                      | No                 | Yes             |
+| **CSV**         | Structured                               | Simple tabular data, data export/import                | Yes                | No              |
+| **Avro**        | Structured                               | Streaming data, serialization                          | No                 | Yes             |
+| **ORC**         | Structured                               | Big data analytics in Hadoop, Hive                     | No                 | Yes             |
+| **XML**         | Semi-Structured                          | Web services, configurations                           | Yes                | No              |
+| **HDFS**        | Structured, Semi-Structured, Unstructured | Distributed storage for big data                       | No                 | No              |
+| **Text/Log Files** | Unstructured                          | Logging, raw data storage                              | Yes                | No              |
+| **Delta Lake**  | Structured, Semi-Structured              | Streaming and batch processing, data lakes             | No                 | Yes             |
+
+By mastering these file formats, data engineers can optimize storage and processing workflows, ensuring efficient data pipelines and analytics at scale.
