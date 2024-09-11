@@ -153,7 +153,8 @@ Like Parquet, ORC is a binary format and optimized for columnar data storage, im
 
 **XML** is a markup language used for encoding documents in a machine-readable format. It is widely used for web services, configurations, and semi-structured data.
 
-![image](https://github.com/user-attachments/assets/2b1e8590-9636-4c7f-84d2-e9ed2aeb94c1)
+![image](https://github.com/user-attachments/assets/44e228b9-e9aa-42e7-84d6-bc4d5045c3b9)
+
 
 ### Features:
 - **Data Type**: Semi-structured
@@ -189,6 +190,8 @@ Like Parquet, ORC is a binary format and optimized for columnar data storage, im
 
 **HDFS** is a distributed file system used for storing large datasets across multiple machines in a Hadoop cluster. It can store both structured and unstructured data and is optimized for large-scale processing.
 
+![image](https://github.com/user-attachments/assets/e87f0290-6d53-47b3-99af-5b409f4781cb)
+
 ### Features:
 - **Data Type**: Structured, Semi-Structured, Unstructured
 - **Use Cases**: Big data storage, Hadoop clusters, ETL, batch processing.
@@ -208,6 +211,12 @@ Like Parquet, ORC is a binary format and optimized for columnar data storage, im
 ## 8. Text/Log Files
 
 **Text files** are simple unstructured or semi-structured files used to store logs, configurations, or raw text data. They are widely used for logging events in applications and systems.
+
+![image](https://github.com/user-attachments/assets/1f102c54-b652-4802-b4d6-32cd15914718)
+
+---
+
+![image](https://github.com/user-attachments/assets/9e81caa9-0e94-4045-bf54-15ff8dace061)
 
 ### Features:
 - **Data Type**: Unstructured
