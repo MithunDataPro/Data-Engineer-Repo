@@ -2,6 +2,8 @@
 
 Data engineers and big data engineers work with large volumes of data in various formats. Understanding these formats is crucial for efficient data storage, retrieval, and processing. Below is a detailed explanation of key file formats, including **structured**, **semi-structured**, and **unstructured** formats commonly used in data engineering.
 
+![image](https://github.com/user-attachments/assets/f98ee8b0-c7fd-485c-bed1-c0b5fcd715a6)
+
 ---
 
 ## 1. **JSON (JavaScript Object Notation)**
@@ -99,6 +101,8 @@ id,name,age
 
 **Avro** is a row-based binary storage format that is optimized for data serialization. It is schema-based, meaning that data is stored along with its schema, which makes it suitable for systems that require fast reads and writes.
 
+![image](https://github.com/user-attachments/assets/fcf82d6b-722b-44e8-bd8d-523bbec1c5c3)
+
 ### Features:
 - **Data Type**: Structured
 - **Use Cases**: Streaming data, real-time data processing, messaging systems (e.g., Apache Kafka).
@@ -123,6 +127,8 @@ An Avro file contains both the schema and the serialized data in binary format, 
 
 **ORC** is a columnar storage format that is highly optimized for big data processing. It is similar to Parquet but is often used in Hadoop and Hive environments. It supports compression and can store large datasets efficiently.
 
+![image](https://github.com/user-attachments/assets/5e5f88ce-4955-4cc9-8e32-2bad62186eb9)
+
 ### Features:
 - **Data Type**: Structured
 - **Use Cases**: Hadoop, Hive, data warehouses, ETL pipelines.
@@ -146,6 +152,8 @@ Like Parquet, ORC is a binary format and optimized for columnar data storage, im
 ## 6. XML (eXtensible Markup Language)
 
 **XML** is a markup language used for encoding documents in a machine-readable format. It is widely used for web services, configurations, and semi-structured data.
+
+![image](https://github.com/user-attachments/assets/2b1e8590-9636-4c7f-84d2-e9ed2aeb94c1)
 
 ### Features:
 - **Data Type**: Semi-structured
@@ -176,4 +184,48 @@ Like Parquet, ORC is a binary format and optimized for columnar data storage, im
 ```
 
 ---
+
+## 7. HDFS (Hadoop Distributed File System)
+
+**HDFS** is a distributed file system used for storing large datasets across multiple machines in a Hadoop cluster. It can store both structured and unstructured data and is optimized for large-scale processing.
+
+### Features:
+- **Data Type**: Structured, Semi-Structured, Unstructured
+- **Use Cases**: Big data storage, Hadoop clusters, ETL, batch processing.
+- **Distributed Storage**: Data is stored across multiple nodes in a cluster, enabling fault tolerance and scalability.
+
+### Pros:
+- Scalable for storing petabytes of data.
+- Fault-tolerant, ensuring data availability even in the event of hardware failures.
+- Supports multiple data formats (Parquet, ORC, Avro).
+
+### Cons:
+- Requires a Hadoop environment for management.
+- Slower random access to specific records compared to traditional file systems.
+
+---
+
+## 8. Text/Log Files
+
+**Text files** are simple unstructured or semi-structured files used to store logs, configurations, or raw text data. They are widely used for logging events in applications and systems.
+
+### Features:
+- **Data Type**: Unstructured
+- **Use Cases**: Application logs, system logs, plain text storage, configuration files.
+- **Simple Format**: No inherent structure, making it easy to append and read lines of text.
+
+### Pros:
+- Human-readable.
+- Easy to manipulate and edit.
+- Supported across all systems.
+
+### Cons:
+- No schema enforcement, leading to inconsistencies.
+- Inefficient for querying and processing large datasets.
+- High storage requirements due to lack of compression.
+
+### Example:
+```txt
+2024-09-10 12:34:56 INFO User logged in
+2024-09-10 12:35:10 ERROR Database connection failed
 
