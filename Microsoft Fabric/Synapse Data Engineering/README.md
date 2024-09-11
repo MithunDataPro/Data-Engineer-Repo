@@ -61,6 +61,9 @@ The **Lakehouse** is a unified storage layer that allows you to store all of you
 
 ---
 
+![image](https://github.com/user-attachments/assets/0ac03a54-7355-4c1f-83b3-a07bb2e54ed8)
+
+---
 ## Synapse Data Engineering in Microsoft Fabric Summary
 Synapse Data Engineering in Microsoft Fabric offers a powerful set of tools for building modern, scalable data pipelines. From **Notebooks** for interactive data transformations to **Lakehouse** storage for centralized data management, the integration of Spark jobs, shortcuts, and pipelines enables comprehensive data engineering solutions.
 
