@@ -2,6 +2,8 @@
 
 Synapse Data Engineering in Microsoft Fabric is an essential service for modern data transformations and analytics. It combines the power of Spark, Lakehouse, and pipelines into a unified data engineering workspace. Below, we provide a detailed breakdown of the core components that make Synapse Data Engineering in Microsoft Fabric highly versatile and efficient.
 
+![image](https://github.com/user-attachments/assets/2f89fa66-c95c-45e7-a423-0e79e836f932)
+
 ---
 
 ## 1. Notebooks
@@ -33,6 +35,8 @@ The **Lakehouse** is a unified storage layer that allows you to store all of you
 - **Delta and Parquet Formats**: The transformed data from notebooks can be stored in **Delta** or **Parquet** formats, ensuring efficient querying and analysis.
 - **Workspaces**: Each data engineering workspace in Microsoft Fabric has a dedicated Lakehouse, helping to keep your projects organized and isolated from other data engineering projects.
 - **Integrated with Synapse**: Lakehouse storage is seamlessly integrated into Synapse Data Engineering, making it easy to perform analytics and transformations on your stored data.
+
+![image](https://github.com/user-attachments/assets/6b5eeb11-5061-409d-bb08-1c3768ca6f13)
 
 ---
 
