@@ -6,6 +6,12 @@ A **Data Warehouse** is a central repository of integrated data from multiple so
 
 In real-time, data warehouses allow organizations to analyze massive datasets, gain insights from historical data, and perform complex queries that support data-driven decision-making. Unlike transactional databases, which handle day-to-day operations, data warehouses are designed for querying and reporting.
 
+![image](https://github.com/user-attachments/assets/9bc6004e-1748-4d09-b888-9aec1cf00997)
+
+---
+
+![image](https://github.com/user-attachments/assets/133b6402-49b3-4176-8524-a07cef2249db)
+
 ---
 
 ## What Does a Data Warehouse Do in Real-Time?
@@ -23,6 +29,8 @@ In real-time scenarios, a data warehouse provides the following functionalities:
 ## What is Data Modeling?
 
 **Data Modeling** is the process of designing a data structure that defines the relationships between different pieces of data within the data warehouse. It helps in organizing the data to optimize storage and retrieval. The two common types of schemas used in data modeling are the **Star Schema** and the **Snowflake Schema**.
+
+![image](https://github.com/user-attachments/assets/5a8f55dd-b9ae-470f-8e7b-a0acf950ec47)
 
 ---
 
@@ -130,6 +138,8 @@ By understanding the different tools and the types of data they manage, business
 
 Synapse Data Warehouse is part of the broader **Azure Synapse Analytics** platform, which unifies data integration, big data analytics, and enterprise data warehousing capabilities. It supports **structured**, **semi-structured**, and **unstructured** data, enabling organizations to build modern data analytics solutions that handle all types of data from various sources.
 
+![image](https://github.com/user-attachments/assets/a803ee5a-3a66-4b86-b3ff-05891a55e3d8)
+
 ### Key Features of Synapse Data Warehouse:
 - **Massive Parallel Processing (MPP)**: Synapse uses MPP architecture, enabling parallel execution of queries and fast processing of large datasets.
 - **Integration with Azure Ecosystem**: Seamlessly integrates with other Azure services like Azure Data Lake, Azure Machine Learning, Power BI, and more.
@@ -178,6 +188,8 @@ A **Star Schema** is a type of database schema used in data warehouses where a c
 |  Location Dim |     |  Customer Dim|
 +--------------+     +--------------+
 
+![image](https://github.com/user-attachments/assets/d92289b9-50d9-49b5-ad72-973bde9455c6)
+
 ----
 
 
@@ -200,6 +212,9 @@ A **Snowflake Schema** is a more complex version of the Star Schema. In a Snowfl
                   +----------------+
                   | Product Category|
                   +----------------+
+
+
+![image](https://github.com/user-attachments/assets/f87e984f-d64b-4177-80d2-bb1362d56c19)
 
 ---
 
