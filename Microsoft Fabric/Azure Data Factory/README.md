@@ -8,6 +8,8 @@ Azure Data Factory in Microsoft Fabric enables various components and tools to w
 
 ---
 
+![image](https://github.com/user-attachments/assets/163c59d4-dde0-4517-b8df-07a7853e9c73)
+
 ## 1. Pipelines
 In Azure Data Factory, **Pipelines** are the fundamental building blocks that define workflows for moving and transforming data. A pipeline is a collection of activities that can ingest data from different sources, process it, and then store it in a designated sink.
 
