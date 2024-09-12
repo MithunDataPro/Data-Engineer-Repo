@@ -6,6 +6,8 @@
 
 Data engineers focus on the technical aspects of data pipelines, ensuring the flow of data from multiple sources to a centralized repository, often referred to as a data lake or data warehouse.
 
+![image](https://github.com/user-attachments/assets/a85c6b9b-730b-4cbb-bbed-ce66a8115174)
+
 ### Day-to-Day Work Involvement for Data Engineers:
 1. **Data Pipeline Development**: Build and maintain pipelines that extract, transform, and load (ETL) data from different sources into databases or data lakes.
 2. **Database Management**: Design and maintain data storage solutions like relational databases, data lakes, and data warehouses.
@@ -20,6 +22,8 @@ Data engineers focus on the technical aspects of data pipelines, ensuring the fl
 ## What is Big Data Engineering?
 
 **Big Data Engineering** focuses on managing and processing vast amounts of data that traditional systems cannot handle. It deals with the collection, storage, and real-time or batch processing of petabytes or exabytes of structured, semi-structured, and unstructured data. Big Data engineers design scalable systems and leverage distributed computing frameworks to ensure data can be efficiently processed.
+
+![image](https://github.com/user-attachments/assets/bc0f1895-91ff-451a-b376-d35c7ca7c875)
 
 ### Day-to-Day Work Involvement for Big Data Engineers:
 1. **Distributed Data Processing**: Use technologies like Hadoop, Spark, and Kafka to process large datasets across multiple servers.
