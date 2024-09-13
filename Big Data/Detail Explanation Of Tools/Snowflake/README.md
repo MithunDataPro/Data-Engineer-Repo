@@ -44,6 +44,8 @@ Snowflake can handle a wide range of data types, including:
 
 SnowSQL is the command-line interface (CLI) provided by Snowflake to interact with your Snowflake data warehouse. It allows users to execute SQL queries, perform data loading/unloading operations, and manage Snowflake accounts. SnowSQL is a lightweight and powerful tool that helps automate and script Snowflake operations for database administrators and data engineers.
 
+![image](https://github.com/user-attachments/assets/42cdf85c-cfe8-4c06-a451-9d07667d8b1f)
+
 ### Key Features of SnowSQL:
 1. **Query Execution**: You can execute any SQL query via the command line using SnowSQL, just like you would within Snowflake’s web interface.
 2. **Data Loading/Unloading**: SnowSQL can be used to load data into Snowflake from various file types (e.g., CSV, JSON) and to unload data from Snowflake into external storage like S3 buckets.
