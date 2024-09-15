@@ -157,3 +157,7 @@ There are two types of transformations in Apache Spark:
   
 - **Wide Transformation**: These are transformations such as `groupByKey` or `reduceByKey`, where data required to compute records in a partition comes from multiple partitions of the parent RDD.
 
+![image](https://github.com/user-attachments/assets/b8fd087e-41fc-4a35-950a-44905275a37b)
+
+---
+
