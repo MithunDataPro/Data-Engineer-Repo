@@ -108,3 +108,5 @@ Apache Spark surpasses Hadoop in the following cases:
   - Hadoop: Slower due to disk-based processing.
   - Spark: Faster due to RDDs caching data in memory, resulting in lower latency.
 
+
+![image](https://github.com/user-attachments/assets/443ed95d-90eb-4de0-988e-e6740c122c29)
