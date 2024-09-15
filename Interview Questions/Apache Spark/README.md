@@ -294,3 +294,63 @@ Apache Spark supports the following cluster managers:
 
 
 ---
+
+
+## Q26. In how many ways can we use Spark over Hadoop?
+We can run Spark over Hadoop in three ways:
+- **Standalone**: In this mode, we can divide resources across all machines or a subset of machines in the Hadoop cluster.
+- **YARN**: Spark can be run on YARN without any prerequisites. It integrates with the Hadoop stack and takes advantage of Spark’s capabilities.
+- **SIMR (Spark in MapReduce)**: This method allows Spark jobs to be launched inside MapReduce. With SIMR, you can start using the Spark shell within minutes, reducing deployment overhead and making it easy to experiment with Spark.
+
+## Q27. What is YARN?
+YARN became a sub-project of Hadoop in 2012 and is also known as **MapReduce 2.0**. The key idea behind YARN is to separate the resource management and job scheduling functionality into different daemons. The system includes:
+- **Resource Manager (RM)**: Manages resources among all applications.
+- **Application Master (AM)**: Manages a specific application. Each application is either a DAG of graphs or an individual job.
+- **Node Manager (NM)**: Looks after the containers that run tasks. Containers are places where units of work happen.
+
+YARN enables applications to negotiate resources from the Resource Manager and execute tasks using NodeManager(s).
+
+## Q28. How can we launch a Spark application on YARN?
+There are two deployment modes to launch a Spark application on YARN:
+- **Cluster Mode**: In this mode, the Spark driver runs inside the Application Master process, which is managed by YARN.
+- **Client Mode**: In this mode, the Spark driver runs in the client process, and the Application Master requests resources from YARN, providing them to the driver program.
+
+## Q29. Define Partition in Apache Spark.
+A **partition** is a logical block of a large distributed dataset. Partitioning the data and distributing it over the cluster provides parallelism and minimizes network traffic between executors. RDDs are automatically partitioned in Spark, but users can change the size and number of partitions as needed.
+
+## Q30. What are shared variables?
+**Shared variables** are abstractions in Apache Spark that can be used in parallel operations. When Spark runs a function in parallel as tasks across different nodes, variables used in the function are sent to each task. Sometimes, there’s a need to share variables across tasks or between the task and the driver program. Spark supports two types of shared variables:
+- **Broadcast Variables**: Cache a value in memory on all nodes.
+- **Accumulators**: Aggregates data from multiple tasks, such as counters or sums.
+
+## Q31. What is an Accumulator?
+An **Accumulator** is a type of shared variable that is added through associative and commutative operations. It allows users to update a variable while executing tasks. Accumulators can be named or unnamed, and Spark provides accumulators for numeric data types:
+- `SparkContext.longAccumulator()` for `Long`
+- `SparkContext.doubleAccumulator()` for `Double`
+
+## Q32. What is the difference between DSM and RDD?
+- **Read Operation**:
+  - **RDD**: Supports both coarse-grained (whole dataset) and fine-grained (individual element) operations.
+  - **Distributed Shared Memory (DSM)**: Only fine-grained operations are supported.
+  
+- **Write Operation**:
+  - **RDD**: Coarse-grained write operations.
+  - **DSM**: Fine-grained write operations.
+
+- **Consistency**:
+  - **RDD**: Immutable by nature, ensuring high consistency. Any changes to RDDs are permanent.
+  - **DSM**: Guarantees memory consistency if programmers follow the rules, ensuring predictable memory operations.
+
+- **Fault Recovery**:
+  - **RDD**: Recovers lost data using lineage graphs.
+  - **DSM**: Uses checkpointing techniques to roll back to the most recent checkpoint.
+
+- **Straggler Mitigation**:
+  - **RDD**: Can mitigate stragglers using backup tasks.
+  - **DSM**: Difficult to achieve straggler mitigation.
+
+- **RAM Shortage**:
+  - **RDD**: Moves data to disk if there is insufficient RAM.
+  - **DSM**: Performance decreases significantly if RAM is insufficient.
+
+
