@@ -108,5 +108,52 @@ Apache Spark surpasses Hadoop in the following cases:
   - Hadoop: Slower due to disk-based processing.
   - Spark: Faster due to RDDs caching data in memory, resulting in lower latency.
 
+---
 
 ![image](https://github.com/user-attachments/assets/443ed95d-90eb-4de0-988e-e6740c122c29)
+
+# Apache Spark Interview Questions and Answers
+
+## Q8. What are the components of the Spark Ecosystem?
+The various components of Apache Spark are:
+- **Spark Core**: Spark Core is the foundation of the entire project. All functionality in Spark is built on top of Spark Core.
+- **Spark Streaming**: It allows fault-tolerant streaming of live data streams. Spark Streaming uses micro-batching to process real-time streaming data by dividing it into small batches.
+- **Spark SQL**: A distributed framework for structured data processing. Spark SQL allows Spark to gain more information about the data's structure and computation, enabling optimization.
+- **Spark MLlib**: A scalable machine learning library that includes high-quality algorithms and high-speed processing. MLlib makes machine learning scalable and easy to use.
+- **Spark GraphX**: A graph processing API that supports parallel execution. GraphX contains fundamental operators like `subgraph` and `joinVertices` and supports tasks like clustering, classification, traversal, searching, and pathfinding.
+- **SparkR**: Introduced in Apache Spark 1.4, SparkR allows data processing using R's DataFrame structure. The DataFrame concept is also extended to other languages like Pandas for Python.
+
+## Q9. What is Spark Core?
+Spark Core is the common execution engine for the entire Spark platform. It provides parallel and distributed processing for large datasets. The components of Spark are built on top of Spark Core, which provides speed through in-memory computation. Spark Core also supports APIs in Java, Scala, and Python.
+
+RDD (Resilient Distributed Dataset) is the basic data structure of Spark Core. RDDs are immutable and partitioned collections of records that can be operated on in parallel. RDDs can be created by transformations on existing RDDs or by loading data from external storage like HDFS or HBase.
+
+## Q10. How is data represented in Spark?
+Data in Apache Spark can be represented in three ways:
+- **RDD**: RDD stands for Resilient Distributed Datasets. It is a read-only partitioned collection of records and the fundamental data structure in Spark. RDDs can only be created through deterministic operations on either:
+  - Data in stable storage.
+  - Parallelizing an existing collection in the driver program.
+  - Other RDDs.
+  RDDs allow in-memory computation on large clusters in a fault-tolerant manner, speeding up tasks.
+  
+- **DataFrame**: Unlike an RDD, a DataFrame organizes data into named columns, similar to a table in a relational database. It is also an immutable, distributed collection of data that allows developers to impose structure on a distributed collection of data, enabling higher-level abstraction.
+
+- **DataSet**: A Dataset is an extension of the DataFrame API. It provides a type-safe, object-oriented programming interface. Datasets also leverage Spark’s Catalyst optimizer by exposing expressions and data fields to a query planner.
+
+## Q11. What are the abstractions of Apache Spark?
+The main abstraction provided by Apache Spark is the **Resilient Distributed Dataset (RDD)**. RDDs are fault-tolerant and immutable. RDD creation begins with files in a file system, such as Hadoop, and then transformations are applied. 
+
+Another abstraction provided by Spark is **shared variables**, which can be used in parallel operations.
+
+## Q12. Explain the operations of Apache Spark RDD.
+Apache Spark RDD supports two types of operations:
+- **Transformations**: These are lazy operations that create one or more new RDDs, such as `map`, `filter`, or `reduceByKey`. Transformations create new datasets from existing ones and compute lazily, meaning they only execute when required.
+  
+- **Actions**: These operations trigger execution by returning a final result from RDD computations. Actions execute transformations using a lineage graph to load data into the original RDD, apply intermediate transformations, and give the final result to the driver program or file system.
+
+## Q13. How many types of transformations are there?
+There are two types of transformations in Apache Spark:
+- **Narrow Transformation**: This transformation results from operations like `map` or `filter`, where the data required for computation comes from a single partition. The output RDD has a partition with records originating from a single partition in the parent RDD.
+  
+- **Wide Transformation**: These are transformations such as `groupByKey` or `reduceByKey`, where data required to compute records in a partition comes from multiple partitions of the parent RDD.
+
