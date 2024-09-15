@@ -216,3 +216,81 @@ There are two ways data can be recovered in the event of a failure:
 ![image](https://github.com/user-attachments/assets/66a67e23-f8eb-4c6b-87c8-7ff817372ed2)
 
 ---
+
+## Q18. What is Directed Acyclic Graph (DAG)?
+RDDs are formed after every transformation. At a high level, when an action is applied on RDDs, Spark creates a DAG. A DAG is a finite directed graph with no directed cycles. 
+- It consists of vertices and edges where each edge is directed from one vertex to another. 
+- The sequence of vertices ensures that every edge is directed from earlier to later in the sequence. 
+- DAG is a generalization of the MapReduce model and allows Spark to provide stage-level execution details.
+  
+In the stage view, all RDDs that belong to a stage are expanded.
+
+## Q19. What is a lineage graph?
+A lineage graph refers to the graph that contains all the parent RDDs of an RDD. 
+- It is the result of all transformations on an RDD and creates a logical execution plan.
+- A logical execution plan begins with the first RDD and ends with the RDD that produces the result of an action.
+
+## Q20. What is lazy evaluation in Spark?
+Lazy evaluation (also known as call-by-need) is a strategy that delays execution until the value is needed. 
+- In Spark, transformations are lazy, meaning they don’t execute immediately when called. 
+- Instead, Spark maintains a graph of transformations and only executes them when an action is called.
+- Data is not loaded until it is necessary.
+
+## Q21. What are the benefits of lazy evaluation?
+Lazy evaluation provides the following benefits:
+- **Increases program manageability**.
+- **Saves computation overhead** and increases system speed.
+- **Reduces time and space complexity**.
+- **Optimizes execution** by reducing the number of queries.
+
+## Q22. What do you mean by persistence?
+RDD persistence is an optimization technique that saves the result of RDD evaluation. 
+- By persisting RDDs, the intermediate result is saved for future use, reducing computation overhead.
+- RDDs can be persisted using `cache()` and `persist()` methods.
+  
+When an RDD is persisted, each node stores any partition of it in memory, making it reusable for future computations, speeding up further computations by ten times.
+
+## Q23. Explain various levels of persistence in Apache Spark.
+The `persist()` method allows seven levels of persistence:
+- **MEMORY_ONLY**: Stores RDD as deserialized Java objects in memory. If RDD does not fit in memory, partitions are recomputed when needed.
+- **MEMORY_AND_DISK**: Stores RDD as deserialized Java objects in memory and spills partitions that don't fit in memory to disk.
+- **MEMORY_ONLY_SER (Java and Scala)**: Stores RDD as serialized Java objects, which are more space-efficient but harder for the CPU to read.
+- **MEMORY_AND_DISK_SER (Java and Scala)**: Similar to `MEMORY_ONLY_SER`, but spills partitions that don't fit in memory to disk.
+- **DISK_ONLY**: Stores RDD partitions only on disk.
+- **MEMORY_ONLY_2, MEMORY_AND_DISK_2**: Replicates each partition on two cluster nodes.
+- **OFF_HEAP**: Stores data in off-heap memory. Requires off-heap memory to be enabled.
+
+## Q24. Explain the run-time architecture of Spark.
+The run-time architecture of Spark consists of three main components:
+1. **Driver**:
+   - The `main()` method of the program runs in the driver.
+   - The driver runs user code, creates RDDs, performs transformations and actions, and creates `SparkContext`.
+   - The driver splits the Spark application into tasks and schedules them to run on executors.
+2. **Cluster Manager**:
+   - The cluster manager launches executors and, in some cases, drivers.
+   - Spark depends on the cluster manager to schedule jobs within the application, either in FIFO or Round Robin fashion.
+   - The resources used by a Spark application can be dynamically adjusted based on workload.
+3. **Executors**:
+   - Executors run tasks in the Spark job. They are launched at the start of the Spark application and run for the entire application lifetime.
+   - Executors provide in-memory storage for RDDs and return results to the driver.
+
+## Q25. Explain various cluster managers in Apache Spark.
+Apache Spark supports the following cluster managers:
+- **Standalone Cluster Manager**: 
+  - A simple cluster manager that is easy to set up and run Spark applications in a clustered environment.
+  - It consists of masters and workers, each with a configured amount of memory and CPU cores. Only one executor can be allocated per worker per application.
+  
+- **Hadoop YARN**:
+  - YARN is a sub-project of Hadoop that manages resources and job scheduling. 
+  - YARN uses a Resource Manager (RM) and per-application Application Master (AM) to manage resources.
+  - The combination of the Resource Manager and Node Manager handles computation and execution.
+
+- **Apache Mesos**:
+  - Mesos handles workloads in a distributed environment and manages large-scale clusters.
+  - It groups physical resources into a single virtual resource, reducing the overhead of allocating specific machines for different workloads.
+  - Mesos is a resource management platform for Hadoop and Big Data clusters. It acts as the reverse of virtualization, grouping multiple physical resources into a single virtual resource.
+
+![image](https://github.com/user-attachments/assets/f0745b46-9e5c-46de-9368-54eaf68c1fcd)
+
+
+---
