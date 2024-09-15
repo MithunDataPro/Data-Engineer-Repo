@@ -161,3 +161,62 @@ There are two types of transformations in Apache Spark:
 
 ---
 
+# Apache Spark Interview Questions and Answers
+
+## Q14. In how many ways can RDDs be created? Explain.
+There are three ways to create an RDD in Apache Spark:
+
+- **Parallelized Collection**: 
+  - In the initial stages, an RDD can be created from an existing collection in the program by passing it to the `parallelize()` method of `SparkContext`. 
+  - The number of partitions should be noted; Spark will run one task per partition. The number of partitions can be set manually. For example:
+    ```scala
+    sc.parallelize(data, 20) // Manually sets the number of partitions to 20
+    ```
+
+- **External Datasets (Referencing a Dataset)**: 
+  - An RDD can be created from any data source supported by Hadoop, such as local file systems, HDFS, Cassandra, HBase, etc. 
+  - For example, to create an RDD from a text file, use the `SparkContext.textFile()` method:
+    ```scala
+    val rdd = sc.textFile("hdfs://path/to/file")
+    ```
+
+- **Creating RDD from an Existing RDD**: 
+  - Transformations can convert one RDD into another. This means you can create an RDD from an existing RDD using transformation functions.
+
+## Q15. What are Paired RDDs?
+Paired RDDs are RDDs containing key-value pairs. A key-value pair (KVP) contains two linked data items:
+- **Key**: The identifier.
+- **Value**: The data corresponding to the key.
+
+## Q16. What is meant by in-memory processing in Spark?
+In-memory processing refers to storing data in random access memory (RAM) instead of slower disk drives. Data is processed in parallel, leading to:
+- Increased processing speed as data is retrieved from memory rather than disk.
+- Decreased execution time.
+
+Spark’s RDDs support in-memory computation. You can cache or persist an RDD to store it in memory for faster retrieval. The difference between `cache()` and `persist()` lies in their default storage levels:
+- **`cache()`**: Default storage level is `MEMORY_ONLY`.
+- **`persist()`**: Offers different storage levels, such as:
+  - `MEMORY_ONLY`
+  - `MEMORY_AND_DISK`
+  - `MEMORY_ONLY_SER`
+  - `MEMORY_AND_DISK_SER`
+  - `DISK_ONLY`
+
+## Q17. How is fault tolerance achieved in Apache Spark?
+Fault tolerance in Spark is achieved using the following principles:
+
+- **Immutable RDDs**: Every RDD is immutable and tracks the lineage of deterministic operations that create it from fault-tolerant input datasets.
+- **Recomputing Partitions**: If any partition of an RDD is lost due to a worker node failure, it can be re-computed from the original dataset using the lineage of operations.
+- **Deterministic Transformations**: All RDD transformations are deterministic, so the final transformed RDD will be the same even if failures occur.
+
+There are two ways data can be recovered in the event of a failure:
+- **Data received and replicated**: Data is replicated across nodes, allowing retrieval in case of a failure.
+- **Data received but not yet replicated**: If data is not replicated, it can only be recovered by retrieving it again from the source.
+
+### Types of Failures:
+- **Failure of Worker Node**: Worker nodes run application code on the cluster. If a worker node fails, the in-memory data may be lost. If receivers were running on the failed nodes, their buffered data will vanish.
+- **Failure of Driver Node**: If the driver node running the Spark Streaming application fails, the SparkContext is lost, and all executors and their in-memory data are also lost.
+
+![image](https://github.com/user-attachments/assets/66a67e23-f8eb-4c6b-87c8-7ff817372ed2)
+
+---
