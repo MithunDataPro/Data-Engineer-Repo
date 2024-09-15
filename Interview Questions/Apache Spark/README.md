@@ -349,8 +349,203 @@ An **Accumulator** is a type of shared variable that is added through associativ
   - **RDD**: Can mitigate stragglers using backup tasks.
   - **DSM**: Difficult to achieve straggler mitigation.
 
+
+## Q33. How can data transfer be minimized when working with Apache Spark?
+
+By minimizing data transfer and avoiding shuffling of data, we can increase the performance in Apache Spark. Data transfer can be minimized in three ways:
+
+1. **Using a Broadcast Variable**:
+   - Broadcast variables increase the efficiency of joins between small and large RDDs by allowing a read-only variable to be cached on every machine, rather than shipping a copy of it with each task. 
+   - You can create a broadcast variable `v` by calling:
+     ```scala
+     val broadcastVar = SparkContext.broadcast(v)
+     ```
+   - The value of the broadcast variable can be accessed using the `value` method.
+
+2. **Using Accumulators**:
+   - Accumulators allow for updating variable values in parallel while executing tasks. They can only be added using associative and commutative operations, similar to MapReduce.
+   - Accumulators are useful for implementing counters or sums. 
+   - Users can create a named or unnamed accumulator. For numeric accumulators, you can use:
+     ```scala
+     val longAccumulator = SparkContext.longAccumulator()
+     val doubleAccumulator = SparkContext.doubleAccumulator()
+     ```
+
+3. **Avoiding Shuffling Operations**:
+   - To minimize data transfer, it is important to avoid operations that trigger shuffles, such as `ByKey`, `repartition`, or other operations that cause data movement between different partitions.
+
 - **RAM Shortage**:
   - **RDD**: Moves data to disk if there is insufficient RAM.
   - **DSM**: Performance decreases significantly if RAM is insufficient.
 
+---
 
+## Q34. How does Apache Spark handle accumulated metadata?
+
+Apache Spark handles accumulated metadata using automatic cleanup. By setting the parameter `spark.cleaner.ttl`, you can trigger automatic cleanup of metadata. The default value is infinite, but you can adjust it to specify how long Spark retains metadata. This periodic cleaner ensures that metadata older than the set duration is removed, allowing Spark to run for extended periods.
+
+---
+
+## Q35. What are the common faults developers make while using Apache Spark?
+
+Some common mistakes developers make include:
+- Hitting web services multiple times by using multiple clusters.
+- Running everything on a local node instead of distributing the workload.
+
+---
+
+## Q36. Which is preferable for a project – Hadoop MapReduce or Apache Spark?
+
+The answer depends on the project's requirements:
+- **Spark**: Uses large amounts of RAM and requires dedicated machines for effective results. If performance and faster computation are priorities, Spark is preferable.
+- **Hadoop MapReduce**: More suitable if the project can tolerate slower processing and doesn’t need the high memory consumption of Spark.
+
+---
+
+## Q37. List the popular use cases of Apache Spark.
+
+Popular use cases of Apache Spark include:
+1. Streaming
+2. Machine Learning
+3. Interactive Analysis
+4. Fog Computing
+5. Real-world usage of Spark
+
+---
+
+## Q38. What is `Spark.executor.memory` in a Spark Application?
+
+The default value of `Spark.executor.memory` is **1 GB**. It refers to the amount of memory allocated per executor process.
+
+---
+
+## Spark SQL Interview Questions and Answers
+
+## Q39. What are DataFrames?
+
+A **DataFrame** is a collection of data organized into named columns, similar to a table in a relational database. DataFrames are optimized for large-scale data processing and are evaluated lazily. Lazy evaluation optimizes execution by applying techniques such as bytecode generation and predicate push-downs.
+
+---
+
+## Q40. What are the advantages of DataFrames?
+
+1. Simplifies large dataset processing.
+2. Allows higher-level abstraction by imposing structure on distributed data.
+3. Space- and performance-efficient.
+4. Can handle structured and unstructured data formats (e.g., Avro, CSV) and storage systems (e.g., HDFS, Hive, MySQL).
+5. Provides Hive compatibility, allowing unmodified Hive queries on Hive warehouses.
+6. Catalyst tree transformation optimizes execution in four phases: logical plan analysis, logical plan optimization, physical planning, and Java bytecode generation.
+7. Scales from small datasets on a laptop to petabytes of data on large clusters.
+
+---
+
+## Q41. What is a DataSet?
+
+A **Dataset** is an extension of the DataFrame API. It provides an object-oriented, type-safe interface and was introduced in Spark 1.6. Datasets leverage Spark's Catalyst optimizer and enable fast in-memory encoding while providing compile-time type safety.
+
+---
+
+## Q42. What are the advantages of Datasets?
+
+1. Provides run-time type safety.
+2. Fast in-memory encoding.
+3. Offers a custom view of structured and semi-structured data.
+4. Rich semantics and domain-specific operations facilitate the use of structured data.
+5. Optimizes memory usage by creating an optimal layout in memory while caching.
+
+---
+
+## Q43. Explain the Catalyst framework.
+
+The **Catalyst framework** represents and manipulates a DataFrame graph. A data flow graph consists of relational operators and expressions in a tree structure. Key features of Catalyst include:
+- A TreeNode library for transforming trees expressed as Scala case classes.
+- Logical plan representation for relational operators.
+- An expression library for building the query optimizer.
+
+Catalyst supports both rule-based and cost-based optimization. It generates many plans using rules and computes their cost to find the most efficient way to execute SQL statements.
+
+---
+
+## Q44. List the advantages of Parquet files.
+
+1. Efficient for large-scale queries.
+2. Supports efficient compression and encoding schemes.
+3. Consumes less space.
+
+---
+
+## Spark Streaming Interview Questions and Answers
+
+## Q45. What is Spark Streaming?
+
+Spark Streaming provides fault-tolerant processing of live data streams. Input data can come from sources such as Kafka, Flume, Kinesis, Twitter, or HDFS/S3. After processing, the data can be sent to file systems, databases, or live dashboards. The workflow of Spark Streaming:
+- Spark Streaming ingests live data.
+- The input data stream is divided into batches.
+- Spark processes the batches, and the final result is also in batches.
+
+---
+
+## Q46. What is DStream?
+
+A **DStream** (Discretized Stream) is the high-level abstraction in Spark Streaming. It represents a continuous stream of data and is internally a sequence of RDDs. DStreams can be created by:
+- Using data from different sources like Kafka, Flume, or Kinesis.
+- Applying high-level operations on other DStreams.
+
+---
+
+## Q47. Explain different transformations on DStream.
+
+DStream supports transformations similar to those available for RDDs, such as:
+- `map(func)`
+- `flatMap(func)`
+- `filter(func)`
+
+---
+
+## Q48. Does Apache Spark provide checkpointing?
+
+Yes, Apache Spark supports two types of checkpointing:
+- **Reliable Checkpointing**: Saves the actual RDD in a reliable distributed file system, such as HDFS. You can set the checkpoint directory using:
+  ```scala
+  SparkContext.setCheckpointDir(directory: String)
+
+- **Local Checkpointing**: Truncates the RDD lineage graph in Spark Streaming or GraphX and persists the RDD to local storage in the executor
+
+---
+
+## Q49. What is write-ahead log (journaling)?
+
+The **write-ahead log** is a technique that provides durability in a database system. All operations applied to the data are first written to the log. The logs are durable, allowing recovery of data in case of failure. When enabled in Spark, write-ahead logs store data in fault-tolerant file systems.
+
+---
+
+## Q50. What is a reliable and unreliable receiver in Spark?
+
+- **Reliable Receiver**: A reliable receiver acknowledges the source upon receiving data and stores it. This requires careful handling of source acknowledgments to ensure data is correctly received and stored.
+  
+- **Unreliable Receiver**: An unreliable receiver does not send acknowledgments to the source. It is typically used for sources that do not require acknowledgments or when simplicity is desired over reliability.
+
+---
+
+## Spark MLlib Interview Questions and Answers
+
+### Q51. What is Spark MLlib?
+
+**MLlib** is Spark's machine learning library. It provides tools for:
+- **ML Algorithms**: Includes common machine learning algorithms such as classification, regression, and clustering.
+- **Featurization**: Provides tools for feature extraction, dimensionality reduction, and selection. MLlib also offers tools for constructing, evaluating, and tuning machine learning pipelines.
+
+---
+
+### Q52. What is a Sparse Vector?
+
+A **Sparse Vector** is a type of local vector in MLlib where most entries are zero. It contains both integer-type indices (0-based) and double-typed values. Sparse vectors are space-efficient and commonly used in machine learning tasks involving high-dimensional data where most values are zeros.
+
+---
+
+### Q53. How to create a Sparse Vector from a Dense Vector?
+
+You can create a sparse vector from a dense vector using the following code:
+
+```scala
+Vector sparseVector = Vectors.sparse(4, new int[] {1, 3}, new double[] {3.0, 4.0});
