@@ -112,8 +112,6 @@ Apache Spark surpasses Hadoop in the following cases:
 
 ![image](https://github.com/user-attachments/assets/443ed95d-90eb-4de0-988e-e6740c122c29)
 
-# Apache Spark Interview Questions and Answers
-
 ## Q8. What are the components of the Spark Ecosystem?
 The various components of Apache Spark are:
 - **Spark Core**: Spark Core is the foundation of the entire project. All functionality in Spark is built on top of Spark Core.
@@ -160,8 +158,6 @@ There are two types of transformations in Apache Spark:
 ![image](https://github.com/user-attachments/assets/b8fd087e-41fc-4a35-950a-44905275a37b)
 
 ---
-
-# Apache Spark Interview Questions and Answers
 
 ## Q14. In how many ways can RDDs be created? Explain.
 There are three ways to create an RDD in Apache Spark:
