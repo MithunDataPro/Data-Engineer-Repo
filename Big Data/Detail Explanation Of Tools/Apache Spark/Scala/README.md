@@ -178,6 +178,10 @@ println(person.greet("John")) // Output: Hello, John
 
 Scala is a versatile and powerful language that offers the best of both functional and object-oriented programming paradigms. Its rich set of features, like pattern matching, immutability, and higher-order functions, make it ideal for building scalable and maintainable applications. Scala’s integration with the JVM allows it to leverage Java's extensive ecosystem while offering a more expressive syntax for modern software development, especially in domains like big data, backend services, and distributed systems.
 
+---
+
+For more information on Scala's basic syntax, you can visit the following website:  
+[Scala Basic Syntax - Tutorialspoint](https://www.tutorialspoint.com/scala/scala_basic_syntax.htm)
 
 ---
 ![image](https://github.com/user-attachments/assets/b155d635-fa7e-4b50-8d32-fabd754ae328)
