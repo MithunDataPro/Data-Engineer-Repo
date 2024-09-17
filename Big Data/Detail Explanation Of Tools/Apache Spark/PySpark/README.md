@@ -52,3 +52,14 @@ The basic logic of Spark jobs remains the same, but the syntax is different beca
 val spark = SparkSession.builder.appName("Spark Example").getOrCreate()
 val df = spark.read.csv("path/to/csvfile")
 println(df.count())
+
+```
+
+### PySpark (Python)
+```python
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("PySpark Example").getOrCreate()
+df = spark.read.csv("path/to/csvfile")
+print(df.count())
+
+```
