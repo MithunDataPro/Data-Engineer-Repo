@@ -78,3 +78,57 @@ case class Person(name: String, age: Int)
 
 val person = Person("John", 25)
 
+```
+
+### 2. **2. Pattern Matching**
+Pattern matching is a powerful feature that allows you to match on the structure of data, similar to switch cases in other languages, but more powerful and expressive.
+
+Example:
+```scala
+val number = 5
+
+number match {
+  case 1 => "One"
+  case 2 => "Two"
+  case _ => "Other number"
+}
+
+```
+
+### 3. **3. Higher-Order Functions**
+Higher-order functions are functions that take other functions as parameters or return functions as results. This is a core concept of functional programming in Scala.
+
+Example:
+```scala
+def applyFunc(f: Int => Int, x: Int): Int = f(x)
+
+val increment = (x: Int) => x + 1
+println(applyFunc(increment, 5)) // Output: 6
+
+```
+
+### 4. **4. Immutability**
+In Scala, values are immutable by default. This ensures that data cannot be modified once created, which leads to safer concurrent programming.
+
+Example:
+```scala
+val immutableValue = 10
+// immutableValue = 20  // This would throw an error since the value cannot be reassigned.
+
+```
+
+### 5. **5. Traits**
+Traits are similar to interfaces in Java but with the added flexibility of allowing method implementations. They are used to share interfaces and fields between classes.
+
+Example:
+```scala
+trait Greeting {
+  def greet(name: String): String = s"Hello, $name"
+}
+
+class Person extends Greeting
+
+val person = new Person()
+println(person.greet("John")) // Output: Hello, John
+
+```
