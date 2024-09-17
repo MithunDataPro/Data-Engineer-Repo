@@ -32,5 +32,45 @@ In case you do not have Java SDK, download its current version from [Java SE Dow
 
 ### Example: For Windows
 
-This will be the output if Java is installed on your computer −
+```windows
+C:\Windows\System32>java --version
 
+```
+
+This will be the **output** if Java is installed on your computer −
+
+```
+Microsoft Windows [Version 10.0.22621.2283]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>java --version
+java 21.0.1 2023-10-17 LTS
+Java(TM) SE Runtime Environment (build 21.0.1+12-LTS-29)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.1+12-LTS-29, mixed mode, sharing)
+
+C:\Windows\System32>
+
+```
+
+![image](https://github.com/user-attachments/assets/32df998d-61ac-4cec-a193-017f8911bce8)
+
+### For Linux
+
+```linux
+$ java -version
+
+```
+
+This will be the output, if Java is installed on your computer −
+
+```
+java version "11.0.11"
+Java(TM) SE Runtime Environment (build 11.0.11+9-LTS)
+Java HotSpot(TM) 64-Bit Server VM (build 11.0.11+9-LTS, mixed mode)
+
+```
+
+If the Java installation has been done properly, it will display the current version and specification of your Java installation. If Java is not already installed on your computer, then there will be an error message.
+
+## Step 2: Set Your Java Environment
+Set the environment variable JAVA_HOME to point to the base directory location where Java is installed on your machine. For example,
