@@ -57,6 +57,8 @@ Scala's powerful type system provides strong guarantees about code correctness. 
 - **Type Safety**: Scala is statically typed, while Python is dynamically typed. This means Scala catches more errors at compile time, whereas Python finds errors during runtime.
 - **Complexity**: Python is simpler to learn compared to Scala, which has a steeper learning curve due to its complex type system and functional programming concepts.
 
+![image](https://github.com/user-attachments/assets/cf302c0e-d08d-4187-aade-c0a5b54e63d9)
+
 ---
 
 ## Where is Scala Used?
