@@ -106,3 +106,92 @@ To define a case class, you need the keyword `case class`, an identifier, and a 
 ```scala
 case class Person(name: String, age: Int)
 
+```
+
+### 10. What is pattern matching in Scala?
+Pattern matching in Scala is a powerful feature. You can match values against patterns and decompose data structures. It is used with case classes and is similar to switch statements in other languages but more powerful and expressive. For example −
+
+```scala
+val x: Any = "Hello"
+x match {
+   case s: String => println(s"String: $s")
+   case i: Int => println(s"Integer: $i")
+   case _ => println("Other")
+}
+
+```
+
+### 11. What are higher-order functions in Scala?
+Higher-order functions are functions that take other functions as parameters and may return functions as results. These are a key feature of functional programming in Scala. So there can be more abstract and reusable code. For example −
+
+```scala
+def applyFunc(f: Int => Int, x: Int): Int = f(x)
+val result = applyFunc(x => x * 2, 5) // result is 10
+
+```
+
+## 12. What is the significance of immutability in Scala?
+
+Immutability in Scala means that once an object is created, it cannot be changed. This ensures safer and more predictable code, particularly in concurrent and parallel programming. Immutability helps maintain data integrity and security. However, Scala also allows the use of mutable variables when necessary.
+
+---
+
+## 13. How does Scala handle error and exception management?
+
+Scala uses exceptions similarly to Java, but it also provides more functional approaches. Scala offers several ways to handle errors and exceptions:
+
+- **Try, Success, and Failure**: For handling exceptions in a functional style.
+- **Either and Option**: For representing optional values and error handling without exceptions.
+- **Traditional Exception Handling**: Using `try`, `catch`, and `finally` blocks.
+
+### Example:
+```scala
+import scala.util.{Try, Success, Failure}
+
+val result = Try(10 / 0)
+result match {
+   case Success(value) => println(s"Success: $value")
+   case Failure(exception) => println(s"Failure: ${exception.getMessage}")
+}
+
+```
+
+## 14. What are traits in Scala?
+Traits in Scala are similar to interfaces in Java but more powerful. You can define methods and fields that can be reused by multiple classes. Traits can also have concrete methods with implementations. For example −
+
+```scala
+trait Greet {
+   def greet(name: String): String = s"Hello, $name"
+}
+
+class Person(name: String) extends Greet {
+   def sayHello(): String = greet(name)
+}
+
+```
+
+## 15. What are implicit parameters and conversions in Scala?
+Implicit parameters in Scala are parameters that are passed to a function and method automatically, instead of explicitly. These are also known as contextual parameters. You need to use implicit keyword at the beginning of the parameter list. So, compiler can understand that this is an implicit parameter. If the parameter is not passed, then compiler will use implicit value.
+
+```scala
+def greet(implicit name: String): String = s"Hello, $name"
+implicit val myName: String = "John"
+println(greet)       // prints "Hello, John"
+
+```
+
+**Implicit conversions** in Scala reduces redundancy by avoiding overloaded constructors and functions for explicit conversions. For example, implicit conversions can be used to convert kilometers to meters and meters to centimeters. Compiler can insert code into a program to avoid type errors and continue program execution.
+
+```scala
+implicit def intToString(x: Int): String = x.toString
+
+val result: String = 42       // result is "42"
+
+```
+
+## 16. Can I use Scala for scripting?
+Yes, Scala can be used for scripting. You can write Scala scripts and run them using the Scala interpreter. You can create and enhance scripts using the Scala CLI tool. Scala scripts can be executed directly from the command line using the scala command.
+
+You can write Scala scripts with .scala extension files. You can use REPL for quick scripting and interactive exploration.
+
+Therefore, Scala is a versatile tool for both small scripts and large applications.
