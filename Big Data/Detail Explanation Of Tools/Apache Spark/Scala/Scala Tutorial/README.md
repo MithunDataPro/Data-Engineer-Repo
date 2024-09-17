@@ -171,7 +171,7 @@ class Person(name: String) extends Greet {
 ```
 
 ## 15. What are implicit parameters and conversions in Scala?
-Implicit parameters in Scala are parameters that are passed to a function and method automatically, instead of explicitly. These are also known as contextual parameters. You need to use implicit keyword at the beginning of the parameter list. So, compiler can understand that this is an implicit parameter. If the parameter is not passed, then compiler will use implicit value.
+**Implicit parameters** in Scala are parameters that are passed to a function and method automatically, instead of explicitly. These are also known as contextual parameters. You need to use **implicit** keyword at the beginning of the parameter list. So, compiler can understand that this is an implicit parameter. If the parameter is not passed, then compiler will use implicit value.
 
 ```scala
 def greet(implicit name: String): String = s"Hello, $name"
