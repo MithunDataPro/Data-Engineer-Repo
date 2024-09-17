@@ -3,6 +3,8 @@
 ## What is Scala?
 **Scala** (short for Scalable Language) is a high-level programming language that integrates both **functional** and **object-oriented** programming paradigms. It was designed by **Martin Odersky** and first released in 2003. Scala is known for its concise syntax, expressiveness, and ability to scale from small scripts to large enterprise applications.
 
+![image](https://github.com/user-attachments/assets/0be8f479-f793-4a87-845b-2f9658af16c7)
+
 ### Key Features of Scala:
 1. **Object-Oriented**: Scala is fully object-oriented, meaning every value is an object, and every operation is a method call.
 2. **Functional Programming**: Scala supports functional programming, allowing functions to be treated as values and making it easier to write concise, high-level code.
@@ -12,6 +14,8 @@
 6. **Pattern Matching**: Scala provides pattern matching, which allows for more expressive and readable code, especially when working with complex data structures like lists or case classes.
 7. **Concurrency Support**: Scala supports concurrent and parallel processing through **Akka** and **Scala Futures**, making it ideal for building scalable and distributed systems.
 8. **Immutability**: Emphasizes immutability, encouraging the use of immutable data structures by default, which helps in writing safe concurrent programs.
+
+![image](https://github.com/user-attachments/assets/502c2eff-c0f6-400a-ab59-6d7b6a8f291d)
 
 ---
 
@@ -44,6 +48,10 @@ Scala's powerful type system provides strong guarantees about code correctness. 
 - **Functional Programming**: Scala has strong support for functional programming, whereas Java introduced basic functional programming concepts (e.g., lambdas) only in Java 8.
 - **Interoperability**: Scala and Java can be used together because Scala runs on the JVM.
 
+![image](https://github.com/user-attachments/assets/12312a08-1079-4ddb-8d8f-b693da3deb35)
+
+---
+
 ### 2. **Scala vs Python**
 - **Performance**: Scala is statically typed and runs on the JVM, making it faster than Python for large-scale systems and distributed computing.
 - **Type Safety**: Scala is statically typed, while Python is dynamically typed. This means Scala catches more errors at compile time, whereas Python finds errors during runtime.
@@ -64,6 +72,10 @@ Scala's concurrency features make it ideal for building scalable backend systems
 
 ### 4. **Financial Services**
 Many financial institutions use Scala to build robust, scalable, and high-performance systems due to its functional programming capabilities, which reduce bugs in mission-critical applications.
+
+
+![image](https://github.com/user-attachments/assets/dddc4c47-2d09-4d90-ac4e-229bcbbfb8a2)
+
 
 ---
 
@@ -132,3 +144,5 @@ val person = new Person()
 println(person.greet("John")) // Output: Hello, John
 
 ```
+
+![image](https://github.com/user-attachments/assets/b155d635-fa7e-4b50-8d32-fabd754ae328)
