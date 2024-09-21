@@ -1,5 +1,8 @@
 # Azure Resources for Data Engineers, Big Data Engineers, Data Analysts, Data Scientists & AI Engineers
 
+![image](https://github.com/user-attachments/assets/0b1340d0-eb35-43aa-b63d-b9aa8372dd9b)
+
+
 ## 1. **Azure Data Lake Storage (ADLS)**
 - **What it is**: A scalable and secure data lake that enables high-performance analytics and real-time insights.
 - **How it's used**: Data Engineers use ADLS to store large amounts of structured and unstructured data for batch and real-time analytics.
