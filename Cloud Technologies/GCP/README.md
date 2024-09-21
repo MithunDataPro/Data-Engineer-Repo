@@ -1,5 +1,11 @@
 # GCP Resources for Data Engineers, Big Data Engineers, Data Analysts, Data Scientists & AI Engineers
 
+![image](https://github.com/user-attachments/assets/ce11abd7-40cf-44f3-9384-b6b1eab5a36c)
+
+---
+
+
+
 ## 1. **BigQuery**
 - **What it is**: A fully managed, serverless data warehouse that allows you to query large datasets using SQL.
 - **How it's used**: Data Engineers and Analysts use BigQuery to store, query, and analyze structured data for reporting, dashboards, and real-time analytics.
@@ -149,3 +155,7 @@
   - AWS Glue Data Catalog
   - Azure Purview
   - Collibra
+
+---
+
+![image](https://github.com/user-attachments/assets/df2d1956-b56c-4d21-bc70-e1c3e49607c3)
