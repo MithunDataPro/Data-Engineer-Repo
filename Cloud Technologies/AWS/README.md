@@ -1,5 +1,13 @@
 # AWS Resources for Data Engineers, Big Data Engineers, Data Analysts, Data Scientists & AI Engineers
 
+![image](https://github.com/user-attachments/assets/bf8deb58-1efb-49f3-a947-539154bbdf2d)
+
+---
+
+![image](https://github.com/user-attachments/assets/c56ea4bc-c1d8-4a1b-b1ce-9ca06309a6e4)
+
+---
+
 ## 1. **Amazon S3 (Simple Storage Service)**
 - **What it is**: An object storage service that offers industry-leading scalability, data availability, security, and performance.
 - **Actions**: Stores and retrieves any amount of data at any time. Used for data lake storage, backup, archiving, and as a source for analytics.
@@ -159,5 +167,7 @@
   - Google Cloud Run
   - Azure Container Instances
   - Kubernetes
+
+![image](https://github.com/user-attachments/assets/a3a247a0-6ec6-4283-ac8f-b8e551188855)
 
 
