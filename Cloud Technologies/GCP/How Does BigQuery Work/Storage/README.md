@@ -9,6 +9,9 @@ One of the key features of BigQuery's architecture is the separation of storage 
 
 When you run a query, the query engine distributes the work in parallel across multiple workers, which scan the relevant tables in storage, process the query, and then gather the results. BigQuery executes queries completely in memory, using a petabit network to ensure that data moves extremely quickly to the worker nodes.
 
+![image](https://github.com/user-attachments/assets/1c5daf7a-8aea-48fa-bacc-76db4e436bf4)
+
+
 Here are some key features of BigQuery storage:
 
 ### Managed
@@ -49,9 +52,14 @@ Many traditional database systems store their data in row-oriented format, meani
 
 BigQuery stores table data in columnar format, meaning it stores each column separately. Column-oriented databases are particularly efficient at scanning individual columns over an entire dataset.
 
+![image](https://github.com/user-attachments/assets/7fccae58-5afe-4b39-9b12-05c7ff830e75)
+
 Column-oriented databases are optimized for analytic workloads that aggregate data over a very large number of records. Often, an analytic query only needs to read a few columns from a table. For example, if you want to compute the sum of a column over millions of rows, BigQuery can read that column data without reading every field of every row.
 
 Another advantage of column-oriented databases is that data within a column typically has more redundancy than data across a row. This characteristic allows for greater data compression by using techniques such as run-length encoding, which can improve read performance.
+
+![image](https://github.com/user-attachments/assets/3babf2e5-3caa-4034-aa09-dcc001455a13)
+
 
 ## Storage Billing Models
 You can be billed for BigQuery data storage in either logical or physical (compressed) bytes, or a combination of both. The storage billing model you choose determines your storage pricing. The storage billing model you choose doesn't impact BigQuery performance. Whichever billing model you choose, your data is stored as physical bytes.
