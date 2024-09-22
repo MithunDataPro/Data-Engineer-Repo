@@ -17,6 +17,12 @@ Legacy databases often share resources between read/write operations and analyti
 
 This separation principle allows BigQuery to innovate faster by deploying storage and compute improvements independently, without downtime or negative impact on performance. The fully managed nature of BigQuery means that resource provisioning and scaling are handled automatically, freeing you from traditional database management tasks.
 
+---
+
+![image](https://github.com/user-attachments/assets/daa4ac31-226c-4786-a828-905bf550b82c)
+
+---
+
 ## Interfaces
 BigQuery offers multiple interfaces:
 - **Google Cloud Console**: Use the BigQuery Console for easy access to your data.
