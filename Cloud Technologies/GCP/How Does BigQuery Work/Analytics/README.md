@@ -6,7 +6,7 @@ BigQuery is optimized to run analytic queries on large datasets, including terab
 
 To take a tour of BigQuery's data analytics features directly in the Google Cloud console, click Take the tour.
 
-[Take the tour](https://cloud.google.com/bigquery/docs/tour)
+[Take the tour](https://console.cloud.google.com/welcome/new?_ga=2.15821110.1667553385.1726962123-174588950.1726962123&pli=1)
 
 ## Analytic Workflows
 BigQuery supports several data analysis workflows:
