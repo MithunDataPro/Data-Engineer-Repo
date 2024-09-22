@@ -3,6 +3,8 @@
 ## Introduction to BigQuery
 **Google BigQuery** is a fully managed, serverless, and scalable enterprise data warehouse designed to handle petabyte-scale datasets for analytics and reporting. It allows users to run fast SQL queries over large datasets, making it an essential tool for data analysts, data engineers, and big data professionals.
 
+![image](https://github.com/user-attachments/assets/1e866728-5075-48d7-8f53-077b5618b2a2)
+
 ## Key Features
 ### 1. **Serverless Architecture**
 - BigQuery is fully managed, meaning users do not need to worry about infrastructure provisioning or managing clusters.
@@ -36,6 +38,9 @@
 - BigQuery is deeply integrated with other Google Cloud products like **Google Cloud Storage**, **Google Data Studio**, **Google AI Platform**, **Looker**, and **Google Sheets**, allowing seamless data workflows.
 - It also integrates with tools like **Apache Spark**, **Tableau**, and **DataRobot**.
 
+- ![image](https://github.com/user-attachments/assets/9765c018-f1d2-41d2-8576-22b0dbb4f8fc)
+
+
 ## How BigQuery Works
 ### 1. **Data Storage**
 - BigQuery stores data in highly compressed, columnar storage, which allows efficient data retrieval.
@@ -53,6 +58,9 @@
 ### 4. **BI Engine for In-Memory Analytics**
 - **BigQuery BI Engine** is an in-memory analysis service that allows users to perform interactive analysis with sub-second query response times on large datasets.
 - It is integrated with tools like Google Data Studio and Looker for fast dashboarding.
+
+![image](https://github.com/user-attachments/assets/dc1d2eba-e9fc-475a-8175-8a3c3a02523b)
+
 
 ## BigQuery Pricing Model
 ### 1. **Storage Costs**
