@@ -56,6 +56,9 @@ To use Dataflow with your Apache Beam pipelines, specify the Dataflow runner. Th
 
 ### Example: ETL and BI Solution with Dataflow
 
+![image](https://github.com/user-attachments/assets/2d00c431-2eae-4be9-842f-1e12cdff7cdd)
+
+
 The following diagram shows a typical ETL and BI solution using Dataflow and other Google Cloud services:
 
 1. **Pub/Sub** ingests data from an external system.
