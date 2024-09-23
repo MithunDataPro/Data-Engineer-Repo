@@ -8,11 +8,20 @@ Extract, transform, and load (ETL) is a process where unstructured or structured
 ## Data warehousing
 You can use HDInsight to perform interactive queries at petabyte scales over structured or unstructured data in any format. You can also build models connecting them to BI tools.
 
+![image](https://github.com/user-attachments/assets/7dbf034a-5ff9-4fa5-8cbe-5fdbe14053eb)
+
+
 ## Internet of Things (IoT)
 You can use HDInsight to process streaming data that is received in real time from different kinds of devices. For more information, read this blog post from Azure that announces the public preview of Apache Kafka on HDInsight with Azure Managed disks.
 
+![image](https://github.com/user-attachments/assets/3ce48c87-6a14-4279-868a-1dce073f0758)
+
+
 ## Hybrid
 You can use HDInsight to extend your existing on-premises big data infrastructure to Azure to apply the advanced analytics capabilities of the cloud.
+
+![image](https://github.com/user-attachments/assets/22427c46-bbd3-403b-81b4-95efe5ce5618)
+
 
 # Open-source components in HDInsight
 Azure HDInsight enables you to create clusters with open-source frameworks such as Spark, Hive, LLAP, Kafka, Hadoop and HBase. By default, these clusters include various open-source components such as Apache Ambari, Avro, Apache Hive 3, HCatalog, Apache Hadoop MapReduce, Apache Hadoop YARN, Apache Phoenix, Apache Pig, Apache Sqoop, Apache Tez, Apache Oozie, and Apache ZooKeeper.
