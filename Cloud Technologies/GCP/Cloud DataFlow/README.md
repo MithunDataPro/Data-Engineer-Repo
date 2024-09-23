@@ -93,3 +93,25 @@ You can estimate costs using the [GCP Pricing Calculator](https://cloud.google.c
 1. **Install the Apache Beam SDK**:
    ```bash
    pip install apache-beam
+
+   ```
+
+2. **Write a Sample Pipeline: Below is a simple example of an Apache Beam pipeline for counting words in a batch file.**
+
+   ```python
+   import apache_beam as beam
+
+def count_words(text):
+    return text.split()
+
+with beam.Pipeline() as pipeline:
+    lines = pipeline | 'Read from Text' >> beam.io.ReadFromText('gs://your-bucket/input.txt')
+    counts = (lines
+              | 'Split into words' >> beam.FlatMap(count_words)
+              | 'Pair with 1' >> beam.Map(lambda word: (word, 1))
+              | 'Group and sum' >> beam.CombinePerKey(sum))
+    counts | 'Write results' >> beam.io.WriteToText('gs://your-bucket/output.txt')
+``
+
+3. **Run on Dataflow:** You can execute your pipeline using Dataflow as the runner by adding --runner=DataflowRunner and providing additional GCP parameters like project, region, and staging_location.
+   
