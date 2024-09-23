@@ -5,6 +5,9 @@
 
 HDInsight supports multiple programming languages, including Java, Python, R, and .NET, making it a flexible solution for data engineers, data scientists, and developers who need a robust big data processing environment. It integrates seamlessly with other Azure services such as **Azure Data Lake**, **Azure Blob Storage**, **Azure Synapse Analytics**, and **Power BI**, ensuring easy access to storage, processing, and visualization tools.
 
+![image](https://github.com/user-attachments/assets/9fe31eec-bf55-422a-baa1-44d48e943d25)
+
+
 ## Key Features of Azure HDInsight
 - **Managed Service**: HDInsight is fully managed by Microsoft, reducing the complexity of managing hardware and software infrastructure.
 - **Scalability**: Automatically scales resources to handle large workloads and can process data in real-time or in batch mode.
