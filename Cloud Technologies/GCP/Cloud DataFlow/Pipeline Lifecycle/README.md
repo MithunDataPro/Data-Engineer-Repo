@@ -19,6 +19,8 @@ During graph construction, Apache Beam locally executes the code from the main e
 
 For example, the WordCount sample included with the Apache Beam SDKs, contains a series of transforms to read, extract, count, format, and write the individual words in a collection of text, along with an occurrence count for each word. The following diagram shows how the transforms in the WordCount pipeline are expanded into an execution graph:
 
+![image](https://github.com/user-attachments/assets/957e0864-9ea1-478c-9a1a-5dc6bd2ab035)
+
 *Figure 1: WordCount example execution graph*
 
 The execution graph often differs from the order in which you specified your transforms when you constructed the pipeline. This difference exists because the Dataflow service performs various optimizations and fusions on the execution graph before it runs on managed cloud resources. The Dataflow service respects data dependencies when executing your pipeline. However, steps without data dependencies between them might run in any order.
@@ -116,6 +118,8 @@ Although all the transforms you specify in your pipeline construction are execut
 
 The following diagram shows how the execution graph from the WordCount example included with the Apache Beam SDK for Java might be optimized and fused by the Dataflow service for efficient execution:
 
+![image](https://github.com/user-attachments/assets/9eea8502-e399-42a4-82f0-69fbe05024df)
+
 *Figure 2: WordCount Example Optimized Execution Graph*
 
 ### Prevent Fusion
@@ -136,6 +140,24 @@ You can access your optimized graph and fused stages in the Google Cloud console
 To view your graph's fused stages and steps in the console, in the Execution details tab for your Dataflow job, open the Stage workflow graph view.
 
 To see the component steps that are fused for a stage, in the graph, click the fused stage. In the Stage info pane, the Component steps row displays the fused stages. Sometimes portions of a single composite transform are fused into multiple stages.
+
+### gcloud
+
+To access your optimized graph and fused stages by using the gcloud CLI, run the following gcloud command:
+
+```
+  gcloud dataflow jobs describe --full JOB_ID --format json
+```
+
+Replace **JOB_ID** with the ID of your Dataflow job.
+
+To extract the relevant bits, pipe the output of the **gcloud** command to **jq**:
+```
+gcloud dataflow jobs describe --full JOB_ID --format json | jq '.pipelineDescription.executionPipelineStage\[\] | {"stage_id": .id, "stage_name": .name, "fused_steps": .componentTransform }'
+
+```
+
+To see the description of the fused stages in the output response file, within the **ComponentTransform** array, see the **ExecutionStageSummary** object.
 
 #### API
 
