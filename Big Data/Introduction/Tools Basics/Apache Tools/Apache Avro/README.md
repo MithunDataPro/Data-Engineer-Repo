@@ -51,3 +51,18 @@ Apache Avro is a row-oriented remote procedure call and data serialization frame
      ]
    }
 
+``
+
+## Serialization/Deserialization
+
+Data can be serialized into Avro format, allowing for efficient storage and transmission. The Avro libraries in various programming languages facilitate this process.
+
+## Reading and Writing Data
+
+Avro provides APIs in multiple programming languages (like Java, Python, and C++) for reading and writing Avro data files.
+
+## Languages Used for Avro
+- **Java:** Avro's primary implementation is in Java.
+- **Python:** Offers libraries for reading and writing Avro data.
+- **C/C++:** Provides bindings for performance-sensitive applications.
+- **Go:** Supports Avro serialization/deserialization with available libraries.
