@@ -6,7 +6,7 @@ Human learning is highly accurate and very reliable. It is very logical to have 
 
 Let us understand “The Art” of how humans learn and relate it back to Machine Learning.
 
-### The Three Arts of Learning:
+# The Three Arts of Learning:
 
 ## Supervised Learning:
 The first art is supervised learning. Most of the things that we learn are taught by others, that is someone else supervises our task. Suppose you are learning football, the coach might have shown you a video of dribbling, you now try to simulate the same thing. This is called learning under supervision or guided training, also technically called supervised learning.
@@ -76,4 +76,54 @@ Your job is to find the relation between the data. In this case, it was grouping
 
 You need a model which will work for unlabelled data. You need a different approach where the model inherently tries to find some relationships within data itself.  
 This again requires a different learning mechanism which I will introduce to you soon. Just remember that this isn’t the same as supervised learning.
+
+---
+
+## Reinforcement Learning
+
+Let me ask you a question.  
+**How did you learn to play Video Games (E.g. FIFA, CS:GO)?**
+
+![image](https://github.com/user-attachments/assets/3d0c59a8-3fd4-4726-baa8-778202e251b0)
+
+
+Was there any significant amount of supervision required?  
+Did it require any data given to you prior and tried to find some sort of relation?
+
+**Definitely not.**  
+This was a really different environment; you tried and tried, and you succeeded in playing the game or mastering it.
+
+### How does this relate to Machine Learning?
+
+This learning mechanism is used in Machine Learning when we have to train AI robots to play games, train self-driving cars, etc.  
+Just think about this, how did you learn to play PC Games? **You had a reward while playing, also you have an agent, this agent is your player.**  
+You have to drive your agent towards maximizing the reward, this reward may be the number of kills in CS:GO or maybe scoring a goal in FIFA.
+
+In **Reinforcement Learning** also we have an agent and a reward. In a similar way, we set up an environment where we try to train the agent based on the reward.  
+E.g., we can train the self-driving car based on reaching the destination. It gets rewarded for not crashing and accurate driving.  
+This art is very tricky and toughest of the three because **here you don’t have any fixed algorithmic path or any certain mechanism to learn**.  
+You learnt to play games by trying repeatedly. But for a computer to try repeatedly and understand is not so easy.  
+**(Had this been very successful by now we would have self-driving cars everywhere 😉)**
+
+---
+
+Let us have a final overview….
+
+![image](https://github.com/user-attachments/assets/4f1f761b-294f-48a0-9dc1-689b8dd154e9)
+
+### This is the Art of Learning. 
+The heart of Machine Learning lies within these three learning domains.  
+**All the machine learning algorithms fall into these three categories**.  
+I haven’t told you how each learning method works in a computer sense yet, but you can comprehend that with these three methods, we should be able to emulate a human.
+
+This is the way Machine Learning works, whatever you see today:  
+**Weather Forecasting, Market Analysis, Robots, Game AI, or Shopping Recommendations** all fall into any one of the three arts of learning.  
+**Mastering each art is difficult but not impossible,** but as I said before, as a common man, you should be able to appreciate each of these arts.
+
+---
+
+### So these are the Three “Arts,” How do I learn them?
+
+I have given you an overview of the three arts; we will dive deeper into our first art called **“Supervised Learning”** from the next blog.  
+Stay tuned 😃
 
