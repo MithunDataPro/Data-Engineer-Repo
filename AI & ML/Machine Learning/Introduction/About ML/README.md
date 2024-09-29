@@ -8,7 +8,7 @@ Let us understand “The Art” of how humans learn and relate it back to Machin
 
 ### The Three Arts of Learning:
 
-#### Supervised Learning:
+## Supervised Learning:
 The first art is supervised learning. Most of the things that we learn are taught by others, that is someone else supervises our task. Suppose you are learning football, the coach might have shown you a video of dribbling, you now try to simulate the same thing. This is called learning under supervision or guided training, also technically called supervised learning.
 
 ### How does this link back to Machine Learning?
@@ -37,4 +37,43 @@ For this, we need a learning algorithm which I will tell you soon.
 (Hold on guys 😁 I can’t tell all the story at once)
 
 Let us move to the second art.
+
+
+## Unsupervised Learning
+
+Imagine I gave you this data.
+
+![image](https://github.com/user-attachments/assets/4f931628-0d32-4800-8ef0-51046dcae906)
+
+
+And now asked you to naively group these data points (the blue dots) into three different zones, or regions.
+
+How would you group?
+
+Let us make this a bit tricky.
+
+I have a certain grouping in my mind, can you too group this in the same way?
+
+Sounds tricky, right??  
+Think about this for a while…
+
+![image](https://github.com/user-attachments/assets/4722e0ec-94d4-471f-8466-563a093bcdbc)
+
+
+Probably you might have thought of this grouping. It may not be the same grouping as I have in my mind though.  
+Think about this way of learning in real life.  
+E.g. You learnt to group cats and dogs into a single class called animals. When shown another animal say horse, you again add that to your group of animals.  
+In some sense, you learn to group the objects based on some similarity measure that you have seen before and then add some more objects to the group that satisfy the property.
+
+### How is this art of learning different from supervised learning?
+
+In this art of learning, I never told you how to group the data. I never supervised over how you are grouping, or rather never even guided you while you were grouping.  
+But I know one thing, the correct groups which I had in my mind. I can use them to say whether you are doing right or wrong.  
+This is the trick in unsupervised learning, we call this situation as having data without labels, (unlike the previous case where I gave you cat and dog as labels) this is a tricky situation where you do not know the relationships within the data.  
+Your job is to find the relation between the data. In this case, it was grouping; you could try different ways of grouping, and in the end, arrive at some relationships within the groups.
+
+### How does a Machine Learning model learn this data?
+
+You need a model which will work for unlabelled data. You need a different approach where the model inherently tries to find some relationships within data itself.  
+This again requires a different learning mechanism which I will introduce to you soon. Just remember that this isn’t the same as supervised learning.
 
