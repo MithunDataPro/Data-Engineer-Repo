@@ -8,6 +8,9 @@ PySpark is the Python API for Apache Spark, a powerful open-source distributed c
    - **RDD** is the fundamental data structure in Spark. It is an immutable distributed collection of objects that can be processed in parallel across a cluster of machines. RDDs are fault-tolerant, meaning they can recover from node failures.
    - PySpark provides several ways to create RDDs, such as parallelizing existing data or reading from external storage sources like HDFS, S3, or local files.
 
+     ![image](https://github.com/user-attachments/assets/5f3ec6f9-3ea8-42d2-ac90-ab6f7ea25055)
+
+
 2. **DataFrame:**
    - PySpark **DataFrame** is similar to a table in a relational database and provides a higher-level abstraction than RDDs. It is designed for processing structured and semi-structured data.
    - A DataFrame has named columns and rows and provides a wide range of operations for manipulating and transforming data, such as filtering, joining, grouping, and aggregating.
