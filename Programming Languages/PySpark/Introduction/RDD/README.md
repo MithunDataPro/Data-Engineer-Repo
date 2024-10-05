@@ -30,3 +30,43 @@ rdd = spark.sparkContext.parallelize(data)
 # Performing an action on the RDD (e.g., count elements)
 print(rdd.count())
 
+```
+
+## RDD Transformations and Actions
+
+### Transformations:
+- **Transformations** are operations that create a new RDD from an existing one. Transformations are **lazy**, meaning they don't execute immediately. Instead, they build up a series of transformations that will only be applied when an action is triggered.
+- Common examples of transformations:
+  - `map()`: Applies a function to each element of the RDD.
+  - `filter()`: Returns a new RDD with only the elements that pass a condition.
+  - `flatMap()`: Similar to `map()`, but each input element can be mapped to zero or more output elements (i.e., it flattens the results).
+
+### Actions:
+- **Actions** trigger the execution of the transformations and return the final result to the driver program. When an action is called, PySpark evaluates the transformations and applies them to the dataset.
+- Common examples of actions:
+  - `count()`: Returns the number of elements in the RDD.
+  - `collect()`: Retrieves the entire RDD as a list to the driver program.
+  - `reduce()`: Aggregates the elements of the RDD using a specified function.
+
+### Example:
+
+```python
+# Example of RDD Transformations and Actions in PySpark
+
+# Create an RDD from a list
+rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5])
+
+# Transformation: Multiply each element by 2
+rdd_transformed = rdd.map(lambda x: x * 2)
+
+# Action: Collect the transformed elements and print the result
+result = rdd_transformed.collect()
+print(result)  # Output: [2, 4, 6, 8, 10]
+
+```
+
+### Summary
+
+- RDDs are the backbone of distributed data processing in PySpark.
+- They enable operations to be performed in parallel across multiple nodes, making them suitable for handling large datasets.
+- With their fault tolerance and ability to operate on distributed data, RDDs provide a robust solution for big data analytics in PySpark.
