@@ -1,6 +1,6 @@
 Large companies contain hundreds of microservices, all needing data to operate. When we talk about technologies that they use, we come across Apache Kafka, which is used to handle trillions of data per day. In this blog, let’s understand what Kafka is and why it is so popular.
 
-Let’s take an example of [Big Data/Detail Explanation Of Tools/Apache Kafka/Introduction/Microservices/README.md](path_to_your_file)
+Let’s take an example of [Microservices](Big Data/Detail Explanation Of Tools/Apache Kafaka/Introduction/Microservices)
  involved in ride application. When a ride is completed, this information is needed by multiple microservices.
 
 - **Ride management service** manages ride information.  
