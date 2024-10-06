@@ -99,3 +99,25 @@ In the older version of Kafka, the zookeeper was responsible for keeping track o
 
 [Confluent Blog - Removing Zookeeper Dependency in Kafka](https://www.confluent.io/blog/removing-zookeeper-dependency-in-kafka/). Kafka itself stores metadata and manage the cluster as discussed in [Apache Kafka KIP-500: Replace Zookeeper with Self-Managed Metadata Quorum](https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum).
 
+---
+
+## Producer
+The producer is responsible for pushing events to Kafka. As we saw earlier, producers distribute messages across partitions by some strategy like round-robin or based on a partition key. Producers always send messages to leader partitions. Producers send messages in batches which is configured by size and time.
+
+![image](https://github.com/user-attachments/assets/554d0e4f-f755-4a05-b2e6-9663a0f895f4)
+
+
+## PART-2 — Fault tolerance in Kafka
+## PART-3 — Kafka Consumer Groups
+
+## Summary
+Apache Kafka helps us to have decoupled services. Today, if we say only two services need particular topic events, as the business requirements change, we might start needing the same events in other services also. And this can be easily done by just subscribing the new service to that event topic. In Apache Kafka, each of the components like producer, broker, zookeeper, and consumer can be scaled independently.
+
+## References
+- [Event sourcing, CQRS, stream processing, and Apache Kafka](https://martinfowler.com/eaaDev/EventSourcing.html)
+- [Kafka for beginners](https://kafka.apache.org/quickstart)
+- [Getting Started with Apache Kafka by Ryan Plant](https://developer.confluent.io/learn/kafka)
+- [Zookeeper explained](https://zookeeper.apache.org/doc/current/zookeeperOver.html)
+- [Kafka topic partitions](https://www.instaclustr.com/the-power-of-kafka-partitions-how-to-get-the-most-out-of-your-kafka-cluster/)
+- [Kafka-all-you-need-to-know](https://data-flair.training/blogs/kafka-tutorial/)
+- [Offset management](https://docs.confluent.io/platform/current/clients/consumer.html#offset-management)
