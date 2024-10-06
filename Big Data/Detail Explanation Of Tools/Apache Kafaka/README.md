@@ -6,6 +6,11 @@
 
 Kafka allows applications to publish, subscribe to, store, and process large streams of data in a reliable and efficient manner. It is widely adopted in use cases such as log aggregation, real-time analytics, monitoring, event sourcing, and much more.
 
+#### Note:
+
+#### What is event streaming?
+Event streaming is the practice of capturing real-time data from applications, databases and IoT devices and transporting it to various destinations for immediate processing and storage, or for real-time analysis and analytics reporting.
+
 ## Why is Kafka Used?
 
 Kafka is used for a variety of reasons in modern data architectures:
