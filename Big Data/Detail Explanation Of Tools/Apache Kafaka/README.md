@@ -11,6 +11,16 @@ Kafka allows applications to publish, subscribe to, store, and process large str
 #### What is event streaming?
 Event streaming is the practice of capturing real-time data from applications, databases and IoT devices and transporting it to various destinations for immediate processing and storage, or for real-time analysis and analytics reporting.
 
+#### Latency?
+in simple words it is the time taken by a single data packet to travel from the source computer to the destination computer. 
+
+**How lateny is measured?** It is measured in milliseconds (ms), Latency is considered an important measure of performance when dealing with real-time systems like online meets, online video games, etc. High latency could lead to a bad user experience due to delay and data loss. To measure latency in real-time tools like ping tests are used.
+
+#### Throughput?
+Throughput on the other hand refers to the amount of data that can be transferred over a network in a given period. 
+
+**How Throughput is measured?** It is measured in bits per second (bps) but in practice, it is mostly measured in megabits per second (Mbps). It is measured using tools like network traffic generators or by simulating a data transfer through the network and by measuring the rate at which the data is transmitted as the throughput.
+
 ## Why is Kafka Used?
 
 Kafka is used for a variety of reasons in modern data architectures:
