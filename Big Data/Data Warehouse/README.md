@@ -24,6 +24,12 @@ SAP Data Warehouse Cloud is a cloud-based data warehousing solution that allows 
 ## 8. **Teradata Vantage**
 Teradata Vantage is a hybrid cloud data warehousing solution that integrates analytics, data lakes, and data warehouses into a unified environment. It allows users to perform analytics across multiple data sources using SQL, Python, R, and other languages.
 
+## 9. **Informatica PowerCenter**
+Informatica PowerCenter is an ETL (Extract, Transform, Load) tool that offers capabilities for data integration. It helps businesses extract data from multiple sources, transform it into a usable format, and load it into the target data warehouse. Key features include workflow management, real-time data processing, and support for multiple data sources and targets.
+
+## 10. **Ataccama**
+Ataccama is a data management platform that specializes in Data Quality (DQ), Master Data Management (MDM), and Data Governance. It enables businesses to ensure data accuracy, consistency, and quality by offering tools for data profiling, rule creation, and observability. Ataccama integrates seamlessly with cloud platforms, providing automated data governance and customizable data workflows.
+
 # Open-Source Data Warehousing Tools
 
 ## 1. **Apache Hive**
