@@ -156,6 +156,40 @@
   - Azure Purview
   - Collibra
 
+# GCP Resources
+
+### 21. Google Kubernetes Engine (GKE)
+**What it is:** A managed Kubernetes service that helps you deploy, manage, and scale containerized applications using Google Cloud.
+**How it's used:** GKE is used by engineers to run containerized applications with automatic scaling, updates, and monitoring.
+**Alternatives:**
+- AWS EKS
+- Azure Kubernetes Service (AKS)
+- Red Hat OpenShift
+
+### 22. Docker in Google Cloud
+**What it is:** Docker is an open platform for developing, shipping, and running applications in containers. Google Cloud supports Docker for building, deploying, and managing applications.
+**How it's used:** Engineers use Docker containers for app development, CI/CD pipelines, and microservices deployment on Google Cloud.
+**Alternatives:**
+- Podman
+- Containerd
+- CRI-O
+
+### 23. Java in Google Cloud
+**What it is:** Google Cloud offers support for Java applications, providing a variety of services such as App Engine, Cloud Functions, and Kubernetes to run Java apps.
+**How it's used:** Java developers use Google Cloud to host web applications, deploy microservices, and integrate with other GCP services like BigQuery, Cloud SQL, and Pub/Sub.
+**Alternatives:**
+- AWS Lambda (Java)
+- Azure Functions (Java)
+- Heroku (Java)
+
+### 24. Apache Spark on Google Cloud
+**What it is:** A distributed data processing engine for big data analytics and machine learning. Google Cloud offers Spark through Dataproc for processing large datasets.
+**How it's used:** Data engineers and scientists use Spark for ETL, real-time stream processing, and running machine learning algorithms at scale.
+**Alternatives:**
+- AWS EMR (Spark)
+- Azure HDInsight (Spark)
+- Databricks
+
 ---
 
 ![image](https://github.com/user-attachments/assets/df2d1956-b56c-4d21-bc70-e1c3e49607c3)
