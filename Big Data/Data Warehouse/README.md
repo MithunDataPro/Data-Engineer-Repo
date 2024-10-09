@@ -30,6 +30,16 @@ Informatica PowerCenter is an ETL (Extract, Transform, Load) tool that offers ca
 ## 10. **Ataccama**
 Ataccama is a data management platform that specializes in Data Quality (DQ), Master Data Management (MDM), and Data Governance. It enables businesses to ensure data accuracy, consistency, and quality by offering tools for data profiling, rule creation, and observability. Ataccama integrates seamlessly with cloud platforms, providing automated data governance and customizable data workflows.
 
+## 11.  Amazon Aurora
+**What it is:** Amazon Aurora is a fully managed relational database engine that’s compatible with MySQL and PostgreSQL. It offers high performance and availability while being fully integrated into AWS.
+**Use case:** Aurora is used for scalable transactional data storage and is ideal for web applications, e-commerce systems, and other OLTP workloads.
+**Category:** Database / Data Warehouse
+**Alternatives:**
+- Google Cloud SQL
+- Azure SQL Database
+- PostgreSQL
+
+
 # Open-Source Data Warehousing Tools
 
 ## 1. **Apache Hive**
