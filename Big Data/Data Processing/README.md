@@ -909,6 +909,29 @@ Java, XML (for defining workflows).
 
 ---
 
+## 18. Impala
+**What it is:** Apache Impala is a massively parallel processing (MPP) SQL query engine for processing large datasets stored in Hadoop’s HDFS and HBase.
+**Use case:** Impala allows fast, interactive SQL-based querying of large datasets, typically used in conjunction with Apache Hive.
+**Category:** Data Processing / Query Engine
+**Alternatives:**
+- Presto (Trino)
+- Apache Drill
+- Google BigQuery
+
+---
+
+### 19. SageMaker
+**What it is:** Amazon SageMaker is a fully managed service that provides developers and data scientists the ability to build, train, and deploy machine learning models at scale.
+**Use case:** It’s used to preprocess data, train ML models, and deploy them for real-time inference or batch processing.
+**Category:** Data Processing / Machine Learning
+**Alternatives:**
+- Google Vertex AI
+- Azure Machine Learning
+- Databricks MLflow
+ 
+
+---
+
 ### Summary of Actions:
 
 #### 1. Data Processing:
