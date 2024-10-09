@@ -281,6 +281,18 @@ Here is a list of tools specifically designed or widely used for **Data Transfor
 
 ---
 
+## 12. Apache Iceberg
+**What it is:** Apache Iceberg is a high-performance table format for huge analytic datasets. It brings SQL tables to big data, allowing for easier querying and transformations of data in data lakes.
+**Use case:** Iceberg allows data engineers to manage data as tables and perform efficient ETL processes on large-scale datasets.
+**Category:** Data Transformation / Data Lakehouse
+**Alternatives:**
+- Delta Lake (Databricks)
+- Apache Hudi
+- AWS Glue
+
+
+---
+
 ## Summary Table of Data Transformation Tools
 
 | **Tool**                     | **Primary Language**       | **Key Use Cases**                                                 | **Industries**                     |
