@@ -167,6 +167,30 @@
   - Google Cloud Run
   - Azure Container Instances
   - Kubernetes
+ 
+## 20. Amazon Managed Workflows for Apache Airflow (MWAA)
+**What it is:** A fully managed service that makes it easy to run Apache Airflow on AWS, allowing you to set up and scale workflows for data pipelines and ETL processes.
+**How it's used:** Data engineers use MWAA to orchestrate workflows such as ETL, data processing, and machine learning pipelines on a managed Airflow environment.
+**Alternatives:**
+- Google Cloud Composer (Managed Airflow)
+- Azure Data Factory (Pipeline Orchestration)
+- Apache NiFi
+
+## 21. Amazon ECS (Elastic Container Service)
+**What it is:** A fully managed container orchestration service that allows you to run, stop, and manage Docker containers on a cluster.
+**How it's used:** Engineers use ECS to deploy and manage scalable, containerized applications without managing the infrastructure, with native integrations to other AWS services.
+**Alternatives:**
+- Kubernetes (self-managed)
+- Google Kubernetes Engine (GKE)
+- Azure Kubernetes Service (AKS)
+
+## 22. Amazon EKS (Elastic Kubernetes Service)
+**What it is:** A managed Kubernetes service that allows you to run Kubernetes on AWS without managing your own Kubernetes control plane.
+**How it's used:** Engineers use EKS to deploy, manage, and scale Kubernetes clusters and containerized applications, with integrations into AWS security, networking, and monitoring services.
+**Alternatives:**
+- Google Kubernetes Engine (GKE)
+- Azure Kubernetes Service (AKS)
+- Red Hat OpenShift
 
 ![image](https://github.com/user-attachments/assets/a3a247a0-6ec6-4283-ac8f-b8e551188855)
 
