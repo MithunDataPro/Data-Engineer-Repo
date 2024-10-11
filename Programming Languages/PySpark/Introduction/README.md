@@ -42,3 +42,16 @@ Spark revolutionized the big data ecosystem by providing an easy-to-use API in l
 10. **Apache Spark 3.4** (Released in May 2023)  
    Brought further enhancements to the Catalyst Optimizer, better Python UDFs support, and continued improvements for adaptive execution and query optimization.
 
+
+### Note:
+**Hadoop** (2.x) Supports **Spark** By **Yarn** Resource Manager.
+
+**Hadoop** (1.x) Doesn't Support **Spark**.
+**Architeture** in **Hadoop** (1.x):
+HDFS - Storage
+Map Reduce - Data Processing & Cluster Resource Management.
+
+**Hadoop** (2.x) **Architeture**:
+HDFS - Storage
+Map Reduce - Data Processing
+Yarn - Cluster Resource Manager
