@@ -139,3 +139,9 @@ You now have a SparkSession object stored in the variable `spark`. You can use i
 ## Summary:
 This code initializes a SparkSession, which serves as the entry point to interact with Apache Spark. It sets the application name to **"first Program"** and ensures only one SparkSession exists using the `getOrCreate()` method.
 
+---
+
+#### Note: 
+
+**Python** Doesn't Support Datasets 
+
