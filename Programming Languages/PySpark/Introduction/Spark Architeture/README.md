@@ -92,3 +92,6 @@ Apache Spark's architecture is built for distributed processing with scalability
 
 By utilizing optimizations like the Catalyst Optimizer and Tungsten Execution Engine, and supporting in-memory computing, Spark achieves exceptional performance and efficiency.
 
+
+![image](https://github.com/user-attachments/assets/6e2008c3-e0ae-4b96-a3fe-dd9fd64dfa58)
+
