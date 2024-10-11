@@ -86,6 +86,9 @@ Spark ensures fault tolerance by:
 - **RDD Lineage**: Every RDD maintains a history of the transformations applied to it. If any partition of the RDD is lost, Spark can recompute it from the original data using the lineage graph.
 - **Task Re-execution**: In case of task failures, Spark automatically retries the tasks on different executors, ensuring that no data is lost.
 
+![image](https://github.com/user-attachments/assets/7a5d385c-879e-48a4-a9bb-4d700bda714d)
+
+
 ## 9. **Conclusion**
 
 Apache Spark's architecture is built for distributed processing with scalability and fault tolerance at its core. It provides a unified engine for big data processing with a simple yet powerful API for large-scale data processing, batch processing, stream processing, machine learning, and graph processing.
