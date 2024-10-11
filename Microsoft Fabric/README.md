@@ -1,5 +1,9 @@
 # Microsoft Fabric: In-Depth Overview
 
+## **Microsoft Fabric**:
+It is an all-in-one Unified Analytics Platform.You can think fabric as similar interface like power BI where we can do complete data engineering, Data science & Data Analytics Projects.
+
+
 ## What is Microsoft Fabric?
 Microsoft Fabric is an end-to-end analytics and data platform designed for enterprises that require a unified solution. It encompasses data movement, processing, ingestion, transformation, real-time event routing, and report building. It offers a comprehensive suite of services including Data Engineering, Data Factory, Data Science, Real-Time Analytics, Data Warehouse, and Databases.
 
