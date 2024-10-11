@@ -61,3 +61,44 @@ Spark revolutionized the big data ecosystem by providing an easy-to-use API in l
 - Yarn - Cluster Resource Manager
 
 ![image](https://github.com/user-attachments/assets/c3416051-89e3-49a6-8763-fa30c1773b64)
+
+---
+
+
+# Difference Between SparkContext and SparkSession
+
+## 1. **SparkContext**
+
+- **Purpose**: SparkContext is the entry point to any Spark functionality. It is the primary object that connects to the cluster and sets up the configuration for Spark jobs.
+- **Introduced In**: Spark 1.x.
+- **Creation**: Used to initialize the core Spark engine and enables access to Spark's basic functionalities like creating RDDs.
+- **Key Role**: 
+  - Responsible for low-level configurations and connecting to the cluster.
+  - Creates RDDs (Resilient Distributed Datasets).
+- **Limitations**: 
+  - Does not provide easy access to higher-level APIs like DataFrames or Datasets.
+  - Can only handle RDD-based operations, limiting support for SQL or DataFrame APIs.
+
+## 2. **SparkSession**
+
+- **Purpose**: SparkSession is a unified entry point for all Spark functionalities, introduced to simplify the API.
+- **Introduced In**: Spark 2.0.
+- **Creation**: It internally contains a SparkContext but also manages access to all Spark functionality, including SQL, streaming, and machine learning.
+- **Key Role**:
+  - Provides access to DataFrame and Dataset APIs.
+  - Supports SQL queries, streaming data processing, and Spark's MLlib.
+  - Unifies all Spark operations into a single object, simplifying the development experience.
+- **Advantages**:
+  - It's a replacement for SQLContext, HiveContext, and SparkContext.
+  - Offers a high-level API that works with both structured and unstructured data.
+
+## Key Differences
+
+| Aspect            | **SparkContext**                          | **SparkSession**                                  |
+|-------------------|-------------------------------------------|---------------------------------------------------|
+| **Introduced In**  | Spark 1.x                                 | Spark 2.0                                         |
+| **Primary Usage**  | Low-level access to Spark's core engine   | Unified access to all of Spark's APIs             |
+| **API Support**    | RDD-based operations                      | Supports DataFrames, Datasets, SQL, and more      |
+| **Complexity**     | Requires different contexts for SQL, etc. | Simplifies access to all functionalities in one   |
+| **Replacement For**| N/A                                       | SQLContext, HiveContext, and SparkContext         |
+
