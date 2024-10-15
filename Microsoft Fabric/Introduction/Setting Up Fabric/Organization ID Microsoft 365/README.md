@@ -18,3 +18,15 @@ Yes, you can create an organizational Outlook mail account with a Microsoft 365 
 
 By following these steps, you'll have a working organizational Outlook email that integrates with Microsoft Fabric for better communication and collaboration
 
+
+----
+
+
+# Microsoft Fabric
+
+The Fabric trial requires a Power BI license. Navigate to [https://app.fabric.microsoft.com](https://app.fabric.microsoft.com) to sign up for a Power BI free license. Once you have a Power BI license, you can start the Fabric trial.
+
+### Steps:
+- **Step 1**: Create an Outlook account at [https://signup.live.com](https://signup.live.com).
+- **Step 2**: Join the Microsoft 365 Developer program at [https://aka.ms/GetM365Developer](https://aka.ms/GetM365Developer).
+- **Step 3**: Go to the Fabric page and start your free trial at [https://app.fabric.microsoft.com](https://app.fabric.microsoft.com).
