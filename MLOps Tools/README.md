@@ -1,4 +1,30 @@
-# Comprehensive Guide to MLOps Tools
+# Comprehensive Guide to MLOps Tools:
+
+## MLOps Tools
+
+1. mlFlow
+2. DVC (Data Version Control)
+3. Kubeflow
+4. TFX (TensorFlow Extended)
+5. Airflow
+6. Metaflow
+7. Kedro
+8. SageMaker
+9. Azure Machine Learning
+10. Vertex AI (Google Cloud)
+11. MLRun
+12. Domino Data Lab
+13. ClearML
+14. Valohai
+15. Pachyderm
+16. Polyaxon
+17. Flyte
+18. FfDL (Fabric for Deep Learning)
+19. DataRobot MLOps
+20. Neptune.ai
+21. Comet.ml
+22. Hopsworks
+
 
 ## 1. **MLflow**
 - **Detailed Explanation**: MLflow is an open-source platform that manages the complete machine learning lifecycle, including experimentation, reproducibility, and deployment. It allows tracking of experiments, packaging of code into reproducible runs, and sharing and deploying models.
