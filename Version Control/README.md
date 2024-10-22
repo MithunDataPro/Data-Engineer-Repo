@@ -149,3 +149,120 @@
 ``
 
 ---
+
+## 8. Bazaar
+**Bazaar** is a distributed version control system designed for ease of use. It supports both distributed and centralized workflows.
+
+- **Key Features:**
+
+- Simple interface.
+- Both distributed and centralized operations.
+- Good support for merging.
+
+- **Common Commands:**
+  ```bash
+  bzr init  # Initialize a new repository
+  bzr commit  # Commit changes to the repository
+  bzr push  # Push changes to a remote repository
+
+``
+
+---
+
+## 9. ClearCase
+**ClearCase** by **IBM** is a centralized version control system designed for large, complex projects. It supports software configuration management with strong process control.
+
+- **Key Features:**
+
+- Centralized control.
+- Supports complex branching, labeling, and parallel development.
+- Ideal for highly structured workflows.
+
+- **Common Commands:**
+  ```bash
+  cleartool checkout  # Check out a file for editing
+  cleartool checkin  # Check-in changes to the repository
+  cleartool merge  # Merge files from different branches
+
+``
+
+---
+
+## 10. TFS (Team Foundation Server)
+**TFS**, now part of Azure DevOps Server, is a centralized version control system from Microsoft. It integrates closely with Visual Studio and offers a full suite of tools for project management and version control.
+
+- **Key Features:**
+
+- Centralized repository with built-in version control, bug tracking, and automation.
+- Strong integration with Visual Studio.
+- Branching, merging, and rollback support.
+
+- **Common Commands:**
+  ```bash
+  tf get  # Get latest version of files from repository
+  tf checkin  # Check-in changes to repository
+  tf branch  # Create a new branch
+  tf merge  # Merge changes from one branch to another
+
+``
+
+---
+
+## 11. CVS (Concurrent Versions System)
+**CVS** is one of the earliest centralized version control systems. It is still used for legacy projects but is largely outdated compared to modern VCS tools.
+
+- **Key Features:**
+
+- Centralized control.
+- Revision tracking.
+- Lightweight but with fewer features than newer systems.
+
+- **Common Commands:**
+  ```bash
+  cvs checkout  # Check out a working copy
+  cvs commit  # Commit changes to repository
+  cvs update  # Update working copy with changes from repository
+
+``
+
+---
+
+## 12. VSS (Visual SourceSafe)
+**Visual SourceSafe (VSS)** is an old centralized version control system by Microsoft, mainly used by small teams. It has been replaced by TFS and Git.
+
+- **Key Features:**
+
+- Centralized system.
+- Basic version tracking.
+- Suitable for small projects.
+
+- **Common Commands:**
+  ```bash
+  vss checkout  # Check out a file for editing
+  vss checkin  # Check-in changes to the repository
+
+``
+
+---
+
+## 13. Plastic SCM
+**Plastic SCM** is a distributed version control system with strong support for large-scale projects, especially in game development.
+
+- **Key Features:**
+
+- Distributed and centralized workflows.
+- Optimized for handling large binary files.
+- Powerful branching and merging.
+
+- **Common Commands:**
+  ```bash
+  cm checkout  # Check out files for editing
+  cm checkin  # Check-in changes to repository
+  cm update  # Update workspace with changes from repository
+
+``
+
+----
+
+
+This document covers a wide range of **version control systems**. While **Git** is by far the most popular today, systems like **SVN**, **Mercurial**, and **Perforce** remain in use for specific applications. **GitLab**, **Azure DevOps**, and **Visual Studio** integrate closely with **Git** to provide full **DevOps** solutions.
