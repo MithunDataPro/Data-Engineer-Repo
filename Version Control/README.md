@@ -109,4 +109,43 @@
   svn commit  # Commit changes to the repository
   svn update  # Update working copy with repository changes
 
-```
+``
+---
+
+## 6. Mercurial
+**Mercurial** is a distributed version control system focused on simplicity and performance, often used in large projects.
+
+- **Key Features:**
+
+- Distributed system: Full history on each developer’s machine.
+- Fast and lightweight.
+- Cross-platform support.
+
+- **Common Commands:**
+  ```bash
+  hg init  # Initialize a new repository
+  hg clone https://your-repo  # Clone a repository
+  hg commit  # Commit changes to the repository
+  hg push  # Push changes to a remote repository
+
+``
+---
+
+## 7. Perforce (Helix Core)
+**Perforce (Helix Core)** is a centralized version control system, often used for large-scale projects like game development. It’s known for handling large binary files efficiently.
+
+- **Key Features:**
+
+- Centralized system with support for large binary files.
+- Strong branching and merging capabilities.
+- Role-based access control.
+
+- **Common Commands:**
+  ```bash
+  p4 checkout  # Check out files for editing
+  p4 submit  # Submit changes to the repository
+  p4 sync  # Synchronize workspace with repository
+
+``
+
+---
