@@ -37,3 +37,21 @@
   git push    # Push changes to a remote repository
   git pull    # Fetch and merge changes from a remote repository
 
+``
+
+## 2. GitLab
+**GitLab** is a web-based **DevOps** lifecycle tool that provides Git repository management, issue tracking, **continuous integration (CI)**, and **deployment pipelines (CD)**. It uses **Git** as its underlying version control system.
+
+- **Key Features:**
+
+- Git-based repository management.
+- Integrated CI/CD pipelines.
+- Issue tracking and project management.
+- Role-based access control (RBAC).
+  
+- **Common Commands (similar to Git):**
+  ```bash
+  git clone https://gitlab.com/your-repo.git  # Clone repository from GitLab
+git push origin master  # Push changes to GitLab
+
+``
