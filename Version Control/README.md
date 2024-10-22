@@ -5,7 +5,7 @@
 - 1. Git
 - 2. GitLab
 - 3. Azure DevOps
-Visual Studio
+4. Visual Studio
 Subversion (SVN)
 Mercurial
 Perforce (Helix Core)
