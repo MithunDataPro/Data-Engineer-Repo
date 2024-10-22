@@ -38,6 +38,7 @@
   git pull    # Fetch and merge changes from a remote repository
 
 ``
+---
 
 ## 2. GitLab
 **GitLab** is a web-based **DevOps** lifecycle tool that provides Git repository management, issue tracking, **continuous integration (CI)**, and **deployment pipelines (CD)**. It uses **Git** as its underlying version control system.
@@ -55,3 +56,57 @@
   git push origin master  # Push changes to GitLab
 
 ``
+
+---
+
+## 3. Azure DevOps
+**Azure DevOps** (previously known as TFS or VSTS) is a cloud-based service that provides tools for version control, build automation, continuous delivery, and more. It supports Git and its own version control system, TFVC (Team Foundation Version Control).
+
+- **Key Features:**
+
+- Supports Git and TFVC.
+- Built-in CI/CD tools.
+- Agile planning (Scrum, Kanban).
+- Integration with Visual Studio.
+
+- **Common Commands for Git:**
+  ```bash
+  git clone https://dev.azure.com/your-project  # Clone repository from Azure DevOps
+  git push origin main  # Push changes to Azure DevOps
+
+``
+
+---
+
+## 4. Visual Studio
+**Visual Studio** integrates version control directly within the development environment. It supports Git repositories and can connect to services like GitHub, GitLab, and Azure DevOps. Visual Studio also integrates with TFVC (Team Foundation Version Control).
+
+- **Key Features:**
+
+- Built-in Git support.
+- Integration with Azure DevOps.
+- Visual interface for version control actions.
+- Supports branching, merging, and pull requests.
+
+- **Common Git Commands in Visual Studio:**
+- Clone a repository using the built-in Git interface.
+- Stage, commit, push, and pull changes directly from the IDE.
+
+---
+
+## 5. Subversion (SVN)
+**Subversion (SVN)** is a centralized version control system. All files and their history are stored in a central repository, and developers must connect to this central server to commit changes.
+
+- **Key Features:**
+
+- Centralized repository.
+- Atomic commits and revision tracking.
+- Good support for binary files.
+
+- **Common Commands:**
+  ```bash
+  svn checkout https://your-svn-repo  # Check out working copy
+  svn commit  # Commit changes to the repository
+  svn update  # Update working copy with repository changes
+
+```
