@@ -52,6 +52,6 @@
 - **Common Commands (similar to Git):**
   ```bash
   git clone https://gitlab.com/your-repo.git  # Clone repository from GitLab
-git push origin master  # Push changes to GitLab
+  git push origin master  # Push changes to GitLab
 
 ``
