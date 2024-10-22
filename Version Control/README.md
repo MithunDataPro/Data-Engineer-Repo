@@ -27,14 +27,13 @@
 - Powerful branching and merging.
 - Offline capabilities.
 - Used by platforms like GitHub, GitLab, Bitbucket.
-
+  
 - **Common Commands:**
   ```bash
-git init    # Initialize a new Git repository
-git clone   # Clone an existing repository
-git add     # Stage changes for commit
-git commit  # Commit staged changes
-git push    # Push changes to a remote repository
-git pull    # Fetch and merge changes from a remote repository
+  git init    # Initialize a new Git repository
+  git clone   # Clone an existing repository
+  git add     # Stage changes for commit
+  git commit  # Commit staged changes
+  git push    # Push changes to a remote repository
+  git pull    # Fetch and merge changes from a remote repository
 
-```
