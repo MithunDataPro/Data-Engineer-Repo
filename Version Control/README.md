@@ -27,9 +27,10 @@
 - Powerful branching and merging.
 - Offline capabilities.
 - Used by platforms like GitHub, GitLab, Bitbucket.
-**Common Commands:**
 
-  ```bash
+- **Common Commands:**
+
+  ``bash
   git init    # Initialize a new Git repository
 git clone   # Clone an existing repository
 git add     # Stage changes for commit
