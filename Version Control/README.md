@@ -30,7 +30,7 @@
 
 - **Common Commands:**
   ```bash
-  git init    # Initialize a new Git repository
+git init    # Initialize a new Git repository
 git clone   # Clone an existing repository
 git add     # Stage changes for commit
 git commit  # Commit staged changes
