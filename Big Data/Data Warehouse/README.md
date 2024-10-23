@@ -39,6 +39,8 @@ Ataccama is a data management platform that specializes in Data Quality (DQ), Ma
 - Azure SQL Database
 - PostgreSQL
 
+## 12. Palantir Foundry
+**Palantir Foundry** is a data integration and analytics platform developed by Palantir Technologies. It empowers organizations to integrate, manage, and analyze large volumes of data from various sources, enabling data-driven decision-making. Foundry is designed to handle structured, unstructured, and semi-structured data, making it highly flexible and suitable for different domains.
 
 # Open-Source Data Warehousing Tools
 
