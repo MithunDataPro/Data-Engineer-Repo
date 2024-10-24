@@ -94,3 +94,31 @@ MLflow’s versatility enhances workflows across various roles, from data scient
 | - Deciding on the best base model suitable for their specific project requirements.                                         |
 
 ---
+
+# Use Cases of MLflow
+
+**MLflow** is versatile, catering to diverse machine learning scenarios. Here are some typical use cases:
+
+- **Experiment Tracking**: A data science team leverages MLflow Tracking to log parameters and metrics for experiments within a particular domain. Using the MLflow UI, they can compare results and fine-tune their solution approach. The outcomes of these experiments are preserved as MLflow models.
+
+- **Model Selection and Deployment**: MLOps engineers employ the MLflow UI to assess and pick the top-performing models. The chosen model is registered in the MLflow Registry, allowing for monitoring its real-world performance.
+
+- **Model Performance Monitoring**: Post deployment, MLOps engineers utilize the MLflow Registry to gauge the model’s efficacy, juxtaposing it against other models in a live environment.
+
+- **Collaborative Projects**: Data scientists embarking on new ventures organize their work as an MLflow Project. This structure facilitates easy sharing and parameter modifications, promoting collaboration.
+
+# Scalability in MLflow
+
+**MLflow** is architected to seamlessly integrate with diverse data environments, from small datasets to Big Data applications. It’s built with the understanding that quality machine learning outcomes often hinge on robust data sources, and as such, scales adeptly to accommodate varying data needs.
+
+Here’s how MLflow addresses scalability across different dimensions:
+
+- **Distributed Execution**: MLflow runs can operate on distributed clusters. For instance, integration with Apache Spark allows for distributed processing. Furthermore, runs can be initiated on the distributed infrastructure of your preference, with results relayed to a centralized Tracking Server for analysis. Notably, MLflow offers an integrated API to initiate runs on Databricks.
+
+- **Parallel Runs**: For use cases like hyperparameter tuning, MLflow can orchestrate multiple runs simultaneously, each with distinct parameters.
+
+- **Interoperability with Distributed Storage**: MLflow Projects can interface with distributed storage solutions, including Azure ADLS, Azure Blob Storage, AWS S3, Cloudflare R2, and DBFS. Whether it’s automatically fetching files to a local environment or interfacing with a distributed storage URI directly, MLflow ensures that projects can handle extensive datasets – even scenarios like processing a 100 TB file.
+
+- **Centralized Model Management with Model Registry**: Large-scale organizations can benefit from the MLflow Model Registry, a unified platform tailored for collaborative model lifecycle management. In environments where multiple data science teams might be concurrently developing numerous models, the Model Registry proves invaluable. It streamlines model discovery, tracks experiments, manages versions, and facilitates understanding a model’s intent across different teams.
+
+By addressing these scalability dimensions, **MLflow** ensures that users can capitalize on its capabilities regardless of their data environment’s size or complexity.
