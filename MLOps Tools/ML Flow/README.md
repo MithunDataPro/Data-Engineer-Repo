@@ -53,3 +53,44 @@ By simplifying the complex landscape of **ML workflows**, **MLflow** empowers da
 ## Who Uses MLflow?
 Throughout the lifecycle of a particular project, there are components within **MLflow** that are designed to cater to different needs.
 
+![image](https://github.com/user-attachments/assets/50f0754f-039b-4011-8309-5e324f53b9f7)
+
+
+MLflow’s versatility enhances workflows across various roles, from data scientists to prompt engineers, extending its impact beyond just the confines of a Data Science team.
+
+---
+
+# MLflow's Versatility
+
+MLflow’s versatility enhances workflows across various roles, from data scientists to prompt engineers, extending its impact beyond just the confines of a Data Science team.
+
+---
+
+| **Data Scientists leverage MLflow for**:                                                                                   |
+|----------------------------------------------------------------------------------------------------------------------------|
+| - Experiment tracking and hypothesis testing persistence.                                                                  |
+| - Code structuring for better reproducibility.                                                                             |
+| - Model packaging and dependency management.                                                                               |
+| - Evaluating hyperparameter tuning selection boundaries.                                                                   |
+| - Comparing the results of model retraining over time.                                                                     |
+| - Reviewing and selecting optimal models for deployment.                                                                   |
+
+| **MLOps Professionals utilize MLflow to**:                                                                                 |
+|----------------------------------------------------------------------------------------------------------------------------|
+| - Manage the lifecycles of trained models, both pre and post deployment.                                                   |
+| - Deploy models securely to production environments.                                                                       |
+| - Audit and review candidate models prior to deployment.                                                                   |
+| - Manage deployment dependencies.                                                                                          |
+
+| **Data Science Managers interact with MLflow by**:                                                                         |
+|----------------------------------------------------------------------------------------------------------------------------|
+| - Reviewing the outcomes of experimentation and modeling activities.                                                      |
+| - Collaborating with teams to ensure that modeling objectives align with business goals.                                   |
+
+| **Prompt Engineering Users use MLflow for**:                                                                               |
+|----------------------------------------------------------------------------------------------------------------------------|
+| - Evaluating and experimenting with large language models.                                                                 |
+| - Crafting custom prompts and persisting their candidate creations.                                                        |
+| - Deciding on the best base model suitable for their specific project requirements.                                         |
+
+---
