@@ -36,4 +36,18 @@ sqoop import \
 --table yourTable \
 --target-dir /hdfs/target_directory \
 --num-mappers 4
+
+```
+---
+
+### Example: Exporting Data from HDFS to MySQL
+
+```bash
+sqoop export \
+--connect jdbc:mysql://localhost/dbname \
+--username yourUsername \
+--password yourPassword \
+--table yourTable \
+--export-dir /hdfs/source_directory
+
 ```
