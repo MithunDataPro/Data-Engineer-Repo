@@ -1,10 +1,8 @@
-End-End Architeture:
+# End-End Architeture:
 
 ![image](https://github.com/user-attachments/assets/92b8caaa-c16d-44ff-ae0f-82ab2037b0e4)
 
 ---
-
-![image](https://github.com/user-attachments/assets/ad0ddd2a-9c88-420c-b60f-19ccecce55d9)
 
 # Real-Time Weather Reporting System on Azure
 
@@ -44,5 +42,8 @@ This project aims to create a real-time weather reporting system that continuous
 ## **Project Outcome**:
 
 This setup results in a fully automated system that provides live weather insights and critical alerts, helping users respond quickly to adverse weather conditions. The project structure ensures **data integrity**, **security**, and **scalability** for real-time data engineering applications on Azure.
+
+![image](https://github.com/user-attachments/assets/ad0ddd2a-9c88-420c-b60f-19ccecce55d9)
+
 ---
 
