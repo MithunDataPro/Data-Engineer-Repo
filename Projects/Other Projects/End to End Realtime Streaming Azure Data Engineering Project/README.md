@@ -45,5 +45,11 @@ This setup results in a fully automated system that provides live weather insigh
 
 ![image](https://github.com/user-attachments/assets/ad0ddd2a-9c88-420c-b60f-19ccecce55d9)
 
+
+
 ---
+
+# Agenda:
+
+![image](https://github.com/user-attachments/assets/ff353f95-1aeb-4dce-9e84-78cf3d601277)
 
