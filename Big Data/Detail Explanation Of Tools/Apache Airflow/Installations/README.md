@@ -48,4 +48,4 @@ cd airflow-docker
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.6.3/docker-compose.yaml'
 
 ```
-[Alternatively: Manually create a file named `docker-compose.yaml` in your `airflow-docker` directory and paste the contents of the file from the Airflow documentation.](https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml)
+**Alternatively:** Manually create a file named `docker-compose.yaml` in your `airflow-docker` directory and paste the contents of the file from the [Airflow documentation].(https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml)
