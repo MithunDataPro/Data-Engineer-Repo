@@ -49,3 +49,88 @@ curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.6.3/docker-compose.y
 
 ```
 **Alternatively:** Manually create a file named `docker-compose.yaml` in your `airflow-docker` directory and paste the contents of the file from the [Airflow documentation].(https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml)
+
+---
+
+## 3. Set Up Airflow Environment Variables
+
+- Airflow requires a **.env** file to define environment variables. In your airflow-docker directory, create the **.env** file with the following command:
+
+```shell
+echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
+
+```
+- **Note:** On Windows, **$(id -u)** may not work directly. If it doesn’t, replace **AIRFLOW_UID=$(id -u)** with **AIRFLOW_UID=50000.**
+
+---
+
+## 4. Initialize the Airflow Database
+
+- Before starting Airflow for the first time, initialize the metadata database:
+
+```shell
+docker-compose up airflow-init
+
+```
+- This command prepares the database and sets up the necessary configurations for Airflow.
+
+---
+
+## 5. Start Airflow Services
+- To start the Airflow services, run:
+
+```shell
+docker-compose up -d
+
+```
+- This starts Airflow in detached mode, meaning it runs in the background.
+
+---
+
+## 6. Access the Airflow Web UI
+- Once the containers are up and running, access the Airflow web server at **http://localhost:8080**.
+- The default username is **airflow**, and the password is also **airflow**.
+
+---
+
+## 7. Stopping and Restarting Airflow
+- To stop all Airflow services, use:
+
+```shell
+docker-compose down
+
+```
+- To restart Airflow services, run:
+
+```shell
+docker-compose up -d
+
+```
+
+---
+
+## 8. Troubleshooting Tips
+- **Container Logs:** If there’s an issue, view logs with:
+
+```shell
+docker-compose logs
+
+```
+
+- **Re-Initialize Database:** If you encounter database issues, re-initialize it with:
+
+```shell
+docker-compose down --volumes --remove-orphans
+docker-compose up airflow-init
+
+```
+
+---
+
+## 9. Additional Configuration
+- You can modify **docker-compose.yaml** to adjust settings like webserver ports or to add custom Airflow configuration options.
+- To add plugins or custom DAGs, place them in the **dags**/ and **plugins**/ folders inside your **airflow-docker** directory.
+
+
+
+With these steps, Apache Airflow should be running on Docker in your Windows 11 environment!
