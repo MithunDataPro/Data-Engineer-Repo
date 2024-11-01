@@ -132,5 +132,6 @@ docker-compose up airflow-init
 - To add plugins or custom DAGs, place them in the **dags**/ and **plugins**/ folders inside your **airflow-docker** directory.
 
 
+---
 
 With these steps, Apache Airflow should be running on Docker in your Windows 11 environment!
