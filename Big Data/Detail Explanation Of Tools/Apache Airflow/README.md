@@ -1,8 +1,17 @@
 # Apache Airflow: A Detailed Explanation
+**Apache Airflow** is an open-source workflow management platform that allows you to programmatically **author**, **schedule**, and **monitor workflows**. It is highly scalable and extensible, making it a good choice for automating complex data pipelines.
 
-**Apache Airflow** is an open-source workflow management platform that allows you to programmatically author, schedule, and monitor workflows. It is highly scalable and extensible, making it a good choice for automating complex data pipelines.
 ---
+## Airflow Architecture
+**Airflow is a distributed system that consists of the following components:**
 
+- **Webserver:** The webserver provides a user interface for managing Airflow workflows.
+- **Scheduler:** The scheduler is responsible for scheduling and running Airflow tasks.
+- **Worker:** The worker nodes execute Airflow tasks.
+- **Executor:** The executor is responsible for running tasks on worker nodes.
+- **Metadata database:** The metadata database stores information about Airflow workflows, tasks, and other entities.
+
+---
 ## Key Concepts
 
 ### 1. Directed Acyclic Graph (DAG)
