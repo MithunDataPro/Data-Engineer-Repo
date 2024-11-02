@@ -1,7 +1,6 @@
 # Apache Airflow: A Detailed Explanation
 
-Apache Airflow is an open-source platform used to programmatically author, schedule, and monitor workflows. Initially developed by Airbnb in 2014, it has since become a popular tool for orchestrating complex workflows, particularly in data engineering. Airflow is designed to handle the scheduling and execution of tasks, enabling users to automate and manage their data pipelines in a scalable, repeatable way.
-
+Apache Airflow is an open-source workflow management platform that allows you to programmatically author, schedule, and monitor workflows. It is highly scalable and extensible, making it a good choice for automating complex data pipelines.
 ---
 
 ## Key Concepts
