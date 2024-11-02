@@ -1,6 +1,8 @@
 # Apache Airflow: A Detailed Explanation
 **Apache Airflow** is an open-source workflow management platform that allows you to programmatically **author**, **schedule**, and **monitor workflows**. It is highly scalable and extensible, making it a good choice for automating complex data pipelines.
 
+![image](https://github.com/user-attachments/assets/ad18c13c-53c4-4be8-9bee-3a264e69cb48)
+
 ---
 ## Airflow Architecture
 **Airflow is a distributed system that consists of the following components:**
@@ -11,7 +13,47 @@
 - **Executor:** The executor is responsible for running tasks on worker nodes.
 - **Metadata database:** The metadata database stores information about Airflow workflows, tasks, and other entities.
 
+![image](https://github.com/user-attachments/assets/410b4d79-ddce-4b5b-af87-c3f904de0d05)
+
 ---
+
+## Airflow Workflow Definition
+Airflow workflows are defined in Python code. Airflow provides a number of operators that can be used to perform common tasks, such as extracting data from databases, running machine learning models, and sending email notifications.
+
+Here is a simple Airflow workflow that extracts data from a database and loads it into a data warehouse:
+
+```
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+
+dag = DAG('extract_load_data', start_date='2023-11-03')
+
+def extract_data():
+    # Extract data from the database
+    pass
+
+def load_data():
+    # Load data into the data warehouse
+    pass
+
+extract_data_task = PythonOperator(
+    task_id='extract_data',
+    python_callable=extract_data,
+    dag=dag,
+)
+
+load_data_task = PythonOperator(
+    task_id='load_data',
+    python_callable=load_data,
+    dag=dag,
+)
+
+extract_data_task >> load_data_task
+
+```
+
+---
+
 ## Key Concepts
 
 ### 1. Directed Acyclic Graph (DAG)
