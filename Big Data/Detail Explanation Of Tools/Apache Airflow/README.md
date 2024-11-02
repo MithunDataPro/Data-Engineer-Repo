@@ -1,6 +1,6 @@
 # Apache Airflow: A Detailed Explanation
 
-Apache Airflow is an open-source workflow management platform that allows you to programmatically author, schedule, and monitor workflows. It is highly scalable and extensible, making it a good choice for automating complex data pipelines.
+**Apache Airflow** is an open-source workflow management platform that allows you to programmatically author, schedule, and monitor workflows. It is highly scalable and extensible, making it a good choice for automating complex data pipelines.
 ---
 
 ## Key Concepts
