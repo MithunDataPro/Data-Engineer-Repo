@@ -70,7 +70,7 @@ In this project, we will set up a data pipeline to extract data from Twitter, pr
 
 1. **Pipeline Diagram**:
 
-   ![Pipeline Flow](path/to/first-image)
+  ![image](https://github.com/user-attachments/assets/910f2324-03fc-45dd-bc68-4f4c085c8e91)
 
    This diagram represents the flow of data from Twitter, through Python for transformation, into Apache Airflow on an EC2 instance, and finally to Amazon S3 for storage.
 
