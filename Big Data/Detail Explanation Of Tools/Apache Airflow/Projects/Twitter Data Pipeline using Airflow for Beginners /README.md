@@ -76,7 +76,8 @@ In this project, we will set up a data pipeline to extract data from Twitter, pr
 
 2. **Airflow DAG Structure**:
 
-   ![Airflow DAG](path/to/second-image)
+  ![image](https://github.com/user-attachments/assets/a2e6edf1-c724-4aee-8b36-6ea3cb136936)
+
 
    This diagram shows the Airflow DAG structure, with each task represented as an operation in the workflow, connected in a directed acyclic manner.
 
