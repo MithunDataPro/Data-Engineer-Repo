@@ -91,3 +91,97 @@ After adding this to your **docker-compose.yml**, start AKHQ with:
 docker-compose up -d
 
 ```
+You can access **AKHQ** in your browser at [http://localhost:8080](http://localhost:8080).
+
+#### 2. Kafka Manager (Yahoo)
+Another option is Kafka Manager by Yahoo, which also provides Kafka monitoring and management features. You can add it to your **docker-compose.yml** similarly.
+```bash
+docker run -d -p 9000:9000 --name kafka-manager \
+   -e ZK_HOSTS="zookeeper:2181" \
+   sheepkiller/kafka-manager
+
+```
+
+- Once running, access **Kafka Manager** in your browser at **http://localhost:9000.**
+
+#### 3. Conduktor (Desktop Application)
+- **Conduktor** is a desktop application (with a free version) that provides an interface for managing Kafka clusters.
+- Download Conduktor from https://www.conduktor.io/ and install it on your machine.
+- Configure it to connect to your Kafka cluster.
+
+
+### Other Ways:
+- Use **Prometheus** and **Grafana** for **Kafka Metrics** (Monitoring)
+- **Prometheus** and **Grafana** are commonly used together to monitor Kafka metrics.
+- You can set up **JMX Exporter** on your Kafka container to expose metrics for Prometheus, then configure Grafana to visualize these metrics.
+
+---
+
+## Basic Kafka Commands
+Here are some basic commands to manage Kafka. These commands assume you’re inside the Kafka container.
+
+#### Listing Topics
+```bash
+kafka-topics --list --bootstrap-server localhost:9092
+
+```
+
+#### Creating a Topic
+```bash
+kafka-topics --create --topic my_topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+```
+
+#### Describing a Topic
+```bash
+kafka-topics --describe --topic my_topic --bootstrap-server localhost:9092
+
+```
+
+#### Producing Messages to a Topic
+Start a producer to send messages to a topic:
+```bash
+kafka-console-producer --topic my_topic --bootstrap-server localhost:9092
+
+```
+
+Type messages and press Enter to send each message.
+
+##### Consuming Messages from a Topic
+**Start a consumer to read messages from a topic:**
+
+```bash
+kafka-console-consumer --topic my_topic --from-beginning --bootstrap-server localhost:9092
+
+```
+
+##### Deleting a Topic
+**To delete a topic:**
+```bash
+kafka-topics --delete --topic my_topic --bootstrap-server localhost:9092
+
+```
+
+##### Viewing Consumer Groups
+**List all consumer groups:**
+```bash
+kafka-consumer-groups --bootstrap-server localhost:9092 --list
+
+```
+
+##### Describing a Consumer Group
+**Get details about a specific consumer group:**
+```bash
+kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group <group_name>
+
+```
+##### Additional Notes
+- **Kafka** and **Zookeeper** logs can be accessed using Docker’s **logs** command:
+```bash
+docker logs kafka
+docker logs zookeeper
+
+```
+- To exit the Kafka container shell, type **exit**.
+
+This setup and these commands should help you get started with Kafka in Docker, including monitoring with a UI.
