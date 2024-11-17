@@ -1,4 +1,4 @@
-# Demo Objective
+# Demo Objective:
 
 **How to integrate the Snowflake Cloud Data Warehouse with AWS Cloud S3 buckets to access the files?**
 
