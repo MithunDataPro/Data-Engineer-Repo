@@ -71,3 +71,7 @@ Here, `(1, John Doe, 20)` is a tuple.
 For a detailed introduction to SQL for Data Engineering, visit the link below:
 [SQL for Data Engineering](https://datawithdarshil.notion.site/SQL-for-Data-Engineering-b59d137564484daea85063adb2c2d429?pvs=4)
 
+## Discord Community
+for Discord Community Visit link below:
+[Discord for Data Engineering](https://discord.gg/9DEre6Uu8c)
+
