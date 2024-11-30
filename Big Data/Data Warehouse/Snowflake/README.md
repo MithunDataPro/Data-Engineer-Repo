@@ -22,3 +22,8 @@ Apart from these, Snowflake also has the following features:
 - No operational burden to build data-intensive applications.
 - Share and collaborate live data across the company's ecosystem.
 
+---
+
+
+1. [Join Discord Community](https://discord.gg/9DEre6Uu8c)  
+2. [Notion Document](https://datawithdarshil.notion.site/Data-Warehouse-with-SnowflakeDB-b8906196be894bbb857511d591ba9f49?pvs=4)
