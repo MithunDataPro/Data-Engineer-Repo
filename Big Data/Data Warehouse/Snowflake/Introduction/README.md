@@ -419,4 +419,101 @@ A schema is the logical structure that defines how data is organized and stored 
 
 **Relationship:** `CustomerID` in `Orders` references `CustomerID` in `Customers`.
 
+---
 
+![image](https://github.com/user-attachments/assets/2e1768c1-4a0b-4388-b914-1a97efe87cf3)
+
+# ETL, ELT, and ETLT Processes Explained
+
+---
+
+## **1. What is ETL?**
+
+### **Definition:**
+ETL stands for **Extract, Transform, Load**, a process used in data integration to move data from multiple sources into a single destination (e.g., a data warehouse).
+
+### **Steps in ETL:**
+1. **Extract:**
+   - Data is collected from various sources, such as databases, APIs, files, and webhooks.
+   - Sources include structured (e.g., RDBMS), semi-structured (e.g., JSON, XML), or unstructured data.
+
+2. **Transform:**
+   - The data is cleaned, enriched, and transformed to meet the requirements of the target schema.
+   - Examples: Formatting dates, removing duplicates, applying business rules.
+
+3. **Load:**
+   - The transformed data is loaded into the target system (e.g., a data warehouse) for analysis.
+
+### **Use Case:**
+- Best for scenarios where the data needs heavy transformations before loading.
+- Example Tools: Informatica, Talend, SSIS.
+
+---
+
+## **2. What is ELT?**
+
+### **Definition:**
+ELT stands for **Extract, Load, Transform**, a modern variation of ETL where raw data is first loaded into the target system (e.g., a data lake) and transformations are performed within the system.
+
+### **Steps in ELT:**
+1. **Extract:**
+   - Similar to ETL, raw data is gathered from various sources.
+
+2. **Load:**
+   - Raw data is loaded directly into the target system (e.g., a data lake or cloud storage).
+
+3. **Transform:**
+   - Transformations are performed using the target system's processing power (e.g., SQL or distributed computing).
+   - Example: Applying transformations in Snowflake, BigQuery, or Hadoop.
+
+### **Use Case:**
+- Ideal for large datasets and cloud-based environments where transformation scalability is key.
+- Example Tools: Snowflake, BigQuery, Redshift.
+
+---
+
+## **3. What is ETLT?**
+
+### **Definition:**
+ETLT stands for **Extract, Transform, Load, Transform**, a hybrid approach where an initial transformation is applied before loading, and further transformations are performed after loading into the target system.
+
+### **Steps in ETLT:**
+1. **Extract:**
+   - Similar to ETL and ELT, raw data is pulled from sources.
+
+2. **Transform (Initial):**
+   - Light preprocessing (e.g., removing nulls, minimal enrichment) is done before loading to ensure data compatibility.
+
+3. **Load:**
+   - Preprocessed data is loaded into the target system.
+
+4. **Transform (Final):**
+   - Further transformations are applied within the target system to fully prepare the data for analytics.
+
+### **Use Case:**
+- Suitable for mixed environments where both preloading and postloading transformations are needed.
+- Example Tools: Apache Nifi + Snowflake.
+
+---
+
+## **Comparison Table**
+
+| Feature            | ETL                                | ELT                                | ETLT                               |
+|--------------------|------------------------------------|------------------------------------|------------------------------------|
+| **Order of Steps** | Extract → Transform → Load         | Extract → Load → Transform         | Extract → Transform → Load → Transform |
+| **Transformation** | Outside the target system          | Inside the target system           | Split between source and target system |
+| **Use Case**       | Data warehouses                   | Data lakes and cloud platforms     | Hybrid workflows                   |
+| **Complexity**     | High (requires preprocessing)      | Medium (transformations handled later) | High (requires dual transformations) |
+| **Performance**    | Limited by ETL tool capabilities   | Leverages target system processing | Combines advantages of ETL and ELT |
+
+---
+
+## **Summary**
+
+- **ETL:** Traditional method for structured data integration; ideal for data warehouses.
+- **ELT:** Modern approach optimized for cloud and big data platforms; ideal for data lakes.
+- **ETLT:** Hybrid method for scenarios requiring both preloading and postloading transformations.
+
+![image](https://github.com/user-attachments/assets/b2f293d6-8b90-401e-b6b0-94f827e9ec89)
+
+---
