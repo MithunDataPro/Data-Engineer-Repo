@@ -338,4 +338,85 @@ The primary purpose of a data warehouse is to support **business intelligence ac
 
 ![image](https://github.com/user-attachments/assets/e0ff791b-9e02-4b08-820e-ce75c7aad415)
 
+---
+
+# What is a Schema?
+
+## **Definition**
+A schema is the logical structure that defines how data is organized and stored in a database or a data warehouse. It includes definitions of tables, fields, relationships, and constraints.
+
+---
+
+## **Types of Schemas**
+
+### **1. Database Schema**
+- Represents the structure of a database.
+- Defines tables, columns, data types, and relationships.
+- Example: 
+  - A table named `Customers` with fields like `CustomerID`, `Name`, `Email`.
+
+### **2. Star Schema**
+- Used in data warehousing for simpler querying and faster analytics.
+- **Structure:**
+  - A central fact table (e.g., sales data) surrounded by dimension tables (e.g., product, customer, time).
+- **Example:**
+  - Fact Table: `Sales`
+  - Dimension Tables: `Products`, `Customers`, `Time`
+
+### **3. Snowflake Schema**
+- A normalized version of the star schema.
+- Dimension tables are split into sub-tables to remove redundancy.
+- **Example:**
+  - `Product` dimension table is split into `Category` and `Subcategory`.
+
+---
+
+## **Schema in Different Contexts**
+
+### **1. Schema-on-Write**
+- The schema is defined before data is stored.
+- Common in traditional databases and data warehouses.
+- Example: MySQL, PostgreSQL.
+
+### **2. Schema-on-Read**
+- The schema is applied when data is queried.
+- Common in data lakes.
+- Example: Hadoop, Amazon S3.
+
+---
+
+## **Key Components of a Schema**
+1. **Tables:** Organized rows and columns to store data.
+2. **Fields/Columns:** Define the attributes of the data.
+3. **Relationships:** Define how tables are connected (e.g., primary keys, foreign keys).
+4. **Constraints:** Rules applied to ensure data integrity (e.g., NOT NULL, UNIQUE).
+
+---
+
+## **Benefits of Using Schemas**
+- **Organized Data:** Makes data easier to manage and query.
+- **Improved Performance:** Predefined schemas optimize data retrieval.
+- **Data Integrity:** Ensures consistency and accuracy of stored data.
+- **Easier Collaboration:** Provides a clear structure for teams working on the same database.
+
+---
+
+## **Example of a Simple Schema**
+
+### Table: Customers
+| Field         | Data Type   | Constraint       |
+|---------------|-------------|------------------|
+| CustomerID    | INT         | PRIMARY KEY      |
+| Name          | VARCHAR(50) | NOT NULL         |
+| Email         | VARCHAR(50) | UNIQUE           |
+
+### Table: Orders
+| Field         | Data Type   | Constraint       |
+|---------------|-------------|------------------|
+| OrderID       | INT         | PRIMARY KEY      |
+| CustomerID    | INT         | FOREIGN KEY      |
+| OrderDate     | DATE        | NOT NULL         |
+
+**Relationship:** `CustomerID` in `Orders` references `CustomerID` in `Customers`.
+
 
