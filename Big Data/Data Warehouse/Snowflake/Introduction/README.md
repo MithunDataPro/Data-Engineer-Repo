@@ -35,7 +35,6 @@ The primary purpose of a data warehouse is to support **business intelligence ac
 - Producing **reports**.
 - Performing **data mining**.
 
----
 
 ## Characteristics of a Data Warehouse
 
@@ -50,10 +49,6 @@ The primary purpose of a data warehouse is to support **business intelligence ac
 
 4. **Non-Volatile**  
    - Once data is stored, it remains unchanged. Updates are handled through new records rather than overwriting.
-
----
-
-![image](https://github.com/user-attachments/assets/ed45531e-8659-4cb4-b4a4-1b512a58d561)
 
 
 ## Benefits of a Data Warehouse
@@ -70,9 +65,13 @@ The primary purpose of a data warehouse is to support **business intelligence ac
 4. **Competitive Advantage**  
    - Allows businesses to identify trends and make strategic moves faster than competitors.
 
----
 
 ### Workflow
 1. **ETL Process**: Extract data from sources like CRM, ERP, billing systems, and flat files.
 2. **Data Storage**: Centralize in the Data Warehouse.
 3. **Output**: Use data for reporting, analytics, and data mining.
+
+
+![image](https://github.com/user-attachments/assets/ed45531e-8659-4cb4-b4a4-1b512a58d561)
+
+---
