@@ -224,3 +224,52 @@ The primary purpose of a data warehouse is to support **business intelligence ac
 ![image](https://github.com/user-attachments/assets/2610ff79-0363-4037-b50a-60c9874e3eb7)
 
 ---
+
+# Difference Between OLTP and OLAP
+
+## **OLTP (Online Transaction Processing)**
+- **Purpose:** Handles day-to-day transactional operations.
+- **Focus:** High volume of short transactions (INSERT, UPDATE, DELETE).
+- **Data Type:** Highly normalized data to reduce redundancy.
+- **Performance:** Optimized for fast query execution and frequent updates.
+- **Examples:** MySQL, PostgreSQL, Microsoft SQL Server.
+- **Usage:** Used for operational tasks, such as order processing, inventory management.
+- **Query Type:** "Who bought X?" (Transactional details).
+
+---
+
+## **OLAP (Online Analytical Processing)**
+- **Purpose:** Supports complex analysis and business intelligence tasks.
+- **Focus:** Low volume of long-running queries for data analysis.
+- **Data Type:** Denormalized data for faster read operations.
+- **Performance:** Optimized for read-heavy operations and aggregations.
+- **Examples:** Snowflake, Amazon Redshift, Google BigQuery.
+- **Usage:** Used for analytics, reporting, and forecasting.
+- **Query Type:** "How many people bought X?" (Aggregated insights).
+
+---
+
+## **Key Differences:**
+
+| Feature                 | OLTP (Online Transaction Processing) | OLAP (Online Analytical Processing)  |
+|-------------------------|---------------------------------------|--------------------------------------|
+| **Purpose**             | Transactional operations             | Analytical operations               |
+| **Focus**               | Fast transactions                   | Complex queries and aggregations    |
+| **Data Structure**      | Normalized                          | Denormalized                        |
+| **Query Type**          | Short and simple queries            | Long and complex queries            |
+| **Performance**         | Optimized for transactions          | Optimized for analytics             |
+| **Examples**            | MySQL, PostgreSQL, Oracle DB        | Snowflake, Amazon Redshift, BigQuery|
+| **Usage**               | Operational systems (e.g., CRM, ERP)| Decision support and business intelligence |
+| **Data Volume**         | Smaller, real-time                  | Larger, historical                  |
+
+---
+
+## **Summary:**
+- **OLTP** is designed for **real-time transactional systems** where speed and accuracy are critical.
+- **OLAP** is designed for **data analysis and decision-making**, prioritizing complex queries and insights over real-time processing.
+
+
+
+![image](https://github.com/user-attachments/assets/5bece35d-627d-43c0-a4fc-6e265624c49b)
+
+---
