@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/9ebfd331-9724-4417-ad98-8a465a75c131)
-
 # Data Engineering Life Cycle
 
 The Data Engineering Life Cycle involves the following stages:
@@ -21,6 +19,9 @@ The Data Engineering Life Cycle involves the following stages:
 
 ### **Undercurrents**
 - Supportive elements like **Security**, **Data Management**, **DataOps**, **Data Architecture**, **Orchestration**, and **Software Engineering** ensure the pipeline runs effectively.
+
+![image](https://github.com/user-attachments/assets/9ebfd331-9724-4417-ad98-8a465a75c131)
+
 
 ----
 
