@@ -273,3 +273,69 @@ The primary purpose of a data warehouse is to support **business intelligence ac
 ![image](https://github.com/user-attachments/assets/5bece35d-627d-43c0-a4fc-6e265624c49b)
 
 ---
+
+![image](https://github.com/user-attachments/assets/5e29f179-a909-44a9-983d-d8175eb69731)
+
+# Data Lake vs Data Warehouse vs Data Mart
+
+## **1. Data Lake**
+- **Definition:** A centralized repository that stores raw, unstructured, semi-structured, and structured data.
+- **Purpose:** Primarily used for storing large amounts of raw data that can later be processed or analyzed as needed.
+- **Characteristics:**
+  - Stores data in its native format (raw form).
+  - Schema-on-read: The schema is applied when data is read, not when it's stored.
+  - Supports advanced analytics, machine learning, and AI.
+  - Can handle a high variety and volume of data.
+- **Technologies:** Hadoop, Amazon S3, Azure Data Lake.
+- **Use Case:** Storing raw logs, social media data, sensor data for AI/ML workflows.
+
+---
+
+## **2. Data Warehouse**
+- **Definition:** A structured repository designed for storing processed and cleaned data, primarily used for business intelligence and reporting.
+- **Purpose:** Supports querying and reporting for decision-making.
+- **Characteristics:**
+  - Stores structured and processed data.
+  - Schema-on-write: The schema is applied before storing data.
+  - Optimized for read-heavy workloads and analytics.
+  - Maintains historical data with time-variant storage.
+- **Technologies:** Snowflake, Amazon Redshift, Google BigQuery.
+- **Use Case:** Generating reports, dashboards, and performing BI analysis.
+
+---
+
+## **3. Data Mart**
+- **Definition:** A subset of a data warehouse, focusing on specific business lines or departments.
+- **Purpose:** Provides specialized data for departments like sales, marketing, or HR.
+- **Characteristics:**
+  - Contains a smaller, focused dataset for faster access.
+  - Derived from a data warehouse or directly from data sources.
+  - Easier to manage and query compared to the full data warehouse.
+- **Technologies:** Can use similar tools as data warehouses, e.g., Amazon Redshift, Snowflake.
+- **Use Case:** Sales forecasting, marketing campaign analysis.
+
+---
+
+## **Key Differences**
+
+| Feature                 | Data Lake                             | Data Warehouse                      | Data Mart                           |
+|-------------------------|----------------------------------------|--------------------------------------|-------------------------------------|
+| **Purpose**             | Store raw, unstructured data          | Store processed, structured data     | Store specific departmental data    |
+| **Data Type**           | Raw, unstructured, and structured     | Structured and processed             | Aggregated, structured data         |
+| **Schema**              | Schema-on-read                       | Schema-on-write                     | Inherits schema from the warehouse  |
+| **Processing**          | Suitable for big data processing      | Suitable for BI and reporting        | Fast access to departmental data    |
+| **Technologies**        | Hadoop, Azure Data Lake, S3          | Snowflake, Redshift, BigQuery        | Redshift, Snowflake, etc.           |
+| **Audience**            | Data engineers, data scientists       | Analysts and business users          | Specific departments                |
+
+---
+
+## **Summary**
+
+1. **Data Lake:** Designed for raw data storage with flexibility for diverse analytics and machine learning workflows.
+2. **Data Warehouse:** Provides structured, cleaned, and processed data for business intelligence and decision-making.
+3. **Data Mart:** A focused, department-specific subset of the data warehouse for fast and efficient querying.
+
+
+![image](https://github.com/user-attachments/assets/e0ff791b-9e02-4b08-820e-ce75c7aad415)
+
+
