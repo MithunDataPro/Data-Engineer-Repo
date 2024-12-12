@@ -137,7 +137,7 @@ Apache Calcite is available as a Maven dependency. Add the following to your Mav
 ```
 
 ## Example Usage
-- 1. Connect Calcite to a data source.
-- 2. Define schemas and tables programmatically.
-- 3. Parse, validate, and optimize SQL queries.
-- 4. Execute queries on the target data source.
+- Connect Calcite to a data source.
+- Define schemas and tables programmatically.
+- Parse, validate, and optimize SQL queries.
+- Execute queries on the target data source.
