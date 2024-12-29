@@ -71,6 +71,10 @@ result = squared_rdd.take(10)
 print(result)
 ```
 
+---
+
+### Fault Tolerance:
+**Fault tolerance** refers to the ability of a system, network, or application to continue operating properly in the event of a failure of some of its components. It ensures that even when errors, faults, or failures occur, the system can maintain functionality, often without any noticeable impact on users or processes.
 
 
 
