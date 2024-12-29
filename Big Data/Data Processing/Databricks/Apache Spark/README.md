@@ -60,6 +60,8 @@
 6. **Spark Structured Streaming**:
    - A newer, more robust framework for processing real-time data streams in a structured manner.
 
+![image](https://github.com/user-attachments/assets/47927525-9b9b-4209-89b5-a0761587afb6)
+
 ---
 
 ## Why Use Apache Spark?
