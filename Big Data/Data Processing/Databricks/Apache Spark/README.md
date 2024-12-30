@@ -60,7 +60,8 @@
 6. **Spark Structured Streaming**:
    - A newer, more robust framework for processing real-time data streams in a structured manner.
 
-![image](https://github.com/user-attachments/assets/47927525-9b9b-4209-89b5-a0761587afb6)
+![image](https://github.com/user-attachments/assets/b3cc446a-a6da-4703-8926-3ded0669861d)
+
 
 ---
 
