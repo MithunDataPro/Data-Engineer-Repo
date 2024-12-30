@@ -6,6 +6,8 @@ Apache Spark is an open-source, distributed computing framework designed for lar
 
 ## Core Components of Spark Architecture
 
+![image](https://github.com/user-attachments/assets/27570294-4e9b-4cb1-bfbf-79261ce0f515)
+
 ### 1. **Driver**
 - **Role**: The main process that orchestrates the execution of the Spark application.
 - **Responsibilities**:
