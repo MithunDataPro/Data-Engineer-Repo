@@ -115,3 +115,71 @@ A DataFrame is the most common Structured API and simply represents a table of d
 A **structured API** is a way for computers or programs to communicate with each other in a clear, organized, and predictable way. It defines a set of rules and formats for exchanging data so that both the sender and receiver understand what to expect.
 
 ![image](https://github.com/user-attachments/assets/1f5881f8-a83c-4318-a9de-0f0a4ec80cfc)
+
+The DataFrame concept is not unique to Spark. R and Python both have similar concepts. However, Python/R DataFrames (with some exceptions) exist on one machine rather than multiple machines.
+
+However, because Spark has language interfaces for both Python and R, it’s quite easy to convert Pandas (Python) DataFrames to Spark DataFrames, and R DataFrames to Spark DataFrames.
+
+---
+
+## 3. Partitions:
+To allow every executor to perform work in parallel, Spark breaks up the data into chunks called partitions.
+
+A DataFrame’s partitions represent how the data is physically distributed across the cluster of machines during execution.
+- If you have one partition, Spark will have a parallelism of only one, even if you have thousands of executors.
+- If you have many partitions but only one executor, Spark will still have a parallelism of only one because there is only one computation resource.
+
+DataFrames are high-level transformations, you do not (for most of the part) manipulate partitions manually or individually.
+
+**Note**:
+
+##### Low-Level API:
+
+- **Closer to the core engine:** You work directly with Spark's core functionality, like distributing data and processing it in chunks (RDDs).
+- **More control, more complexity:** You have fine-grained control over how data is processed, but you need to write more detailed and complex code.
+
+##### Key Feature:
+- Works with RDDs (Resilient Distributed Datasets).
+- RDDs are the basic building blocks of Spark and represent distributed data collections.
+
+##### When to Use:
+- When you need **customized data processing** or performance optimization.
+
+**Example:** Writing low-level operations on distributed datasets.
+
+```python
+rdd = spark.sparkContext.parallelize([1, 2, 3, 4])
+result = rdd.map(lambda x: x * 2).collect()
+print(result)
+# Output: [2, 4, 6, 8]
+
+```
+
+##### High-Level API
+- **Simpler and more abstract:** Focuses on ease of use and provides tools for common tasks.
+- **Easier to learn and use:** Built for convenience, hiding much of the complexity of distributed processing.
+
+##### Key Features:
+- Works with DataFrames and Datasets.
+  - **DataFrames:** Like a table in a database (structured data with rows and columns).
+  - **Datasets:** Similar to DataFrames but with type safety for statically typed languages (like Scala).
+
+##### When to Use:
+- For structured data processing or when you don’t need fine-grained control.
+
+**Example:** SQL-like queries or high-level transformations.
+
+```python
+data = [("Alice", 25), ("Bob", 30)]
+df = spark.createDataFrame(data, ["Name", "Age"])
+df.select("Name").show()
+# Output:
+# +-----+
+# | Name|
+# +-----+
+# |Alice|
+# |  Bob|
+# +-----+
+
+```
+---
