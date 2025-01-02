@@ -93,4 +93,25 @@ The repository containing the code and data for the course can be found here:
 
 ---
 
+# Spark Important Concepts:
 
+## 1. Why do we need Spark? Big Data Problem
+For most of their history, computers became faster every year through processor speed increases: the new processors each year could run more instructions per second than the previous year’s. As a result, applications also automatically became faster every year, without any changes needed to their code.
+
+This trend in hardware stopped around 2005: due to hard limits in heat dissipation, hardware developers stopped making individual processors faster, and switched toward adding more parallel CPU cores all running at the same speed. This change meant that suddenly applications needed to be modified to add parallelism in order to run faster, which set the stage for new programming models such as Apache Spark.
+
+In this new world, the software developed in the past 50 years cannot automatically scale up, and neither can the traditional programming models for data processing applications, creating the need for new programming models. It is this world that Apache Spark was built for.
+
+Apache Spark began at UC Berkeley in 2009 as the Spark research project, which was first published the following year in a paper entitled “Spark: Cluster Computing with Working Sets”
+
+At the time, Hadoop MapReduce was the dominant parallel programming engine for clusters
+
+---
+
+## 2. Spark Dataframe:
+A DataFrame is the most common Structured API and simply represents a table of data with rows and columns.
+
+**Note:**
+A **structured API** is a way for computers or programs to communicate with each other in a clear, organized, and predictable way. It defines a set of rules and formats for exchanging data so that both the sender and receiver understand what to expect.
+
+![image](https://github.com/user-attachments/assets/1f5881f8-a83c-4318-a9de-0f0a4ec80cfc)
