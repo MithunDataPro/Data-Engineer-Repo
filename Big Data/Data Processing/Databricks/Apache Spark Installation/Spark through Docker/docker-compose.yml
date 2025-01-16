@@ -1,0 +1,37 @@
+version: '3'
+services:
+  spark:
+    image: jupyter/pyspark-notebook
+    container_name: pyspark-notebook
+    ports:
+      - "8888:8888"  # Jupyter Notebook
+      - "4040:4040"  # Spark UI for Jupyter tasks
+    volumes:
+      - ./files/data:/home/jovyan/work/files/data
+      - ./files:/home/jovyan/work/files
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: start.sh jupyter lab --NotebookApp.token=''
+    depends_on:
+      - spark-master
+
+  spark-master:
+    image: bitnami/spark:latest
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_HOST=spark-master
+    ports:
+      - "8181:8181"  # Spark Master Web UI
+      - "7177:7177"  # Spark Master RPC port
+
+  spark-worker:
+    image: bitnami/spark:latest
+    container_name: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    depends_on:
+      - spark-master
+    ports:
+      - "8081:8081"  # Spark Worker Web UI
