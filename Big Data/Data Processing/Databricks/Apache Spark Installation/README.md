@@ -83,6 +83,7 @@ word_counts.collect()
 ## 7. Save Your Work
 Save your work or outputs to Google Drive if needed:
 
+```python
 from google.colab import drive
 drive.mount('/content/drive')
 
