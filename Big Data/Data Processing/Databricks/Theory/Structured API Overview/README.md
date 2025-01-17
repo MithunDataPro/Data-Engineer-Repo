@@ -15,3 +15,9 @@ The Structured APIs are the fundamental abstraction that you will use to write t
 
 **Note:**
 Also, In the Above Core Types In real time we maily work with Dataframes & SQL Tables & Views.
+
+
+**Structured APIs:** They are the foundation of modern data processing in **Apache Spark**. They provide a **high-level abstraction** for handling structured data efficiently.
+
+---
+
